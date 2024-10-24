@@ -43,10 +43,10 @@
 		            <a href="/regionfilter">🏙️ 지역별 숙소예약</a>
 		        </div>
 		        <div class="reservation-item">
-		            <a href="/테마별숙소링크">🎨 테마별 숙소예약</a>
+		            <a href="/hotelbytype">🎨 테마별 숙소예약</a>
 		        </div>
 		        <div class="reservation-item">
-		            <a href="/인기숙소링크">🔥 인기 숙소 보기</a>
+		            <a href="/hotellist">🔥 인기 숙소 보기</a>
 		        </div>
 		    </div>
 		</div>
