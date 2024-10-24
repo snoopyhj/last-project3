@@ -22,6 +22,9 @@ public class HotelController {
 	
 	@Autowired
 	HotelSearchDAO hdao;
+		
+	
+	
 	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
 	public String region_search(String region, String subregion, Model model) {
