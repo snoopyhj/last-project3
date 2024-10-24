@@ -47,6 +47,20 @@ public class HotelController {
 	
 	@RequestMapping(value = "/hotelreservation", method = RequestMethod.GET)
 	public String gotoreservation(@RequestParam("name") String name,  
+			@RequestParam("roomTypebytype") String roomType,
+	        @RequestParam("pricebytype") String price, Model model) {
+
+		HotelVO hotelInfobytype = hdao.gotoreservation(name);
+	    model.addAttribute("hotelInfobytype", hotelInfobytype);
+	    
+	    model.addAttribute("roomTypebytype", roomType);
+	    model.addAttribute("pricebytype", price);
+
+	    return "hotelreservationbytype";
+	}
+	
+	@RequestMapping(value = "/hotelreservationbytype", method = RequestMethod.GET)
+	public String gotoreservationbytype(@RequestParam("name") String name,  
 			@RequestParam("roomType") String roomType,
 	        @RequestParam("price") String price, Model model) {
 
@@ -62,6 +76,14 @@ public class HotelController {
 	 @RequestMapping(value = "/hotelbytype", method = RequestMethod.GET)
 	 public String gotohotelbytype() {
 		 return "hotelbytype";
+	 }
+	 
+	 @RequestMapping(value="/hoteldetailbytype", method=RequestMethod.GET)
+	 public String gotohoteldetailbytype(@RequestParam("name") String name, Model model) {
+		 HotelVO hotelInfobytype = hdao.gotohoteldetailbytype(name);
+		 model.addAttribute("hotelInfobytype", hotelInfobytype);
+		 
+		 return "hoteldetailbytype";
 	 }
 	
 	 @GetMapping("/hotel/data")

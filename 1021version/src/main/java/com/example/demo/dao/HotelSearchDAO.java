@@ -16,4 +16,8 @@ public interface HotelSearchDAO {
 	public List<HotelVO> selectHotelsByType(@Param("type") String type);
 
 	public HotelVO gotoreservation(@Param("name") String name);
+	
+	public HotelVO gotohoteldetailbytype(@Param("name") String name);
+	
+	public HotelVO gotoreservationbytype(@Param("name") String name);
 }
