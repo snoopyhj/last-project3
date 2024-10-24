@@ -45,6 +45,20 @@ public class HotelController {
 		return "hoteldetail";
 	}
 	
+	@RequestMapping(value = "/hotelreservation", method = RequestMethod.GET)
+	public String gotoreservation(@RequestParam("name") String name,  
+			@RequestParam("roomType") String roomType,
+	        @RequestParam("price") String price, Model model) {
+
+		HotelVO hotelInfo = hdao.gotoreservation(name);
+	    model.addAttribute("hotelInfo", hotelInfo);
+	    
+	    model.addAttribute("roomType", roomType);
+	    model.addAttribute("price", price);
+
+	    return "hotelreservation";
+	}
+	
 	 @RequestMapping(value = "/hotelbytype", method = RequestMethod.GET)
 	 public String gotohotelbytype() {
 		 return "hotelbytype";
