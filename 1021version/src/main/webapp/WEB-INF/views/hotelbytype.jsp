@@ -3,30 +3,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>타입별 숙소 선택</title>
-    <link rel="stylesheet" type="text/css"
-        href="${pageContext.request.contextPath}/css/hotelbytype.css">
+<meta charset="UTF-8">
+<title>타입별 숙소 선택</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/hotelbytype.css">
 </head>
 <body>
-    <div class="container">
-        <h1>타입별 숙소 선택</h1>
-        <div class="button-container">
-            <button onclick="showHotel('게스트하우스')">게스트하우스</button>
-            <button onclick="showHotel('레지던스')">레지던스</button>
-            <button onclick="showHotel('리조트')">리조트</button>
-            <button onclick="showHotel('모텔')">모텔</button>
-            <button onclick="showHotel('민박')">민박</button>
-            <button onclick="showHotel('유스호스텔')">유스호스텔</button>
-            <button onclick="showHotel('콘도')">콘도</button>
-            <button onclick="showHotel('펜션')">펜션</button>
-            <button onclick="showHotel('한옥')">한옥</button>
-            <button onclick="showHotel('호텔')">호텔</button>
-        </div>
-		 <div id="hotel-info" class="hotel-info"></div>
-    </div>
+	<div class="container">
+		<h1>타입별 숙소 선택</h1>
+		<div class="button-container">
+			<button onclick="showHotel('게스트하우스')">게스트하우스</button>
+			<button onclick="showHotel('레지던스')">레지던스</button>
+			<button onclick="showHotel('리조트')">리조트</button>
+			<button onclick="showHotel('모텔')">모텔</button>
+			<button onclick="showHotel('민박')">민박</button>
+			<button onclick="showHotel('유스호스텔')">유스호스텔</button>
+			<button onclick="showHotel('콘도')">콘도</button>
+			<button onclick="showHotel('펜션')">펜션</button>
+			<button onclick="showHotel('한옥')">한옥</button>
+			<button onclick="showHotel('호텔')">호텔</button>
+		</div>
+		<div id="hotel-info" class="hotel-info"></div>
+	</div>
 
-    <script>
+	<script>
         function showHotel(type) {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", "/hotel/data?type="+type, true);
@@ -47,33 +47,43 @@
             
             hotels.forEach((hotel, index) => {        
             	
-                // 호텔 카드 div 생성
-                const card = document.createElement("div");
-                card.classList.add("hotel-card");
+            	const card = document.createElement("div");
+            	card.classList.add("hotel-card");
 
-                const name = document.createElement("h2");
-                name.classList.add("hotel-name");
-                name.textContent = "호텔이름: " + hotel.name;
-                
-                const address = document.createElement("p");
-                address.classList.add("hotel-address");
-                address.textContent = "주소: " + hotel.address;
+            	// name 요소 생성 및 추가
+            	const name = document.createElement("h2");
+            	name.classList.add("hotel-name");
 
-                const detailsLink  = document.createElement("a");
-                detailsLink.classList.add("details-button");
-                detailsLink.textContent = "상세보기";
-                detailsLink.target = "_blank";
-                detailsLink.href = "/hoteldetailbytype";
-                
-               
-                card.appendChild(address);
-                card.appendChild(detailsLink);
-                
-                hotelInfoDiv.appendChild(card);
+            	// 호텔 이름에서 특정 문자열을 '★'로 대체
+            	const hotelName = hotel.name.includes('[한국관광 품질인증/Korea Quality]')
+            	    ? hotel.name.replace('[한국관광 품질인증/Korea Quality]', '★품질인증된 숙소임 ㅇㅇ ★')
+            	    : hotel.name;
+
+            	name.textContent = "호텔이름: " + hotelName;
+
+            	// 주소 요소 생성 및 추가
+            	const address = document.createElement("p");
+            	address.classList.add("hotel-address");
+            	address.textContent = "주소: " + hotel.address;
+
+            	// 상세보기 링크 생성 및 추가
+            	const detailsLink = document.createElement("a");
+            	detailsLink.classList.add("details-button");
+            	detailsLink.textContent = "상세보기";
+            	detailsLink.href = "/hoteldetailbytype";  // 현재 창에서 열기
+            	detailsLink.target = "_self";  // 현재 창에서 링크 열기
+
+            	// 요소들을 카드에 추가
+            	card.appendChild(name);
+            	card.appendChild(address);
+            	card.appendChild(detailsLink);
+
+            	// 카드 요소를 hotelInfoDiv에 추가
+            	hotelInfoDiv.appendChild(card);
                 
             });
         }
     </script>
-    
+
 </body>
 </html>
