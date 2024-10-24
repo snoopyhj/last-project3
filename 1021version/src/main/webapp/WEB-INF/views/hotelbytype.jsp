@@ -70,7 +70,7 @@
             	const detailsLink = document.createElement("a");
             	detailsLink.classList.add("details-button");
             	detailsLink.textContent = "상세보기";
-            	detailsLink.href = "/hoteldetailbytype";  // 현재 창에서 열기
+            	detailsLink.href = "/hoteldetailbytype?name=" + encodeURIComponent(hotel.name); 
             	detailsLink.target = "_self";  // 현재 창에서 링크 열기
 
             	// 요소들을 카드에 추가

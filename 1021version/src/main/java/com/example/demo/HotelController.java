@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,6 +52,20 @@ public class HotelController {
 	
 	@RequestMapping(value = "/hotelreservation", method = RequestMethod.GET)
 	public String gotoreservation(@RequestParam("name") String name,  
+			@RequestParam("roomTypebytype") String roomType,
+	        @RequestParam("pricebytype") String price, Model model) {
+
+		HotelVO hotelInfobytype = hdao.gotoreservation(name);
+	    model.addAttribute("hotelInfobytype", hotelInfobytype);
+	    
+	    model.addAttribute("roomTypebytype", roomType);
+	    model.addAttribute("pricebytype", price);
+
+	    return "hotelreservationbytype";
+	}
+	
+	@RequestMapping(value = "/hotelreservationbytype", method = RequestMethod.GET)
+	public String gotoreservationbytype(@RequestParam("name") String name,  
 			@RequestParam("roomType") String roomType,
 	        @RequestParam("price") String price, Model model) {
 
@@ -66,6 +82,14 @@ public class HotelController {
 	 public String gotohotelbytype() {
 		 return "hotelbytype";
 	 }
+	 
+	 @RequestMapping(value="/hoteldetailbytype", method=RequestMethod.GET)
+	 public String gotohoteldetailbytype(@RequestParam("name") String name, Model model) {
+		 HotelVO hotelInfobytype = hdao.gotohoteldetailbytype(name);
+		 model.addAttribute("hotelInfobytype", hotelInfobytype);
+		 
+		 return "hoteldetailbytype";
+	 }
 	
 	 @GetMapping("/hotel/data")
 	 @ResponseBody
@@ -74,5 +98,11 @@ public class HotelController {
 		 List<HotelVO> hotels = hdao.selectHotelsByType(type);
 		 System.out.println(hotels.get(0).getName());
 		 return hotels;
+	 }
+	 
+	 @ResponseBody
+	 @PostMapping("/reservation_clear")
+	 public void paymentByImpUid(@RequestBody String imp_uid) {
+		 
 	 }
 }
