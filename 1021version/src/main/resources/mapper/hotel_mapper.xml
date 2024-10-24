@@ -20,4 +20,9 @@
 		HOTEL_LIST
 		WHERE name = #{name}
 	</select>
+	
+	<select id="gotohoteldetailbytype" parameterType="string"
+		resultType="com.example.demo.vo.HotelVO">
+		SELECT * FROM hotel_list WHERE name = #{name}
+	</select>
 </mapper>
