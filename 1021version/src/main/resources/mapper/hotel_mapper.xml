@@ -6,8 +6,8 @@
 	</select>
 
 	<select id = "selectHotelsByType" parameterType = "string" resultType = "com.example.demo.vo.HotelVO">
-		SELECT name, address, region, type, tel, cost
-		FROM hotel_list
-		WHERE type = #{type}
+		SELECT NAME, ADDRESS, REGION, TYPE, TEL
+		FROM HOTEL_LIST
+		WHERE TYPE = #{type}
 	</select>
 </mapper>

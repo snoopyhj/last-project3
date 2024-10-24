@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.demo.dao.RegionSearchDAO;
 import com.example.demo.dao.RegisterDAO;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,6 +14,9 @@ import jakarta.servlet.http.HttpServletRequest;
 public class MainController {
 	@Autowired
 	RegisterDAO dao;
+	
+	@Autowired
+	RegionSearchDAO region_dao;
 	
 	@RequestMapping(value = "/")
 	public String move_main() {
@@ -42,6 +46,11 @@ public class MainController {
 	@RequestMapping("/hoteldetail")
 	public String hoteldetail() {
 		return "hoteldetail";
+	}
+	
+	@RequestMapping("/hoteldetailbytype")
+	public String hoteldetailbytype() {
+		return "hoteldetailbytype";
 	}
 
 	@RequestMapping("/aboutus")

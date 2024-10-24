@@ -41,16 +41,39 @@
         }
         
         function displayHotels(hotels) {
-        	
+
             const hotelInfoDiv = document.getElementById("hotel-info");
             hotelInfoDiv.innerHTML = ""; // 기존 내용 초기화
+            
+            hotels.forEach((hotel, index) => {        
+            	
+                // 호텔 카드 div 생성
+                const card = document.createElement("div");
+                card.classList.add("hotel-card");
 
-            hotels.forEach(hotel => {            
-                const card = 
-                	hotel.name;        
-                hotelInfoDiv.innerHTML += card;
+                const name = document.createElement("h2");
+                name.classList.add("hotel-name");
+                name.textContent = "호텔이름: " + hotel.name;
+                
+                const address = document.createElement("p");
+                address.classList.add("hotel-address");
+                address.textContent = "주소: " + hotel.address;
+
+                const detailsLink  = document.createElement("a");
+                detailsLink.classList.add("details-button");
+                detailsLink.textContent = "상세보기";
+                detailsLink.target = "_blank";
+                detailsLink.href = "/hoteldetailbytype";
+                
+               
+                card.appendChild(address);
+                card.appendChild(detailsLink);
+                
+                hotelInfoDiv.appendChild(card);
+                
             });
         }
     </script>
+    
 </body>
 </html>

@@ -40,7 +40,7 @@
 			<c:forEach var="eachhotel" items="${hotel_list}">
 				<div class="hotel-card">
 					<p>호텔이름 : ${eachhotel.name}</p>
-					<p>가격 : ${eachhotel.cost}원</p>
+					<p>주소 : ${eachhotel.address}</p>
 					<p>전화번호 : ${eachhotel.tel}</p>
 					<button class="btn details-btn" onclick="window.open('/hoteldetail?name=${eachhotel.name}')">상세보기</button>
 					<a href="#"><button class="btn book-btn">지금 예약하기</button></a>
