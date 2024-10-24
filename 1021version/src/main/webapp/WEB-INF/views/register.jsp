@@ -6,9 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/register.css">
-
 </head>
-
 <body>
     <div class="form-container">
         <h2>회원가입</h2>
@@ -69,12 +67,11 @@
                 <input type="checkbox" name="signupRoute" value="반나절 호캉스"> 반나절 호캉스
             </div>
 
-				<div class="form-actions">
-				    <a href="/login"> <input type="submit" value="저장" /> </a>
-				    <a href=""> <input type="reset" value="취소" onclick="location.href='/'"/> </a>
-				</div>
+			<div class="form-actions">
+			    <a href="/login"> <input type="submit" value="저장" /> </a>
+			    <a href=""> <input type="reset" value="취소" onclick="location.href='/'"/> </a>
+			</div>
         </form>
     </div>
 </body>
-
 </html>

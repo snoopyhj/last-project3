@@ -34,7 +34,6 @@
             </div>
         </div>
 
-
         <ul class="amount">
             <li>오늘 예약건 수: 2,350건</li>
             <li>총 회원수: 6,852명</li>
@@ -59,15 +58,11 @@
             </div>
         </div>
 
-
-
-
-
         <div class="RESERVATION" id="RESERVATION">
             <h1>RESERVATION</h1>
             <ul class="icons">
                 <li><a href="/regionfilter">지역별 숙소예약</a></li>
-                <li><a href="/hotellist">테마별 숙소예약</a></li>
+                <li><a href="/hotelbytype">테마별 숙소예약</a></li>
                 <li><a href="/hotellist">인기 숙소 보기</a></li>
             </ul>
         </div>
@@ -90,9 +85,7 @@
                 <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
             </div>
         </div>
-        
-        
-
+		
         <footer>
             <div>CEO. 배현우</div>
             <div>서울시 동작구 노량진동 장승배기로 171 3층 302호</div>
@@ -100,5 +93,4 @@
         </footer>
     </div>
 </body>
-
 </html>

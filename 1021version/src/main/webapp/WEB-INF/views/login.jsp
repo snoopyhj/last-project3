@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/login.css">
-
 </head>
-
 <body>
 	<div class="container">
 		<h2>로그인</h2>
@@ -41,7 +39,5 @@
 			</div>
 		</div>
 	</div>
-
 </body>
-
 </html>

@@ -9,5 +9,4 @@ public class Project3copy2Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Project3copy2Application.class, args);
 	}
-
 }

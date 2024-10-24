@@ -1,29 +1,22 @@
-/* 헤더 설정 - 고정된 위치 및 검정색 배경 */
+@charset "UTF-8";
+
 .header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	/* 화면 전체 가로 차지 */
 	height: 80px;
-	/* 헤더 높이 */
 	background-color: black;
-	/* 검정 배경 */
 	display: flex;
 	justify-content: center;
-	/* 네비게이션을 중앙 정렬 */
 	align-items: center;
 	z-index: 100;
-	/* 다른 요소 위에 표시 */
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	/* 그림자 효과 */
 }
 
-/* 네비게이션 링크 스타일 */
 .nav {
 	display: flex;
 	gap: 20px;
-	/* 링크 사이의 간격 */
 }
 
 .nav a {
@@ -39,13 +32,10 @@
 	color: #74B9FF;
 }
 
-/* 로그인 버튼 스타일 */
 .login {
 	position: absolute;
 	top: 20px;
-	/* 화면 상단에서 20px 아래 */
 	right: 30px;
-	/* 화면 우측에서 30px 안쪽 */
 	background-color: black;
 	padding: 10px 20px;
 	border-radius: 25px;
@@ -61,14 +51,14 @@
 	transform: scale(1.1);
 }
 
-/* 대분류 카테고리 스타일 */
 .region-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.region-box {
+
+.region-box, .subregion-box {
     padding: 15px;
     margin: 5px;
     background-color: #f0f0f0;
@@ -84,17 +74,15 @@
     background-color: #ddd;
 }
 
-/* 중분류 카테고리 스타일 */
 .subregion {
+    display: none;
     margin-top: 20px;
 }
 
-/* 세부 지역을 한 줄에 나열하는 스타일 */
 .subregion-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    align-items: center;  /* 버튼들을 가운데 정렬 */
 }
 
 .subregion-box {
@@ -103,11 +91,15 @@
     border: 1px solid #bbb;
     border-radius: 5px;
     cursor: pointer;
-    flex-basis: calc(25% - 20px); /* 한 줄에 4개 나열 */
     text-align: center;
+    flex-basis: calc(25% - 20px); /* 한 줄에 4개 나열 */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .subregion-box:hover {
     background-color: #ccc;
+}
+
+.subregion.active {
+    display: block;
 }

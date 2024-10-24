@@ -1,33 +1,35 @@
+@charset "UTF-8";
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-  }
+	margin : 0;
+	font-family : Arial, sans-serif;
+	background-color : #f8f9fa;
+	color : #333;
+}
   
-  .hotel-detail-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+.hotel-detail-page {
+	max-width : 1200px;
+	margin : 0 auto;
+	padding : 20px;
+}
   
-  /* 상단 이미지 */
-  .hotel-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
+/* 상단 이미지 */
+.hotel-image {
+	width : 100%;
+	height : 400px;
+	object-fit : cover;
+	margin-bottom : 20px;
+}
   
-  /* 호텔 기본 정보 */
-  .hotel-info {
-    margin-bottom: 40px;
-  }
+/* 호텔 기본 정보 */
+.hotel-info {
+	margin-bottom : 40px;
+}
   
-  .hotel-name {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
+.hotel-name {
+	font-size : 32px;
+	margin-bottom : 10px;
+}
   
   .hotel-address {
     font-size: 18px;
@@ -86,4 +88,3 @@ body {
   .book-btn:hover {
     opacity: 0.8;
   }
-  
