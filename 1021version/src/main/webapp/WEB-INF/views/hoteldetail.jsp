@@ -32,21 +32,21 @@
 				<h3>스탠다드</h3>
 				<p>기본적인 편의시설을 갖춘 스탠다드룸입니다.</p>
 				<p>${hotel.standard}</p>
-				<button class="btn book-btn" onclick="window.open('/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.suite}', '_blank')">예약하기</button>
+				<button class="btn book-btn" onclick="location.href='/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.standard}'">예약하기</button>
 			</div>
 
 			<div class="room">
 				<h3>디럭스</h3>
 				<p>넓은 공간과 고급 침구를 갖춘 디럭스룸입니다.</p>
 				<p>${hotel.deluxe}</p>
-				<button class="btn book-btn"onclick="window.open('/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.deluxe}', '_blank')">예약하기</button>
+				<button class="btn book-btn"onclick="location.href='/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.deluxe}'">예약하기</button>
 			</div>
 
 			<div class="room">
 				<h3>스위트</h3>
 				<p>럭셔리한 인테리어와 최고의 편안함을 제공하는 스위트룸입니다.</p>
 				<p>${hotel.suite}</p>
-				<button class="btn book-btn" onclick="window.open('/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.suite}', '_blank')">예약하기</button>
+				<button class="btn book-btn" onclick="location.href='/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.suite}'">예약하기</button>
 			</div>
 		</div>
 	</div>
