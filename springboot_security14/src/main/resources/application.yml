@@ -6,15 +6,10 @@ spring:
     name: hotel-service  # 클라이언트 이름
   
   datasource:
-    driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521/xe
-    username: hr
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.2.63:1521/xe
+    username: c##hr
     password: hr
-#		datasource:
-#		    driver-class-name: oracle.jdbc.OracleDriver
-#		    url: jdbc:oracle:thin:@192.168.2.63:1521/xe
-#		    username: c##hr
-#		    password: hr
 
   jpa:
     hibernate:

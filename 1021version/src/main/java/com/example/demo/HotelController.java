@@ -26,8 +26,6 @@ public class HotelController {
 	HotelSearchDAO hdao;
 		
 	
-	
-	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
 	public String region_search(String region, String subregion, Model model) {
 		  
@@ -50,18 +48,28 @@ public class HotelController {
 		return "hoteldetail";
 	}
 	
+	@RequestMapping(value = "/hoteldetailbytype", method = RequestMethod.GET)
+	public String gotohoteldetailbytype(@RequestParam("name") String name, Model model) {
+		HotelVO vo = new HotelVO();
+		vo.setName(name);
+		model.addAttribute("hotelInfobytype", hdao.gotohoteldetailbytype(name));
+		
+		return "hoteldetailbytype";
+		
+	}
+	
 	@RequestMapping(value = "/hotelreservation", method = RequestMethod.GET)
 	public String gotoreservation(@RequestParam("name") String name,  
-			@RequestParam("roomTypebytype") String roomType,
-	        @RequestParam("pricebytype") String price, Model model) {
+			@RequestParam("roomType") String roomType,
+	        @RequestParam("price") String price, Model model) {
 
 		HotelVO hotelInfobytype = hdao.gotoreservation(name);
-	    model.addAttribute("hotelInfobytype", hotelInfobytype);
+	    model.addAttribute("hotelInfo", hotelInfobytype);
 	    
-	    model.addAttribute("roomTypebytype", roomType);
-	    model.addAttribute("pricebytype", price);
+	    model.addAttribute("roomType", roomType);
+	    model.addAttribute("price", price);
 
-	    return "hotelreservationbytype";
+	    return "hotelreservation";
 	}
 	
 	@RequestMapping(value = "/hotelreservationbytype", method = RequestMethod.GET)
@@ -70,25 +78,17 @@ public class HotelController {
 	        @RequestParam("price") String price, Model model) {
 
 		HotelVO hotelInfo = hdao.gotoreservation(name);
-	    model.addAttribute("hotelInfo", hotelInfo);
+	    model.addAttribute("hotelInfobytpye", hotelInfo);
 	    
 	    model.addAttribute("roomType", roomType);
 	    model.addAttribute("price", price);
 
-	    return "hotelreservation";
+	    return "hotelreservationbytype";
 	}
 	
 	 @RequestMapping(value = "/hotelbytype", method = RequestMethod.GET)
 	 public String gotohotelbytype() {
 		 return "hotelbytype";
-	 }
-	 
-	 @RequestMapping(value="/hoteldetailbytype", method=RequestMethod.GET)
-	 public String gotohoteldetailbytype(@RequestParam("name") String name, Model model) {
-		 HotelVO hotelInfobytype = hdao.gotohoteldetailbytype(name);
-		 model.addAttribute("hotelInfobytype", hotelInfobytype);
-		 
-		 return "hoteldetailbytype";
 	 }
 	
 	 @GetMapping("/hotel/data")

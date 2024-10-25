@@ -22,7 +22,7 @@
 		</div>
 
 		<!-- 방 종류 섹션 -->
-		<div class="room-types">
+			<div class="room-types">
 			<h2>객실 종류</h2>
 
 			<div class="room">
