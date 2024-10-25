@@ -40,7 +40,7 @@
 <!-- ================================================= main1 ======================================== -->
 
       <div class="RESERVATION" id="RESERVATION">
-          <h1>RESERVATION</h1>
+          <h1>국내인기숙박시설</h1><br>
 	 <div class="reservation_wrapper"> 
          <div class="reservation_count ">
 			<div>사진1</div>
@@ -48,11 +48,16 @@
 			<div>사진3</div>
 			<div>사진4</div>
 			<div>사진5</div>
+			<div>사진6</div>
+			<div>사진7</div>
+			<div>사진8</div>
+			<div>사진9</div>
+			<div>사진10</div>
 			</div>
          </div>   
-         
-         <br><br>
 		 
+         <br><br>
+		 <h1>RESERVATION</h1>
           <div class="reservation-options">
               <div class="reservation-item">
                   <a href="/regionfilter">🏙️ 지역별 숙소예약</a>
@@ -188,6 +193,12 @@
               }
           });
       });
+	  
+	  <script>
+	    window.onload = function () {
+	        window.scrollTo(0, 0);
+	    };
+	  </script>
     </script>
 </body>
 </html>
