@@ -263,7 +263,7 @@ hr {
 .reservation_count {
   display: flex; /* 가로 배열 */
   gap: 15px; /* 요소 사이의 간격 조정 */
-  animation: scroll 80s linear infinite; /* 오른쪽으로 이동하는 애니메이션 설정 */
+  animation: scroll 8	0s linear infinite; /* 오른쪽으로 이동하는 애니메이션 설정 */
   width: max-content;
   position: relative;
   left: 0;
