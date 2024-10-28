@@ -25,7 +25,7 @@ public class MainController {
 
 	@RequestMapping(value = "/login")
 	public String insertform() {
-		return "login";
+		return "http://localhost:8083/login";
 	}
 
 	@RequestMapping("/register")
