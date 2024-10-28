@@ -39,7 +39,7 @@
 
 <!-- ================================================= main1 ======================================== -->
 
-      <div class="RESERVATION" id="RESERVATION">
+      <div class="RESERVATION" id="RESERVATION"><br><br><br>
           <h1>국내인기숙박시설</h1><br>
 	 <div class="reservation_wrapper"> 
          <div class="reservation_count ">
@@ -53,10 +53,15 @@
 			<div>사진8</div>
 			<div>사진9</div>
 			<div>사진10</div>
+			<div>사진11</div>
+			<div>사진12</div>
+			<div>사진13</div>
+			<div>사진14</div>
+			<div>사진15</div>
 			</div>
          </div>   
 		 
-         <br><br>
+         <br><br><br>
 		 <h1>RESERVATION</h1>
           <div class="reservation-options">
               <div class="reservation-item">
