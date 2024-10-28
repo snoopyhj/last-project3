@@ -343,6 +343,8 @@ hr {
 .reservation_wrapper {
     width: 100%; 
     overflow: hidden; /* 화면 밖 요소 숨기기 */
+	align-items: center;
+	justify-content: center;
 }
 
 .reservation_count {
@@ -361,6 +363,74 @@ hr {
     align-items: center;
     justify-content: center;
     font-size: 20px;
+}
+
+.reservation_count2 {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+	margin-bottom: 50px;
+}
+
+.image-button {
+    border: none;            /* 버튼 테두리 제거 */
+    background: none;         /* 배경 제거 */
+    padding: 0;               /* 기본 여백 제거 */
+    cursor: pointer;          /* 마우스 포인터 변경 */
+    outline: none;            /* 포커스 시 테두리 제거 */
+}
+
+.image-button img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;       /* 이미지가 버튼 내부를 채우도록 */
+    border-radius: 10px;     /* 부드러운 모서리 */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-button img:hover {
+    transform: scale(1.05);  /* 마우스 오버 시 확대 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+	
+
+
+.reservation_count2 div {
+	flex-direction: column;
+    width: 200px;
+    height: 200px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.reservation_count2 img {
+    width: 200px;           /* 이미지의 너비 */
+    height: 179.5px;        /* 이미지의 높이 */
+    object-fit: cover;      /* 비율을 유지하며 박스에 맞게 자르기 */
+   	border-radius: 15px;    /* 라운드 처리 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 약간의 그림자 효과 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 부드러운 애니메이션 */
+	margin-bottom: 10px;
+	}
+
+.reservation_count2 img:hover {
+    transform: scale(1.05); /* 마우스 오버 시 약간 확대 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 강조 */
+}
+
+
+
+.reservation_count2 p {
+    margin: 0; /* 기본 여백 제거 */
+    font-size: 17px; /* 텍스트 크기 조절 */
+    color: #333; /* 텍스트 색상 */
 }
 
 /* 부드러운 스크롤 애니메이션 */
