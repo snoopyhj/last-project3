@@ -21,7 +21,7 @@
                     </div>
                <div>
                <a href="/register" class="login">회원가입</a>
-                    <a href="/login" class="login">LOGIN</a>
+                    <a href="http://localhost:8083/login" class="login">LOGIN</a>
                </div>
                 </div>   
 <!-- ================================================= main ======================================== -->
