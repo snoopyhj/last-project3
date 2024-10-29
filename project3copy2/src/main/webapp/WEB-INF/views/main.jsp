@@ -1,11 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>Cozy Pick</title>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
 </head>
-<body>
+<body
     <div class="wrap">
         
             
@@ -19,7 +20,7 @@
                         <a href="#CONTACT">CONTACT</a>
                     </div>
                <div>
-               <a href="/register" class="register">회원가입</a>
+               <a href="/register" class="login">회원가입</a>
                     <a href="/login" class="login">LOGIN</a>
                </div>
                 </div>   
@@ -37,60 +38,62 @@
             </div>
 
 <!-- ================================================= main1 ======================================== -->
+ 
+  <div class="RESERVATION" id="RESERVATION"><br><br><br>
+      <h1>국내 대표 여행지</h1><br>
+ <div class="reservation_wrapper"> 
+	<div class="reservation_count2">
+	    <button class="image-button" onclick="location.href='/seoul'">
+	        <img src="/image/seoul2.jpg" alt="서울">
+	        <p>서울</p>
+	    </button>
 
-      <div class="RESERVATION" id="RESERVATION"><br><br><br>
+	    <button class="image-button" onclick="location.href='/busan'">
+	        <img src="/image/busan.jpg" alt="부산">
+	        <p>부산</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/jeju'">
+	        <img src="/image/jeju.jpg" alt="제주">
+	        <p>제주</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/sokcho'">
+	        <img src="/image/sokcho.jpg" alt="속초">
+	        <p>속초</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/mokpo'">
+	        <img src="/image/mokpo.jpg" alt="목포">
+	        <p>목포</p>
+	    </button>
+	</div>
           <h1>국내인기숙박시설</h1><br>
-    <div class="reservation_wrapper"> 
-		<div class="reservation_count2">
-			    <button class="image-button" onclick="location.href='/seoul'">
-			        <img src="../image/seoul2.jpg" alt="서울">
-			        <p>서울</p>
-			    </button>
-
-			    <button class="image-button" onclick="location.href='/busan'">
-			        <img src="/static/image/busan.jpg" alt="부산">
-			        <p>부산</p>
-			    </button>
-
-			    <button class="image-button" onclick="location.href='/jeju'">
-			        <img src="/image/jeju.jpg" alt="제주">
-			        <p>제주</p>
-			    </button>
-
-			    <button class="image-button" onclick="location.href='/sokcho'">
-			        <img src="/image/sokcho.jpg" alt="속초">
-			        <p>속초</p>
-			    </button>
-
-			    <button class="image-button" onclick="location.href='/mokpo'">
-			        <img src="/image/mokpo.jpg" alt="목포">
-			        <p>목포</p>
-			    </button>
-			</div>
          <div class="reservation_count ">
-         <div>사진1</div>
-         <div>사진2</div>
-         <div>사진3</div>
-         <div>사진4</div>
-         <div>사진5</div>
-         <div>사진6</div>
-         <div>사진7</div>
-         <div>사진8</div>
-         <div>사진9</div>
-         <div>사진10</div>
-         <div>사진11</div>
-         <div>사진12</div>
-         <div>사진13</div>
-         <div>사진14</div>
-         <div>사진15</div>
-         </div>
+			<div>사진1</div>
+			<div>사진2</div>
+			<div>사진3</div>
+			<div>사진4</div>
+			<div>사진5</div>
+			<div>사진6</div>
+			<div>사진7</div>
+			<div>사진8</div>
+			<div>사진9</div>
+			<div>사진10</div>
+			<div>사진11</div>
+			<div>사진12</div>
+			<div>사진13</div>
+			<div>사진14</div>
+			<div>사진15</div>			
+			</div>
          </div>   
-       
+
+			  
          <br><br><br>
-       <h1>RESERVATION</h1>
+		 <h1>RESERVATION</h1>
           <div class="reservation-options">
               <div class="reservation-item">
-                  <a href="https://localhost:8444/regionfilter">🏙️ 지역별 숙소예약</a>
+                  <a href="/regionfilter">🏙️ 지역별 숙소예약</a>
               </div>
               <div class="reservation-item">
                   <a href="/hotelbytype">🎨 테마별 숙소예약</a>
@@ -117,12 +120,8 @@
           <div class="contact-buttons">
               <button class="phone-btn">📞 1670-6250</button>
               <button class="kakao-btn">💬 카카오 문의</button>
-              <button class="email-btn"><a href="http://localhost:8084/email">📧 이메일 문의</a></button>
-			  <form id="emailForm" action="http://localhost:8084/email" method="POST" style="display: none;">
-			  			      <input type="hidden" name="email" id="email">
-			  			      <input type="hidden" name="username" id="username">
-			  			  </form>
-              <button class="question-btn"><a href="https://localhost:8444/question">자주 묻는 질문</a></button>
+              <button class="email-btn"><a href="/email">📧 이메일 문의</a></button>
+              <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
           </div>
          </div>
 
@@ -195,7 +194,7 @@
    <br><br>
    </div>
             </main>
-<a href="/reaaaa">ㅎㅇㅎㅇㅎㅇㅎㅇㅎ</a>            
+            
 <!-- ================================================= footer ======================================== -->
 
         <footer>
@@ -210,82 +209,29 @@
          
         </footer>
     </div>
-
-	
-	<div id="token-container" th:data-token="${token}" th:data-username="${username}" th:data-nickname="${nickname}"
-		th:data-name="${name}" th:data-email="${email}" th:data-phoneNumber="${phoneNumber}" th:data-genderInKorean="${genderInKorean}" th:data-birthDate="${birthDate}"></div>
-	<script>
-		
-	    function changeLoginButtonToMyPage() {
-	        const loginBtn = document.querySelector('.login'); // 로그인 버튼 선택
-			const registerBtn = document.querySelector('.register');
-	        if (loginBtn) {
-	            loginBtn.innerHTML = '마이 페이지'; // 버튼 텍스트 변경
-	            loginBtn.href = '/mypage'; // 마이 페이지 링크로 변경
-				registerBtn.style.display='none';
-	        } else {
-	            console.error("로그인 버튼이 없습니다.");
-	        }
-	    }
-
-		document.addEventListener('DOMContentLoaded', function() {
-		    console.log('페이지가 로드되었습니다!');
-		    fetchUserInfo();
-		});
-
-	    // 사용자 정보를 가져오는 함수
-	    function fetchUserInfo() {
-			
-	        fetch('/userinfo', {
-	            method: 'GET',
-	            credentials: 'include' // 쿠키를 포함하여 요청
-	        })
-	        .then(response => {
-	            if (!response.ok) {
-	                throw new Error('사용자 정보를 가져오는 데 실패했습니다.');
-	            }
-	            return response.json();
-	        })
-	        .then(userInfo => {
-	            // 사용자 정보에 따라 UI 업데이트
-	            if (userInfo) {
-	                changeLoginButtonToMyPage(); // 로그인 버튼을 마이 페이지로 변경
-	            } else {
-	                console.log('사용자 정보가 없습니다.');
-	            }
-	        })
-	        .catch(error => {
-	            console.error('사용자 정보를 가져오는 중 오류 발생:', error);
-	        });
-	    }
-
-	    // 홈 페이지 로드 함수 (기존 코드)
-	    function loadHomePage() {
-	        fetch('/', {
-	            method: 'GET',
-	            headers: {
-	                'Content-Type': 'application/json'
-	            }
-	        })
-	        .then(response => {
-	            if (!response.ok) {
-	                throw new Error('홈 페이지 로드를 실패했습니다.');
-	            }
-				
-	            return response.text();
-	        })
-	        .then(data => {
-	            document.body.innerHTML = data; // 홈 페이지 HTML 삽입
-	            window.history.pushState(null, '', '/'); // URL 변경
-	        })
-	        .catch(error => {
-	            console.error('오류:', error);
-	            alert('홈 페이지 로드를 실패했습니다. 로그인 페이지로 리다이렉트합니다.');
-	            window.location.href = '/login'; // 로그인 페이지로 리다이렉트
-	        });
-	    }
-	</script>
-
+   
+<!-- ================================================= script ======================================== -->
+    <script>
+      document.querySelectorAll('.faq-header').forEach(header => {
+          header.addEventListener('click', () => {
+              const faqItem = header.parentElement;
+              const isOpen = faqItem.classList.contains('open');
+              
+              // 모든 항목 닫기
+              document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('open'));
+              
+              // 클릭한 항목 열기 (이미 열려 있다면 닫기)
+              if (!isOpen) {
+                  faqItem.classList.add('open');
+              }
+          });
+      });
+	  
+	  
+	    window.onload = function () {
+	        window.scrollTo(0, 0);
+	    };
+	  
+    </script>
 </body>
-
 </html>
