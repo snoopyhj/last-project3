@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+<div class="container">
+    <h2>로그인</h2>
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+        </div>
+        
+        <div class="input-group">
+            <label for="password">패스워드</label>
+            <input type="password" id="password" name="password" placeholder="패스워드를 입력하세요" required>
+        </div>
+        <button type="submit" class="login-btn">로그인</button>
+    </form>
+
+    <div class="button-section">
+        <button id="findIdButton" class="secondary-btn">아이디 찾기</button>
+        <button id="resetPasswordButton" class="secondary-btn">비밀번호 재설정</button>
+    </div>
+
+    <div class="signup-section">
+        <p>아직 회원이 아니신가요? <a href="/register">지금 바로 회원가입하기</a></p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="social-login-section">
+        <h3>간편가입</h3>
+        <div class="social-buttons">
+            <button class="social-kakao" id="kakaoLoginButton">카카오로 가입</button>
+            <button class="social-naver" id="naverLoginButton">네이버로 가입</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
+<script>
+    Kakao.init('823fc9943d97c4e15c751cddc501be43'); // 사용하려는 앱의 JavaScript 키 입력
+
+    // 로그인 폼 제출 이벤트 처리
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // 로그인 요청
+        fetch(`/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(data => {
+                    throw new Error(data.message || '로그인 실패'); // 에러 처리
+                });
+            }
+            return response.json(); // JSON 응답을 반환받음
+        })
+        .then(data => {
+            if (data.message) {
+                // 비밀번호 변경 알림 처리
+                const userConfirmed = confirm(data.message);
+                if (userConfirmed) {
+                    // 비밀번호 변경 URL로 이동
+                    window.location.href = data.changePasswordUrl;
+                }
+            } else {
+                // JWT 토큰 처리
+                const token = data.token; // JWT 토큰
+                loadHomePage(token); // 홈 페이지 로드 함수 호출
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('로그인 실패. 다시 시도해 주세요.');
+        });
+    });
+
+    function loadHomePage(token) {
+        fetch('/', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token, // 헤더에 JWT 포함
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('홈 페이지 로드 실패');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.body.innerHTML = data; // 홈 페이지 HTML 삽입
+            window.location.href = '/'; // 홈 페이지로 이동 (이 부분은 필요 없을 수 있음)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('홈 페이지 로드 실패. 로그인 페이지로 리다이렉트합니다.');
+            window.location.href = '/login'; // 로그인 페이지로 리다이렉트
+        });
+    }
+
+    // 카카오 로그인 함수
+    function loginWithKakao() {
+        Kakao.Auth.authorize({
+            redirectUri: 'https://localhost:8443/oauth2/success',
+            scope: 'account_email profile_nickname name gender birthday birthyear phone_number', // 요청할 스코프 추가
+        });
+    }
+
+    // 네이버 로그인 함수
+    function loginWithNaver() {
+        const clientId = 'ZCu6SjlzSG3mKIvbTW1e'; // 네이버 앱의 클라이언트 ID를 입력하세요.
+        const redirectUri = encodeURIComponent('https://localhost:8443/naver/success'); // 리다이렉트 URI
+        const naverLoginUrl = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}`;
+        window.location.href = naverLoginUrl; // 네이버 로그인 페이지로 이동
+    }
+
+    // 버튼 클릭 시 카카오 로그인 처리
+    document.getElementById('kakaoLoginButton').addEventListener('click', loginWithKakao);
+
+    // 버튼 클릭 시 네이버 로그인 처리
+    document.getElementById('naverLoginButton').addEventListener('click', loginWithNaver);
+
+    // 아이디 찾기 버튼 클릭 이벤트
+    document.getElementById('findIdButton').addEventListener('click', function() {
+        window.location.href = '/find-id/email'; // 아이디 찾기 페이지의 URL
+    });
+
+    // 비밀번호 재설정 버튼 클릭 이벤트
+    document.getElementById('resetPasswordButton').addEventListener('click', function() {
+        window.location.href = '/change-pw/email'; // 비밀번호 재설정 페이지의 URL
+    });
+</script>
+</body>
+</html>
