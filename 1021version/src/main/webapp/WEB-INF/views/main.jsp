@@ -119,7 +119,7 @@
           <p>카카오톡 문의: 24시간 운영</p>
           <div class="contact-buttons">
               <button class="phone-btn">📞 1670-6250</button>
-              <button class="kakao-btn">💬 카카오 문의</button>
+              <button class="kakao-btn"><a href="/chatbot">💬 카카오 문의</a></button>
               <button class="email-btn"><a href="/email">📧 이메일 문의</a></button>
               <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
           </div>
