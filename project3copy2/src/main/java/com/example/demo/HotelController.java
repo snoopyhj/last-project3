@@ -23,7 +23,7 @@ public class HotelController {
 	RegionSearchDAO dao;
 	
 	@Autowired
-	HotelSearchDAO hdao;
+	HotelSearchDAO hdao; 
 		
 	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
