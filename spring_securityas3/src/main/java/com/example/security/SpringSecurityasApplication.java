@@ -13,6 +13,4 @@ public class SpringSecurityasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringSecurityasApplication.class, args);
 	}
-	
-
 }
