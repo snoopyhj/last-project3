@@ -6,7 +6,7 @@
     <title>Cozy Pick</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
 </head>
-<body>
+<body
     <div class="wrap">
         
             
@@ -38,10 +38,37 @@
             </div>
 
 <!-- ================================================= main1 ======================================== -->
+ 
+  <div class="RESERVATION" id="RESERVATION"><br><br><br>
+      <h1>국내 대표 여행지</h1><br>
+ <div class="reservation_wrapper"> 
+	<div class="reservation_count2">
+	    <button class="image-button" onclick="location.href='/seoul'">
+	        <img src="/image/seoul2.jpg" alt="서울">
+	        <p>서울</p>
+	    </button>
 
-      <div class="RESERVATION" id="RESERVATION"><br><br><br>
+	    <button class="image-button" onclick="location.href='/busan'">
+	        <img src="/image/busan.jpg" alt="부산">
+	        <p>부산</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/jeju'">
+	        <img src="/image/jeju.jpg" alt="제주">
+	        <p>제주</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/sokcho'">
+	        <img src="/image/sokcho.jpg" alt="속초">
+	        <p>속초</p>
+	    </button>
+
+	    <button class="image-button" onclick="location.href='/mokpo'">
+	        <img src="/image/mokpo.jpg" alt="목포">
+	        <p>목포</p>
+	    </button>
+	</div>
           <h1>국내인기숙박시설</h1><br>
-	 <div class="reservation_wrapper"> 
          <div class="reservation_count ">
 			<div>사진1</div>
 			<div>사진2</div>
@@ -57,10 +84,11 @@
 			<div>사진12</div>
 			<div>사진13</div>
 			<div>사진14</div>
-			<div>사진15</div>
+			<div>사진15</div>			
 			</div>
          </div>   
-		 
+
+			  
          <br><br><br>
 		 <h1>RESERVATION</h1>
           <div class="reservation-options">
