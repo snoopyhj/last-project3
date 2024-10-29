@@ -34,7 +34,7 @@ public class SecurityConfig {
                             "/userinfo", "/confirm-kakao-insert", "/register", "/insert_member", 
                             "/check-duplicate", "/send-email", "/verify-code", "/find-id/email", 
                             "/idview", "/get-found-id", "/change-pw/email", "/password/change", 
-                            "/changepw", "/password/check", "/naver/success", "/validate-token","https://localhost:8443/**","/image/**").permitAll()  // 여기서 인증 필요 없음
+                            "/changepw", "/password/check", "/naver/success", "/validate-token","https://localhost:8443/**").permitAll()  // 여기서 인증 필요 없음
                 .requestMatchers("/", "/validate-token").permitAll()  // 로그인 없이 접근 허용
                 .anyRequest().authenticated()  // 나머지 요청은 인증 필요
             )
