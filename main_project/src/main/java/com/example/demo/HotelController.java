@@ -21,7 +21,7 @@ import com.example.demo.vo.HotelVO;
 public class HotelController {
 	@Autowired
 	RegionSearchDAO dao;
-	//ㅇㄹㅇㄴㄹㄴ
+	//ㅇㄹㅇㄴ
 	@Autowired
 	HotelSearchDAO hdao;
 		
