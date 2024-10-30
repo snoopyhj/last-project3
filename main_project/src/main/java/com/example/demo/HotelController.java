@@ -44,7 +44,6 @@ public class HotelController {
 		vo.setName(name);
 		model.addAttribute("hotel", hdao.select_hotel(vo));
 		System.out.println(hdao.select_hotel(vo).getName());
-		
 		return "hoteldetail";
 	}
 	

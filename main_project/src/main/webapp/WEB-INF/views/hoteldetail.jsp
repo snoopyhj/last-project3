@@ -6,9 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/hoteldetail.css">
+<title>${hotel.name} 호텔 소개</title>
+<link rel = "stylesheet" type = "text/css" href = "${pageContext.request.contextPath}/css/hoteldetail.css">
 </head>
 <body>
 	<div class="hotel-detail-page">
@@ -49,8 +48,33 @@
 				<button class="btn book-btn" onclick="location.href='/hotelreservation?name=${hotel.name}&roomType=스위트&price=${hotel.suite}'">예약하기</button>
 			</div>
 		</div>
+		<h3>오시는 길</h3>
+		<input type = "hidden" id = "map_x" value = "${hotel.mapx}">
+		<input type = "hidden" id = "map_y" value = "${hotel.mapy}">
+		<div id = "map" class = "hotel_map"></div>
 	</div>
-
-	<script src="script.js"></script>
+	
+	<script type = "text/javascript" src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=b8314e6d575584c7e23cae7bdbb3bc39"></script>
+	<script type = "text/javascript">
+		var mapContainer = document.getElementById("map"); // 지도가 표시될 위치
+		var map_x = parseFloat(document.getElementById("map_x").value); // 지도의 x좌표
+		var map_y = parseFloat(document.getElementById("map_y").value); // 지도의 y좌표
+		
+		mapOption = {
+			center : new kakao.maps.LatLng(map_x, map_y), // 중심 좌표
+			level : 2, // 지도 확대 수준
+			mapTypeId : daum.maps.MapTypeId.ROADMAP
+		};
+		
+		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+		
+		var marker_position = new kakao.maps.LatLng(map_x, map_y); // Marker 표시 위치
+		
+		var marker = new kakao.maps.Marker({ // Marker 생성
+			position : marker_position
+		})
+		
+		marker.setMap(map); // Marker가 지도 위에 표시되도록 설정
+	</script>
 </body>
 </html>
