@@ -54,7 +54,7 @@
 		<div id = "map" class = "hotel_map"></div>
 	</div>
 	
-	<script type = "text/javascript" src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=b8314e6d575584c7e23cae7bdbb3bc39"></script>
+	<script type = "text/javascript" src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=b8314e6d575584c7e23cae7bdbb3bc39"></script>
 	<script type = "text/javascript">
 		var mapContainer = document.getElementById("map"); // 지도가 표시될 위치
 		var map_x = parseFloat(document.getElementById("map_x").value); // 지도의 x좌표
