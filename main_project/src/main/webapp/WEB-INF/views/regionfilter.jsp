@@ -14,23 +14,23 @@
 
 	<!-- 대분류 카테고리 -->
 	<div class="region-container">
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('1')">서울특별시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('6')">부산광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('4')">대구광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('2')">인천광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('5')">광주광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('3')">대전광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('7')">울산광역시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('8')">세종특별자치시</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('31')">경기도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('32')">강원도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('33')">충청북도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('34')">충청남도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('37')">전라북도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('38')">전라남도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('35')">경상북도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('36')">경상남도</button>
-		<button id = "region-box" class = "region-box"" onclick="toggleSubregion('39')">제주도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('1')">서울특별시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('6')">부산광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('4')">대구광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('2')">인천광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('5')">광주광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('3')">대전광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('7')">울산광역시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('8')">세종특별자치시</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('31')">경기도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('32')">강원도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('33')">충청북도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('34')">충청남도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('37')">전라북도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('38')">전라남도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('35')">경상북도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('36')">경상남도</button>
+		<button id = "region-box" class = "region-box" onclick="toggleSubregion('39')">제주도</button>
 	</div>
 
 	<!-- 서울시 -->
@@ -366,6 +366,7 @@
 	let selectedRegion = null; // 대분류 지역 선택 값 저장
 	let selectedSubregion = null; // 세부 지역 선택 값 저장
 	
+	// 대분류 지역 버튼 색상 변경
 	document.getElementById("region-box").addEventListener("focus", () => {
 		document.getElementById("region-box").style.backgroundColor = "grey";
 	});
@@ -395,6 +396,7 @@
 	    selectedRegion = region; // 선택된 대분류 지역 값 저장
 	}
 	
+	// 세부 지역 버튼 색상 변경
 	document.getElementById("subregion-box").addEventListener("focus", () => {
 		document.getElementById("subregion-box").style.backgroundColor = "grey";
 	});
