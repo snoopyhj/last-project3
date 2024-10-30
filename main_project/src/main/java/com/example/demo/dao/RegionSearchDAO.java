@@ -11,4 +11,8 @@ import com.example.demo.vo.HotelVO;
 @Repository
 public interface RegionSearchDAO {
 	public ArrayList<HotelVO> select_region(HotelVO vo);
+
+	public ArrayList<HotelVO> select_region2(HotelVO vo);
+	
+	public ArrayList<HotelVO> select_region3(HotelVO vo);
 }

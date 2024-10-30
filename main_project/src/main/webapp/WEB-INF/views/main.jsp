@@ -3,17 +3,11 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozy Pick</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
 </head>
-<script>
-	function chatbotpopup() {
-		let options = "toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=500, height=700, top=300,left=300";
-	
-		window.open("http://localhost:8085","_blank", options)
-	}
-</script>
-<body>
+<body
     <div class="wrap">
         
             
@@ -28,7 +22,7 @@
                     </div>
                <div>
                <a href="/register" class="login">회원가입</a>
-                    <a href="http://localhost:8083/login" class="login">LOGIN</a>
+                    <a href="/login" class="login">LOGIN</a>
                </div>
                 </div>   
 <!-- ================================================= main ======================================== -->
@@ -38,9 +32,14 @@
             <div class="intro_bg">   
                 <div class="intro_text">
                     <p class="search_main">국내여행엔<br> cozypick</p>
-                    <button class="search-reservation-box" onclick="location.href='/호텔페이'">
-                        🔍 여행지나 숙소를 검색해보세요
-                    </button>
+					    <input 
+					        type="text" 
+					        id="search-input" 
+					        class="search-reservation-box" 
+					        placeholder="🔍 여행지나 숙소를 검색해보세요"
+					        onkeypress="handleEnter(event)" 
+					    />
+					</div>
                 </div>
             </div>
 
@@ -50,27 +49,27 @@
       <h1>국내 대표 여행지</h1><br>
  <div class="reservation_wrapper"> 
 	<div class="reservation_count2">
-	    <button class="image-button" onclick="location.href='/seoul'">
+	    <button class="image-button" onclick="search2(1)">
 	        <img src="/image/seoul2.jpg" alt="서울">
 	        <p>서울</p>
 	    </button>
 
-	    <button class="image-button" onclick="location.href='/busan'">
+	    <button class="image-button" onclick="search2(6)">	
 	        <img src="/image/busan.jpg" alt="부산">
 	        <p>부산</p>
 	    </button>
 
-	    <button class="image-button" onclick="location.href='/jeju'">
+	    <button class="image-button" onclick="search2(39)">	
 	        <img src="/image/jeju.jpg" alt="제주">
 	        <p>제주</p>
 	    </button>
 
-	    <button class="image-button" onclick="location.href='/sokcho'">
+	    <button class="image-button" onclick="search(32,5)">	
 	        <img src="/image/sokcho.jpg" alt="속초">
 	        <p>속초</p>
 	    </button>
 
-	    <button class="image-button" onclick="location.href='/mokpo'">
+	    <button class="image-button" onclick="search(38,8)">	
 	        <img src="/image/mokpo.jpg" alt="목포">
 	        <p>목포</p>
 	    </button>
@@ -126,7 +125,7 @@
           <p>카카오톡 문의: 24시간 운영</p>
           <div class="contact-buttons">
               <button class="phone-btn">📞 1670-6250</button>
-              <button class="kakao-btn" onclick=chatbotpopup()>💬 카카오 문의</button>
+              <button class="kakao-btn">💬 카카오 문의</button>
               <button class="email-btn"><a href="/email">📧 이메일 문의</a></button>
               <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
           </div>
@@ -238,7 +237,36 @@
 	    window.onload = function () {
 	        window.scrollTo(0, 0);
 	    };
-	  
+		
+		function search(regionCode, subregionCode) {
+		    if (regionCode && subregionCode) {
+		        // 선택한 지역 코드를 포함한 URL로 이동
+		        location.href = "/regionsearch?region=" + regionCode + "&subregion=" + subregionCode;
+		    } else {
+		        alert("유효한 지역을 선택해주세요.");
+		    }
+		}	
+		
+			function search2(regionCode2) {
+			    if (regionCode2) {
+			        // 선택한 지역 코드를 포함한 URL로 이동
+			        location.href = "/regionsearch2?region=" + regionCode2;
+			    } else {
+			        alert("유효한 지역을 선택해주세요.");
+			    }
+			}
+	
+			function handleEnter(event) {
+			    if (event.key === "Enter") {
+			        const searchcode = document.getElementById("search-input").value;
+			        if (searchcode) {
+			            location.href = "/regionsearch3?search=" + encodeURIComponent(searchcode);
+			        } else {
+			            alert("검색어를 입력해주세요.");
+			        }
+			    }
+			}
+		
     </script>
 </body>
 </html>

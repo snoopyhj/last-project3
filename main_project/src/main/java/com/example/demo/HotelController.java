@@ -38,12 +38,37 @@ public class HotelController {
 		return "hotellist";
 	}
 	
+	@RequestMapping(value = "/regionsearch2", method = RequestMethod.GET) 
+	public String region_search(String region,Model model) {
+		  
+		HotelVO vo = new HotelVO();
+		vo.setRegion(region);
+		
+		
+		model.addAttribute("hotel_list", dao.select_region2(vo));
+	  
+		return "hotellist";
+	}
+	
+	@RequestMapping(value = "/regionsearch3", method = RequestMethod.GET)
+	public String region_search3(@RequestParam("search") String search, Model model) {
+	    HotelVO vo = new HotelVO();
+	    vo.setAddress(search);
+	    vo.setName(search);
+
+	    // 데이터베이스에서 검색 결과 가져오기
+	    List<HotelVO> hotels = dao.select_region3(vo);
+
+	    model.addAttribute("hotel_list", hotels);
+	    return "hotellist";  // 호텔 목록 페이지로 이동
+	}
 	@RequestMapping(value = "/hoteldetail", method = RequestMethod.GET)
 	public String gotohoteldetail(@RequestParam("name") String name, Model model) {
 		HotelVO vo = new HotelVO();
 		vo.setName(name);
 		model.addAttribute("hotel", hdao.select_hotel(vo));
 		System.out.println(hdao.select_hotel(vo).getName());
+		
 		return "hoteldetail";
 	}
 	
