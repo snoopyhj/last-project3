@@ -43,10 +43,6 @@
 				merchant_uid : "merchant_" + new Date().getTime(), // 가맹점에서 구별할 수 있는 고유한 ID
 				name : product, // 상품명
 				amount : price // 가격
-				// buyer_email : "test@naver.com",
-				// buyer_name : "tester", // 구매자 이름
-				// buyer_tel : "010-1234-5678", // 구매자 연락처
-				// buyer_addr : ""
 			},
 			function(rsp) {
 				$.ajax({
