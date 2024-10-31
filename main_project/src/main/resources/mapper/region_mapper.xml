@@ -3,17 +3,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace = "com.example.demo.dao.RegionSearchDAO">
 	<select id = "select_region" resultType = "com.example.demo.vo.HotelVO">
-		SELECT * FROM hotel_list WHERE region = #{region} AND subregion = #{subregion}
+		SELECT DISTINCT hl.*, hr.reservation_count FROM hotel_reservations hr JOIN hotel_list hl ON hr.DEFAULT_NUM = hl.DEFAULT_NUM WHERE region = #{region} AND subregion = #{subregion}
 	</select>
 	<select id = "select_region2" resultType = "com.example.demo.vo.HotelVO">
-		SELECT * FROM hotel_list WHERE region = #{region}
+		SELECT DISTINCT hl.*, hr.reservation_count FROM hotel_reservations hr JOIN hotel_list hl ON hr.DEFAULT_NUM = hl.DEFAULT_NUM WHERE region = #{region}
 	</select>
 	
 <select id="select_region3" resultType="com.example.demo.vo.HotelVO">
-    SELECT DISTINCT * 
-    FROM hotel_list 
-    WHERE address LIKE '%' || #{address} || '%' 
-       OR name LIKE '%' || #{name} || '%'
+
+        SELECT DISTINCT hl.*, hr.reservation_count FROM hotel_reservations hr JOIN hotel_list hl ON hr.DEFAULT_NUM = hl.DEFAULT_NUM WHERE hl.address LIKE '%' || #{address} || '%'  OR hl.name LIKE '%' || #{name} || '%'
 </select>
 	
 </mapper>

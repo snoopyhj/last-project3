@@ -28,65 +28,171 @@
 
 <!-- Main Content -->
 <main class="main-content">
+
     <aside class="filter-bar">
-		<h3>필터 검색</h3>
-		      <div class="filter-card">
-		          <label for="accommodationType">숙박 유형</label>
-		          <select id="accommodationType" onchange="showHotelByType()">
-		              <option value="">전체</option>
-		              <option value="호텔">호텔</option>
-		              <option value="콘도">콘도</option>
-		              <option value="유스호스텔">유스호스텔</option>
-		              <option value="펜션">펜션</option>
-		              <option value="모텔">모텔</option>
-		              <option value="민박">민박</option>
-		              <option value="게스트하우스">게스트하우스</option>
-		              <option value="레지던스">레지던스</option>
-		              <option value="한옥">한옥</option>
-		              <option value="리조트">리조트</option>
-		          </select>
-		      </div>
+		
+		<div class="filter-card">
+		    
+		    <label>
+		        <input type="radio" name="accommodationType" value="" onclick="applyAccommodationFilter()"> 전체
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="호텔" onclick="applyAccommodationFilter()"> 호텔
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="리조트" onclick="applyAccommodationFilter()"> 리조트
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="유스호스텔" onclick="applyAccommodationFilter()"> 유스호스텔
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="펜션" onclick="applyAccommodationFilter()"> 펜션
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="모텔" onclick="applyAccommodationFilter()"> 모텔
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="민박" onclick="applyAccommodationFilter()"> 민박
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="게스트하우스" onclick="applyAccommodationFilter()"> 게스트하우스
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="레지던스" onclick="applyAccommodationFilter()"> 레지던스
+		    </label><br>
+		    <label>
+		        <input type="radio" name="accommodationType" value="한옥" onclick="applyAccommodationFilter()"> 한옥
+		    </label><br>
+		    <label>
+				<input type="radio" name="accommodationType" value="콘도" onclick="applyAccommodationFilter()"> 콘도
+		        
+	
+		    </label>
+		</div>
 
-		      <div class="filter-card">
-		          <label for="priceRange">가격 범위</label>
-		          <input type="range" id="priceRange" min="50000" max="1000000" step="10000" value="100000" 
-		                 onchange="updatePrice(this.value)">
-		          <span id="priceValue">100000원 이하</span>
-		      </div>
-
-		      <button class="filter-btn" onclick="applyFilters()">필터 적용</button>
+		<div class="filter-card2">
+		    <label for="priceRange">가격 범위</label>	
+		    <input type="range" id="priceRange" min="50000" max="500000" step="10000" value="500000" 
+		           oninput="updatePrice(this.value)">
+		    <span id="priceValue">500000원 이하</span>
+		</div>
+	
 		  </aside>
 
-	<section class="hotel-container">
-	    <c:forEach var="eachhotel" items="${hotel_list}">
-	        <div class="hotel-card" 
-	             onclick="location.href='/hoteldetail?name=${eachhotel.name}'" 
-	             style="cursor: pointer;">
-	            <img src="${eachhotel.img1}" alt="${eachhotel.name}" class="hotel-img">
-	            <div class="hotel-info">
-	                <h3>${eachhotel.name}</h3>
-	                <p>주소: ${eachhotel.address}</p>
-	                <p>전화번호: ${eachhotel.tel}</p>
-					<p class="price">${eachhotel.standard} ~</p>
-	            </div>
-	        </div>
-	        <div class="divider"></div>
-	    </c:forEach>
-	</section>
+		  
+		  
+		  <section class="hotel-container">
+		      <div class="sorting-bar">
+		          <select id="sortOptions" onchange="sortHotels()">
+		              <option value="">정렬</option>
+		              <option value="priceLow">가격 낮은순</option>
+		              <option value="priceHigh">가격 높은순</option>
+		              <option value="popularity">인기순</option>
+		              <option value="recommended">추천순</option>
+		          </select>
+		      </div>
+		      <div id="hotelCards">
+		          <c:forEach var="eachhotel" items="${hotel_list}">
+		              <div class="hotel-card" onclick="location.href='/hoteldetail?name=${eachhotel.name}'" style="cursor: pointer;">
+		                  <img src="${eachhotel.img1}" alt="${eachhotel.name}" class="hotel-img">
+		                  <div class="hotel-info">
+		                      <h3>${eachhotel.name}</h3>
+		                      <p>주소: ${eachhotel.address}</p>
+		                      <p>전화번호: ${eachhotel.tel}</p>
+		                      <p class="price">${eachhotel.standard} ~</p>
+							  <p class="resevations" style="display: none;">${eachhotel.reservation_count}</p>
+							  <p class="type" style="display: none;" >${eachhotel.type}</p>
+
+		                  </div>
+		              </div>
+		              <div class="divider"></div>
+		          </c:forEach>
+		      </div>
+		  </section>
 </main>
 
 <script>
-    function updatePrice(value) {
-        document.getElementById("priceValue").innerText = value + "원 이하";
-    }
+	let originalHotelCards = [];
 
-    function applyFilters() {
-        const accommodationType = document.getElementById("accommodationType").value;
-        const price = document.getElementById("priceRange").value;
-        const roomType = document.getElementById("roomType").value;
+	window.addEventListener('DOMContentLoaded', () => {
+	    const hotelCardsContainer = document.getElementById('hotelCards');
+	    originalHotelCards = Array.from(hotelCardsContainer.querySelectorAll('.hotel-card')); // 원본 리스트 저장
+	});
 
-        location.href = `/regionsearch?type=${accommodationType}&price=${price}&roomType=${roomType}`;
-    }
+	function updatePrice(value) {
+	    document.getElementById("priceValue").innerText = value + "원 이하";
+	    applyFilters(); // 가격 변경 시 필터 적용
+	}
+
+	function applyFilters() {
+	    const selectedType = document.querySelector('input[name="accommodationType"]:checked')?.value || "";
+	    const maxPrice = parseInt(document.getElementById("priceRange").value);
+	    const hotelCardsContainer = document.getElementById('hotelCards');
+
+	    // hotelCardsContainer 초기화
+	    hotelCardsContainer.innerHTML = '';
+
+	    // 원본 리스트에서 조건에 맞는 호텔 카드만 추가
+	    originalHotelCards.forEach(card => {
+	        const hotelType = card.querySelector('.type').innerText.trim();
+	        const priceText = card.querySelector('.price').innerText.replace(/,/g, '').replace(/[^\d]/g, '');
+	        const hotelPrice = parseInt(priceText);
+
+	        // 조건: 선택된 유형과 가격 범위 모두 충족
+	        if ((selectedType === "" || hotelType === selectedType) && hotelPrice <= maxPrice) {
+	            hotelCardsContainer.appendChild(card);
+	        }
+	    });
+	}
+
+	function sortHotels() {
+	    const sortOption = document.getElementById("sortOptions").value;
+	    const hotelCardsContainer = document.getElementById('hotelCards');
+	    const hotelCards = Array.from(hotelCardsContainer.querySelectorAll('.hotel-card'));
+
+	    // 정렬 기준에 따라 호텔 카드 정렬
+	    hotelCards.sort((a, b) => {
+	        const priceA = parseInt(a.querySelector('.price').innerText.replace(/,/g, '').replace(/[^\d]/g, ''));
+	        const priceB = parseInt(b.querySelector('.price').innerText.replace(/,/g, '').replace(/[^\d]/g, ''));
+	        const reservationsA = parseInt(a.querySelector('.resevations').innerText.replace(/,/g, ''));
+	        const reservationsB = parseInt(b.querySelector('.resevations').innerText.replace(/,/g, ''));
+	        switch (sortOption) {
+	            case 'priceLow':
+	                return priceA - priceB; // 가격 낮은 순
+	            case 'priceHigh':
+	                return priceB - priceA; // 가격 높은 순
+	            case 'popularity':
+	                return reservationsB - reservationsA; // 인기순
+	            default:
+	                return 0;
+	        }
+	    });
+
+	    // 정렬된 결과를 호텔 카드 컨테이너에 다시 추가하여 렌더링 업데이트
+	    hotelCardsContainer.innerHTML = '';
+	    hotelCards.forEach(card => hotelCardsContainer.appendChild(card));
+	}
+
+	function applyAccommodationFilter() {
+	    const selectedType = document.querySelector('input[name="accommodationType"]:checked')?.value || "";
+	    const maxPrice = parseInt(document.getElementById("priceRange").value);
+	    const hotelCardsContainer = document.getElementById('hotelCards');
+
+	    // hotelCardsContainer 초기화
+	    hotelCardsContainer.innerHTML = '';
+
+	    // 원본 리스트에서 조건에 맞는 호텔 카드만 추가
+	    originalHotelCards.forEach(card => {
+	        const hotelType = card.querySelector('.type').innerText.trim();
+	        const priceText = card.querySelector('.price').innerText.replace(/,/g, '').replace(/[^\d]/g, '');
+	        const hotelPrice = parseInt(priceText);
+
+	        // 조건: 선택된 유형과 가격 범위 모두 충족
+	        if ((selectedType === "" || hotelType === selectedType) && hotelPrice <= maxPrice) {
+	            hotelCardsContainer.appendChild(card);
+	        }
+	    });
+	}
 </script>
 
 </body>

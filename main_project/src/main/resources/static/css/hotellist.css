@@ -139,6 +139,33 @@ body {
     margin-top: 70px; /* 헤더 높이만큼 아래로 이동 */
 }
 
+
+
+.sorting-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.sorting-bar label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#sortOptions {
+	width: 15%;
+	    padding: 8px;
+	    margin-top: 10px;
+	    border: 1.5px solid #ddd;
+	    border-radius: 5px;
+	    font-size: 14px;
+	
+}
+
+
+
+
+
 /* 필터 바 스타일 */
 .filter-bar {
     width: 20%;
@@ -149,23 +176,22 @@ body {
 }
 
 .filter-card {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 40%;
+}
+
+.filter-card2 {
+    margin-bottom: 10px;
+	margin-top: 30px;
+
 }
 
 .filter-card label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+
 }
 
-select, input[type="range"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-}
+
 
 .filter-btn {
     width: 100%;
@@ -244,6 +270,10 @@ select, input[type="range"] {
     font-weight: bold;
 }
 
+#priceRange {
+    width: 100%;
+    max-width: 500px; /* 원하는 최대 길이로 설정 가능 */
+}
 .hotel-info p {
     margin: 5px 0;
     font-size: 16px;
@@ -283,4 +313,120 @@ select, input[type="range"] {
 
 .btn:hover {
     opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+/* 태블릿 스타일 */
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .login {
+        margin-top: 10px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .filter-bar {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .hotel-container {
+        width: 100%;
+    }
+
+    #priceRange {
+        max-width: 100%;
+    }
+
+    .hotel-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .sorting-bar, .filter-bar {
+        justify-content: center;
+    }
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav, .auth-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .nav a {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .filter-bar {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .hotel-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hotel-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hotel-img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .price {
+        position: static;
+        font-size: 16px;
+    }
+
+    .sorting-bar {
+        justify-content: center;
+    }
+
+    #sortOptions {
+        width: 60%;
+    }
 }

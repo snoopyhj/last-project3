@@ -21,4 +21,5 @@ public class HotelVO {
 	public String standard;
 	public String deluxe;
 	public String suite;
+	public String reservation_count;
 }
