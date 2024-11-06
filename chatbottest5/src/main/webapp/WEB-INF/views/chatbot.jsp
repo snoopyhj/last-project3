@@ -42,7 +42,7 @@
     </c:forEach>
 </div>
 
-	<form onsubmit="sendMessage(event)"
+	<form action="sendMessage(event)"
 		style="text-align: center; margin-top: 10px;">
 		<input type="text" id="userInput" placeholder="Enter your message"
 			required>
@@ -64,10 +64,10 @@
 	            return;
 	        }
 
-	        console.log(`User message: ${userMessage}`);  // 디버깅용 로그
+	        console.log(`User message: ` + userMessage); // 디버깅용 로그
 
 	        // 사용자 메시지를 화면에 추가
-	        addMessageToChatBox(`You: ${userMessage}`, 'user');
+	        addMessageToChatBox(`You: ` + userMessage, 'user');
 	        
 	        // 입력 필드 초기화 (확인용 로그)
 	        input.value = '';
