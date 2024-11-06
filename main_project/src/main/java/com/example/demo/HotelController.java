@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dao.HotelSearchDAO;
 import com.example.demo.dao.RegionSearchDAO;
+import com.example.demo.dao.ReservationDAO;
 import com.example.demo.vo.HotelVO;
 
 @Controller
@@ -24,6 +23,9 @@ public class HotelController {
 	//ㅇㄹㅇㄴ
 	@Autowired
 	HotelSearchDAO hdao;
+	
+	@Autowired
+	ReservationDAO rdao;
 		
 	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
@@ -124,9 +126,16 @@ public class HotelController {
 		 return hotels;
 	 }
 	 
-	 @ResponseBody
-	 @PostMapping("/reservation_clear")
-	 public void paymentByImpUid(@RequestBody String imp_uid) {
-		 
+	 @RequestMapping(value = "/payment_success", method = RequestMethod.POST)
+	 public String payment_success(@RequestParam("imp_uid")		 String imp_uid,
+			  					   @RequestParam("product_name") String product_name,
+			  					   @RequestParam("cost")		 int cost,
+			  					   @RequestParam("email")		 String email,
+			  					   @RequestParam("name")		 String name,
+			  					   @RequestParam("tel")			 String tel,
+			  					   @RequestParam("address") 	 String address) {
+		 rdao.insert_info(imp_uid, product_name, cost, email, name, tel, address);
+
+		 return "main";
 	 }
 }

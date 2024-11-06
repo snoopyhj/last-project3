@@ -42,17 +42,74 @@
 				pay_method : "card", // 지불 수단
 				merchant_uid : "merchant_" + new Date().getTime(), // 가맹점에서 구별할 수 있는 고유한 ID
 				name : product, // 상품명
-				amount : price // 가격
+				amount : price, // 가격
+				buyer_email : "test@portone.io", // 구매자 email
+				buyer_name : "구매자이름", // 구매자 이름
+				buyer_tel : "010-1234-5678", // 구매자 전화번호
+				buyer_addr : "서울특별시 강남구 삼성동", // 구매자 주소
+				buyer_postcode : "123-456" // 구매자 우편번호
 			},
 			function(rsp) {
-				$.ajax({
-					url : "/reservation_clear",
-					method : "POST",
-					headers : {"Content-Type" : "application/json"},
-					data : {imp_uid : rsp.imp_uid}
-				}).done(function() {
+				console.log(rsp);
+				
+				if(rsp.success) {
+					var form = document.createElement("form");
+						form.setAttribute("method", "POST"); // POST 방식
+						form.setAttribute("action", "/payment_success"); // 요청 보낼 주소
 					
-				});
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "imp_uid");
+						hidden_field.setAttribute("value", rsp.imp_uid);
+						
+					form.appendChild(hidden_field);
+					
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "product_name");
+						hidden_field.setAttribute("value", rsp.name);
+															
+					form.appendChild(hidden_field);
+											
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "cost");
+						hidden_field.setAttribute("value", rsp.paid_amount);
+																							
+					form.appendChild(hidden_field);
+											
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "email");
+						hidden_field.setAttribute("value", rsp.buyer_email);
+																							
+					form.appendChild(hidden_field);
+											
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "name");
+						hidden_field.setAttribute("value", rsp.buyer_name);
+																							
+					form.appendChild(hidden_field);
+											
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "tel");
+						hidden_field.setAttribute("value", rsp.buyer_tel);
+																							
+					form.appendChild(hidden_field);
+											
+					var hidden_field = document.createElement("input");
+						hidden_field.setAttribute("type", "hidden");
+						hidden_field.setAttribute("name", "address");
+						hidden_field.setAttribute("value", rsp.buyer_addr);
+																							
+					form.appendChild(hidden_field);
+											
+					document.body.appendChild(form);
+											
+					form.submit();
+				}
 			});
 		}
 	</script>
