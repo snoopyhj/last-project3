@@ -12,5 +12,8 @@ public interface ReservationDAO {
 			   			   String email,
 			   			   String name,
 			   			   String tel,
-			   			   String address);
+			   			   String address,
+			   			   String dateRange,
+			   			   String dateStr,
+			   			   String person);
 }

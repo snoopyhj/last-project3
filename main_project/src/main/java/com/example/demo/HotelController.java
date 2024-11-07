@@ -143,8 +143,11 @@ public class HotelController {
 			  					   @RequestParam("email")		 String email,
 			  					   @RequestParam("name")		 String name,
 			  					   @RequestParam("tel")			 String tel,
-			  					   @RequestParam("address") 	 String address) {
-		 rdao.insert_info(imp_uid, product_name, cost, email, name, tel, address);
+			  					   @RequestParam("address") 	 String address,
+			  					   @RequestParam("dateRange")	 String dateRange,
+			  					   @RequestParam("dateStr")		 String dateStr,
+			  					   @RequestParam("person")		 String person) {
+		 rdao.insert_info(imp_uid, product_name, cost, email, name, tel, address, dateRange, dateStr, person);
 
 		 return "main";
 	 }
