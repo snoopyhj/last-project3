@@ -93,7 +93,7 @@
 		      </div>
 		      <div id="hotelCards">
 		          <c:forEach var="eachhotel" items="${hotel_list}">
-		              <div class="hotel-card" onclick="location.href='/hoteldetail?name=${eachhotel.name}'" style="cursor: pointer;">
+		              <div class="hotel-card" onclick="searchByDefaultNum('${eachhotel.default_num}')">
 		                  <img src="${eachhotel.img1}" alt="${eachhotel.name}" class="hotel-img">
 		                  <div class="hotel-info">
 		                      <h3>${eachhotel.name}</h3>
@@ -192,6 +192,14 @@
 	            hotelCardsContainer.appendChild(card);
 	        }
 	    });
+	}
+	
+	function searchByDefaultNum(default_num) {
+	    if (default_num) {
+	        location.href = "/regionsearch5?default_num=" + encodeURIComponent(default_num);
+	    } else {
+	        alert("유효한 숙소를 선택해주세요.");
+	    }
 	}
 </script>
 
