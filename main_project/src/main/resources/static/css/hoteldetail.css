@@ -36,14 +36,14 @@ body {
 }
 
 .hotel-info, .review-form, .review-list {
-    width: 90%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+	    width: 100%;
+	    max-width: 100%;
+	    margin: 20px auto;
+	    padding: 20px;
+	    background-color: #ffffff;
+	    border-radius: 8px;
+	    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+	}
 
 .hotel-info h1 {
     font-size: 1.8rem;
@@ -66,7 +66,7 @@ body {
 }
 
 .review-form button {
-    background-color: #007bff;
+        background-color: #fb6c6c;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -79,11 +79,7 @@ body {
     background-color: #0056b3;
 }
 
-.review-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-    margin-bottom: 15px;
-}
+
 
 .rating-stars {
     font-size: 1.2rem; /* 별 크기 조정 */
@@ -160,7 +156,7 @@ body {
 	background-color: #f9f9f9;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 }
 
 .hotel-name {
@@ -236,12 +232,9 @@ body {
 }
 
 /* 리뷰 섹션 스타일 */
-review-section {
-    width: 90%;
-    max-width: 800px;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 10px;
+.review-section {
+    width: 100%;
+    overflow: hidden;
 }
 
 .review-section h2, .review-list-title {
@@ -267,32 +260,28 @@ review-section {
     resize: vertical;
 }
 
-.review-form button {
-    align-self: center;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.review-form button:hover {
-    background-color: #0056b3;
-}
 
 .review-list {
-    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    padding: 10px;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.review-list::-webkit-scrollbar {
+    display: none;
 }
 
 .review-item {
+    min-width: 250px;
+    max-width: 300px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .review-item p {
@@ -338,4 +327,39 @@ review-section {
 
 .star-rating .filled-star {
     color: #ffd700; /* 별 선택 시 노란색으로 변경 */
+}
+
+
+/* 호텔 정보 섹션 스타일 */
+.hotel-info-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-info-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hotel-info-category {
+    margin-bottom: 20px;
+}
+
+.hotel-info-category h4 {
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+}
+
+.hotel-info-category p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
 }

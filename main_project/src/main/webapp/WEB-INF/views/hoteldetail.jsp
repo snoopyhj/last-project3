@@ -43,6 +43,29 @@
 		<p class="hotel-type">${hotel.type}</p>
 	</div>
 
+	
+	<div class="review-section">
+	
+	    <!-- 가로 스크롤 컨테이너 -->
+	    <div class="review-list" id="reviewList">
+	        <c:forEach items="${reviews}" var="review">
+	            <div class="review-item">
+	                <div class="rating-stars">
+	                    <c:forEach begin="1" end="5" var="i">
+	                        <span class="${i <= review.rating ? 'filled-star' : 'empty-star'}">&#9733;</span>
+	                    </c:forEach>
+	                </div>
+	                <p><strong>작성자:</strong> ${review.userId}</p>
+	                <p><strong>작성일:</strong> 
+	                    <fmt:formatDate value="${review.createdAt}" pattern="yyyy-MM-dd"/>
+	                </p>
+	                <p class="review-content">${review.reviewText}</p>
+	            </div>
+	        </c:forEach>
+	    </div>
+	</div>
+	
+	
 	<!-- 객실 정보 섹션 -->
 	<div class="room-types">
 		<h2>객실 종류 및 요금</h2>
@@ -90,32 +113,88 @@
 		    </form>
 		</div>
 
-		<!-- 리뷰 목록 표시 -->
-		<h3 class="review-list-title">리뷰 목록</h3>
-		<div class="review-list">
-		    <c:forEach items="${reviews}" var="review">
-		        <div class="review-item">
-		            <div class="rating-stars">
-		                <c:forEach begin="1" end="5" var="i">
-		                    <span class="${i <= review.rating ? 'filled-star' : 'empty-star'}">&#9733;</span>
-		                </c:forEach>
-		            </div>
-		            <p><strong>작성자:</strong> ${review.userId}</p>
-					<p><strong>작성일:</strong>
-					    <span class="relative-time" data-timestamp="<fmt:formatDate value='${review.createdAt}' pattern='yyyy-MM-dd\'T\'HH:mm:ss'/>">
-					        <fmt:formatDate value="${review.createdAt}" pattern="yyyy-MM-dd HH:mm:ss"/>
-					    </span>
-					</p>
-		            <p class="review-content">${review.reviewText}</p>
-		        </div>
-		        <hr>
-		    </c:forEach>
-		</div>
+
 
 	<!-- 지도 좌표 정보 -->
 	<input type="hidden" id="map_x" value="${hotel.mapx}">
 	<input type="hidden" id="map_y" value="${hotel.mapy}">
 </div>
+
+
+<!-- 호텔 정보 섹션 -->
+<!-- 호텔 정보 섹션 -->
+<div class="hotel-info-section">
+    <h3 class="hotel-info-title">호텔 이용 정보</h3>
+    
+    <!-- 서비스 및 부대시설 -->
+    <div class="hotel-info-category">
+        <h4>서비스 및 부대시설</h4>
+        <p>피트니스, 반려견 동반 가능, 사우나, 무선 인터넷, 욕실용품, 레스토랑, 금연 객실, TV, 에어컨, 짐 보관 가능, 샤워실, 무료 주차, 드라이기, 카드 결제 가능, 금고, 전기 주전자, 커피 머신, 주차장</p>
+    </div>
+
+    <!-- 숙소 이용 정보 -->
+    <div class="hotel-info-category">
+        <h4>숙소 이용 정보</h4>
+        <p>자원재활용법에 따라 2024년 3월 29일부터 일부 숙소에서는 일회용 어메니티가 무료로 제공되지 않습니다. 일회용 어메니티 별도 구매는 숙소에 문의해주세요.</p>
+    </div>
+    
+    <!-- 기본정보 -->
+    <div class="hotel-info-category">
+        <h4>기본 정보</h4>
+        <p><strong>체크인:</strong> 16:00 | <strong>체크아웃:</strong> 11:00</p>
+        <p>무료 Wi-Fi | 전 객실 금연 | 주차 무료 (1박 1대 무료/초과 시 차량 박당 1만원)</p>
+        <p>호텔 내부 주차장 만차 시 외부 주차장 이용 가능 (강릉시 해안로 298-7)</p>
+        <p>샴푸, 컨디셔너, 바디워시, 핸드워시는 친환경 다회용 제품으로 제공</p>
+        <p>칫솔, 치약, 슬리퍼는 호텔 내 자판기에서 구매 가능</p>
+    </div>
+    
+    <!-- 반려견 이용 정책 -->
+    <div class="hotel-info-category">
+        <h4>반려견 이용 정책</h4>
+        <p>반려견 동반 객실 외 입실 불가 (위반 시 벌금 30만원)</p>
+        <p>15kg 이상의 반려견은 공용 공간에서 입마개 착용 필수</p>
+        <p>반려견 추가 시 1마리당 35,000원 추가 비용 발생</p>
+        <p>반려견 어메니티: 배변패드, 배변봉투, 수건, 밥그릇 제공</p>
+        <p>케이지 또는 견모차 이용 필수 | 펫모차 대여 가능</p>
+        <p>반려견 동반 규정 위반 시 퇴실 조치 가능</p>
+    </div>
+    
+    <!-- 인피니티 풀 안내 -->
+    <div class="hotel-info-category">
+        <h4>수영장 안내</h4>
+        <p>수영장 : 08:00~22:00, 반려견 동반 가능</p>
+
+    </div>
+
+
+    <!-- 조식 정보 -->
+    <div class="hotel-info-category">
+        <h4>조식 정보</h4>
+        <p> 식당/07:00~10:00</p>
+        <p>성인 1인 25,000원, 소인 1인 10,000원, 유아 무료</p>
+    </div>
+
+    <!-- 취소 및 환불 규정 -->
+    <div class="hotel-info-category">
+        <h4>취소 및 환불 규정</h4>
+        <p>체크인 3일 전: 100% 환불</p>
+        <p>체크인 2일 전: 70% 환불</p>
+        <p>체크인 당일 및 No-show: 환불 불가</p>
+    </div>
+
+    <!-- 확인 사항 및 기타 -->
+    <div class="hotel-info-category">
+        <h4>확인 사항 및 기타</h4>
+        <p>최대 인원 초과 시 입실 불가</p>
+        <p>미성년자는 보호자 동반 없이 이용 불가</p>
+    </div>
+</div>
+    
+    <!-- 기본정보 -->
+
+
+
+
 
 <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b8314e6d575584c7e23cae7bdbb3bc39"></script>
 <script>
@@ -145,38 +224,36 @@
 	    });
 	});
 	
-	document.addEventListener("DOMContentLoaded", function() {
-	    // 모든 .relative-time 요소를 찾아 처리
-	    document.querySelectorAll(".relative-time").forEach(element => {
-	        const timestamp = new Date(element.getAttribute("data-timestamp"));
-	        element.textContent = getRelativeTime(timestamp);
-	    });
+	const reviewList = document.getElementById("reviewList");
+
+	let isDragging = false;
+	let startX, scrollLeft;
+
+	reviewList.addEventListener("mousedown", (e) => {
+	    isDragging = true;
+	    startX = e.pageX - reviewList.offsetLeft;
+	    scrollLeft = reviewList.scrollLeft;
+	    reviewList.style.cursor = "grabbing";
 	});
 
-	function getRelativeTime(timestamp) {
-	    const now = new Date();
-	    const diffInMs = now - timestamp;
-	    const diffInSeconds = Math.floor(diffInMs / 1000);
-	    const diffInMinutes = Math.floor(diffInSeconds / 60);
-	    const diffInHours = Math.floor(diffInMinutes / 60);
-	    const diffInDays = Math.floor(diffInHours / 24);
-	    const diffInMonths = Math.floor(diffInDays / 30);
+	reviewList.addEventListener("mouseleave", () => {
+	    isDragging = false;
+	    reviewList.style.cursor = "grab";
+	});
 
-	    if (diffInDays < 1) {
-	        if (diffInHours < 1) {
-	            return diffInMinutes < 1 ? "방금 전" : `${diffInMinutes}분 전`;
-	        }
-	        return `${diffInHours}시간 전`;
-	    } else if (diffInDays < 30) {
-	        return `${diffInDays}일 전`;
-	    } else if (diffInMonths < 12) {
-	        return `${diffInMonths}달 전`;
-	    } else {
-	        const years = Math.floor(diffInMonths / 12);
-	        return `${years}년 전`;
-	    }
-	}
-	
+	reviewList.addEventListener("mouseup", () => {
+	    isDragging = false;
+	    reviewList.style.cursor = "grab";
+	});
+
+	reviewList.addEventListener("mousemove", (e) => {
+	    if (!isDragging) return;
+	    e.preventDefault();
+	    const x = e.pageX - reviewList.offsetLeft;
+	    const walk = (x - startX) * 2; // 드래그 속도 조절
+	    reviewList.scrollLeft = scrollLeft - walk;
+	});
+
 </script>
 
 </body>

@@ -31,6 +31,16 @@
 
     <aside class="filter-bar">
 		
+		
+		<div class="search-bar">
+		    <input 
+		        type="text" 
+		        id="search-input" 
+		        class="search-input" 
+		        placeholder="🔍 여행지나 숙소를 검색"
+		        onkeypress="handleEnter(event)" 
+		    />
+		</div>
 		<div class="filter-card">
 		    
 		    <label>
@@ -199,6 +209,17 @@
 	        location.href = "/regionsearch5?default_num=" + encodeURIComponent(default_num);
 	    } else {
 	        alert("유효한 숙소를 선택해주세요.");
+	    }
+	}
+	
+	function handleEnter(event) {
+	    if (event.key === "Enter") {
+	        const searchcode = document.getElementById("search-input").value;
+	        if (searchcode) {
+	            location.href = "/regionsearch3?search=" + encodeURIComponent(searchcode);
+	        } else {
+	            alert("검색어를 입력해주세요.");
+	        }
 	    }
 	}
 </script>
