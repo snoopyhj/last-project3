@@ -184,7 +184,7 @@ footer {
 	display: flex;
 	background: #1f1f1f;
 	color: #f0f0f0;
-	padding: 30px;
+	padding: 10px;
 }
 
 hr {
@@ -222,7 +222,25 @@ hr {
     }
 }
 
-#ABOUTUS, #RESERVATION, #REVIEW, #CONTACT {
+#ABOUTUS{
+	padding-top: 100px; /* 헤더 높이만큼 여백 */
+	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
+	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
+}
+
+#RESERVATION {
+    padding-top: 20px; /* 여백 줄이기 */
+    margin-top: -20px; /* 보정 값 줄이기 */
+    scroll-margin-top: 120px; /* 원하는 스크롤 위치에 멈추도록 설정 */
+}
+
+#REVIEW {
+	padding-top: 100px; /* 헤더 높이만큼 여백 */
+	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
+	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
+}
+
+#CONTACT {
 	padding-top: 100px; /* 헤더 높이만큼 여백 */
 	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
 	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
@@ -336,6 +354,7 @@ hr {
 .RESERVATION h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 
@@ -345,6 +364,7 @@ hr {
     overflow: hidden; /* 화면 밖 요소 숨기기 */
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 300px;
 }
 
 .reservation_count {
@@ -443,9 +463,76 @@ hr {
     }
 }
 
+.hotel-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: max-content; /* 전체 박스를 담을 수 있는 가로 길이 */
+    animation: scroll 300s linear infinite; /* 천천히 왼쪽으로 이동하는 애니메이션 */
+	margin-bottom: 50px;
+}
+
+.hotel-scroll-wrapper {
+    display: flex;
+    overflow: hidden; /* 스크롤 숨기기 */
+    justify-content: flex-start;
+    width: 100%; /* 화면에 꽉 차도록 설정 */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* 처음 위치 */
+    }
+    100% {
+        transform: translateX(-100%); /* 끝 위치로 이동 */
+    }
+}
+
+.hotel-item {
+    width: 200px;
+	height: 260px;
+    /* padding: 15px; */
+    background-color: #ffffff;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
 
 
+.hotel-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
 
+.hotel-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 0 4px;
+}
+
+.hotel-name2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    bottom: 20px; /* 하단에서 10px 위에 배치 */
+	padding-left: 10px;
+
+
+}
+
+.hotel-address {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
 
 
 
@@ -571,12 +658,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* 추가 여백 및 스크롤 마진 설정 */
-#CONTACT, #RESERVATION {
-    padding-top: 120px; /* 헤더 높이만큼 여백 추가 */
-    margin-top: -120px; /* 스크롤 시 위치 보정 */
-    scroll-margin-top: 120px; /* 스크롤 고정 위치 설정 */
-}
 
 /*아코디언 */
 

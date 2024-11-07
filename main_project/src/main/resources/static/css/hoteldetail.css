@@ -1,98 +1,341 @@
-@charset "UTF-8";
-
+/* 기본 스타일 */
 body {
-	margin : 0;
-	font-family : Arial, sans-serif;
-	background-color : #f8f9fa;
-	color : #333;
+	margin: 0;
+	font-family: "Noto Sans KR", Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
 }
-  
-.hotel-detail-page {
-	max-width : 1200px;
-	margin : 0 auto;
-	padding : 20px;
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-  
-/* 상단 이미지 */
-.hotel-image {
-	width : 100%;
-	height : 400px;
-	object-fit : cover;
-	margin-bottom : 20px;
+
+.wrap {
+    width: 100%;
+    margin: auto;
 }
-  
-/* 호텔 기본 정보 */
-.hotel-info {
-	margin-bottom : 40px;
-}
-  
-.hotel-name {
-	font-size : 32px;
-	margin-bottom : 10px;
-}
-  
-  .hotel-address {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #555;
-  }
-  
-  .hotel-description {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  /* 객실 종류 섹션 */
-  .room-types {
-    margin-top: 40px;
-  }
-  
-  .room-types h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  .room {
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
     background-color: white;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.hotel-info, .review-form, .review-list {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .room h3 {
-    font-size: 24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-info h1 {
+    font-size: 1.8rem;
     margin-bottom: 10px;
-  }
-  
-  .room p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  /* 예약 버튼 */
-  .btn {
+}
+
+.review-form h2, .review-list h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-form textarea, .review-form input[type="number"], .review-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.review-form button {
+    background-color: #007bff;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
-  .book-btn {
-    background-color: #28a745;
+    font-size: 1rem;
+}
+
+.review-form button:hover {
+    background-color: #0056b3;
+}
+
+.review-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.rating-stars {
+    font-size: 1.2rem; /* 별 크기 조정 */
+    color: #ffd700; /* 별 색상 */
+}
+
+.filled-star {
+    color: #ffd700; /* 채워진 별 색상 */
+}
+
+.empty-star {
+    color: #ccc; /* 빈 별 색상 */
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav a {
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #0984e3;
+}
+
+.login {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
     color: white;
-  }
-  
-  .book-btn:hover {
-    opacity: 0.8;
-  }
-  
-/* 하단 지도 */
-.hotel_map {
-  	width : 100%;
-  	height : 400px;
-  	object-fit : cover;
-  	margin-top : 20px;
+    transition: background-color 0.3s, transform 0.3s;
+	margin-left: 10px;
+}
+
+.login:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.hotel-detail-page {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 90px 20px 20px; /* 상단 패딩을 추가하여 헤더와 겹침 방지 */
+	background-color: white;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-map-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+
+.hotel-main-image, .hotel-map {
+	width: 48%;
+	height: 300px;
+	border-radius: 8px;
+	object-fit: cover;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-summary {
+	padding: 20px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin-bottom: 40px;
+}
+
+.hotel-name {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.hotel-address,
+.hotel-tel,
+.hotel-comment,
+.hotel-type {
+	font-size: 1rem;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.room-types {
+	margin-top: 20px;
+}
+
+.room-types h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.room {
+	background-color: #ffffff;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room h3 {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 5px;
+}
+
+.room p {
+	color: #666;
+	margin: 5px 0;
+}
+
+.room-price {
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #007aff;
+	margin-top: 5px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #ff6f61;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-top: 10px;
+}
+
+.book-btn:hover {
+	background-color: #ff4a4a;
+}
+
+/* 리뷰 섹션 스타일 */
+review-section {
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.review-section h2, .review-list-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.review-form textarea, .review-form input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.review-form button {
+    align-self: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.review-form button:hover {
+    background-color: #0056b3;
+}
+
+.review-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.review-item p {
+    color: #555;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.review-item p.review-content {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.rating-stars {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.filled-star {
+    color: #ffd700; /* 채워진 별 색상 */
+}
+
+.empty-star {
+    color: #ccc; /* 빈 별 색상 */
+}
+/* 별 평점 스타일 */
+.star-rating {
+    font-size: 2rem;
+    color: #ccc;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.star-rating .star {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star-rating .filled-star {
+    color: #ffd700; /* 별 선택 시 노란색으로 변경 */
 }

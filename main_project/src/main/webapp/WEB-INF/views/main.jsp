@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,14 +17,15 @@
                 <div class="header">
                <a href="#" class="logo">cozypick</a>
                     <div class="nav">
-                        <a href="#">HOME</a> <a href="#ABOUTUS">ABOUT US</a> 
-                        <a href="#RESERVATION">RESERVATION</a> 
-                        <a href="#REVIEW">REVIEW</a>
+                        <a href="#">HOME</a> 
+                        <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
                         <a href="#CONTACT">CONTACT</a>
+						<a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
+						<a href="http://localhost:8084/aboutus">ABOUT US</a> 
                     </div>
                <div>
-               <a href="/register" class="login">회원가입</a>
-                    <a href="/login" class="login">LOGIN</a>
+               <a href="https://localhost:8443/register" class="login">회원가입</a>
+                    <a href="https://localhost:8443/login" class="login">LOGIN</a>
                </div>
                 </div>   
 <!-- ================================================= main ======================================== -->
@@ -74,29 +77,25 @@
 	        <p>목포</p>
 	    </button>
 	</div>
-          <h1>국내인기숙박시설</h1><br>
-         <div class="reservation_count ">
-			<div>사진1</div>
-			<div>사진2</div>
-			<div>사진3</div>
-			<div>사진4</div>
-			<div>사진5</div>
-			<div>사진6</div>
-			<div>사진7</div>
-			<div>사진8</div>
-			<div>사진9</div>
-			<div>사진10</div>
-			<div>사진11</div>
-			<div>사진12</div>
-			<div>사진13</div>
-			<div>사진14</div>
-			<div>사진15</div>			
-			</div>
-         </div>   
+	<h1>국내 인기 숙박시설</h1>
+	<br><br><br>
+	<div class="hotel-scroll-wrapper">
+	    <div class="hotel-container">
+	        <c:forEach var="eachhotel" items="${hotel_list}">
+	            <div class="hotel-item" onclick="searchByDefaultNum('${eachhotel.default_num}')">
+	                <img src="${eachhotel.img1 != null ? eachhotel.img1 : '/path/to/default_image.jpg'}" 
+	                     alt="${eachhotel.name}" width="200" height="150">
+						 <p class="hotel-name">${eachhotel.name}</p>
+						 <p class="hotel-address">${eachhotel.address}</p>
+						 <p class="hotel-name2">${eachhotel.standard}원 ~</p>	
+	            </div>
+	        </c:forEach>
+	    </div>
+	</div>
 
 			  
          <br><br><br>
-		 <h1>RESERVATION</h1>
+
           <div class="reservation-options">
               <div class="reservation-item">
                   <a href="/regionfilter">🏙️ 지역별 숙소예약</a>
@@ -104,20 +103,11 @@
               <div class="reservation-item">
                   <a href="/hotelbytype">🎨 테마별 숙소예약</a>
               </div>
-              <div class="reservation-item">
-                  <a href="/hotellist">🔥 인기 숙소 보기</a>
-              </div>
+
           </div>
       </div>
 <!-- ================================================= main2 ======================================== -->
-      <div class="REVIEW" id="REVIEW">
-          <div class="customer-review">
-              <h2>회원 만족 리뷰</h2>
-              <p>회원들이 남긴 다양한 리뷰 사진을 확인해보세요!</p>
-          </div>
-         <br><br><br><br>
 
-      </div>
 <!-- ================================================= main3 ======================================== -->
       <div class="CONTACT" id="CONTACT">
           <h2>고객센터</h2>
@@ -131,17 +121,7 @@
           </div>
          </div>
 
-        <hr><br><br>
-<!-- ================================================= main4 ======================================== -->
-        <div class="ABOUTUS" id="ABOUTUS">
-            <h1>ABOUT US</h1>
-            <div class="aboutus-content">
-                <p>지친 일상 속에서 나만의 아늑한 쉼터를 찾고 싶으신가요? Cozy Pick은 당신의 소중한 순간을 위해 선별된 특별한 숙소를 제공합니다.</p>
-                <div class="button-container">
-                    <button class="learn-more-button" onclick="location.href='/aboutus'">더 알아보기</button>
-                </div>
-            </div>
-        </div>
+
 
       <hr><br><br>
 <!-- ================================================= main5 ======================================== -->      
@@ -206,6 +186,7 @@
         <footer>
          
             <pre>
+				
                 Some hotels require cancellation at least 24 hours before check-in.
                 © 2024 COZYPICK. All rights reserved.
                 Dispute Settlement: Tel: 010-4717-2540 | Email: dica200@paran.com
@@ -238,6 +219,8 @@
 	        window.scrollTo(0, 0);
 	    };
 		
+
+		
 		function search(regionCode, subregionCode) {
 		    if (regionCode && subregionCode) {
 		        // 선택한 지역 코드를 포함한 URL로 이동
@@ -265,6 +248,34 @@
 			            alert("검색어를 입력해주세요.");
 			        }
 			    }
+			}
+			function searchByDefaultNum(default_num) {
+			    if (default_num) {
+			        location.href = "/regionsearch5?default_num=" + encodeURIComponent(default_num);
+			    } else {
+			        alert("유효한 숙소를 선택해주세요.");
+			    }
+			}
+			function scrollToReservation(event) {
+			    event.preventDefault(); // 기본 링크 이동 방지
+
+			    // 원하는 위치로 부드럽게 스크롤
+			    const targetPosition = document.querySelector("#RESERVATION").offsetTop +350; // 조정된 위치
+			    window.scrollTo({
+			        top: targetPosition,
+			        behavior: "smooth"
+			    });
+			}
+			
+			function scrollToReservation2(event) {
+			    event.preventDefault(); // 기본 링크 이동 방지
+
+			    // 원하는 위치로 부드럽게 스크롤
+			    const targetPosition = document.querySelector("#FAQ").offsetTop +1000; // 조정된 위치
+			    window.scrollTo({
+			        top: targetPosition,
+			        behavior: "smooth"
+			    });
 			}
 		
     </script>

@@ -33,4 +33,9 @@
 		HOTEL_LIST
 		WHERE name = #{name}
 	</select>
+	
+	
+
+
+
 </mapper>

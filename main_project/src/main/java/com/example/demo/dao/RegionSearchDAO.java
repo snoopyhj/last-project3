@@ -15,4 +15,10 @@ public interface RegionSearchDAO {
 	public ArrayList<HotelVO> select_region2(HotelVO vo);
 	
 	public ArrayList<HotelVO> select_region3(HotelVO vo);
+	
+	public ArrayList<HotelVO> select_region4(HotelVO vo);
+	
+	public ArrayList<HotelVO> select_region5(HotelVO vo);
+	
+	HotelVO selectHotelByDefaultNum(String defaultNum);
 }
