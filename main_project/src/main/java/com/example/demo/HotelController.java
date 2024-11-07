@@ -33,7 +33,7 @@ public class HotelController {
 	ReservationDAO rdao;
 	
 	@Autowired
-	private HotelDAO hotelDAO;  // HotelDAO 인스턴스 변수로 선언
+	private HotelDAO hotelDAO;   // HotelDAO 인스턴스 변수로 선언
 
 	@Autowired
 	private HotelReviewDAO hotelReviewDAO;

@@ -31,8 +31,8 @@
 						<a href="http://localhost:8084/aboutus">ABOUT US</a> 
                     </div>
                <div>
-               <a href="https://localhost:8443/register" class="login">회원가입</a>
-                    <a href="https://localhost:8443/login" class="login">LOGIN</a>
+				<a href="https://localhost:8443/register" class="login">회원가입</a>
+				     <a href="https://localhost:8443/login" class="login">LOGIN</a>
                </div>
                 </div>   
 <!-- ================================================= main ======================================== -->
