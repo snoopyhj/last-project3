@@ -9,16 +9,16 @@
 <body>
 	<div class="wrap">
 	    <div class="header">
-	        <a href="https://localhost:8444/" class="logo">cozypick</a>
+	        <a href="http://localhost:8084" class="logo">cozypick</a>
 	        <div class="nav">
-	            <a href="https://localhost:8444/#">HOME</a> 
+	            <a href="http://localhost:8084/#">HOME</a> 
 	            <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
 	            <a href="#CONTACT">CONTACT</a>
 	            <a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
-	            <a href="https://localhost:8444/aboutus">ABOUT US</a> 
+	            <a href="http://localhost:8084/aboutus">ABOUT US</a> 
 	        </div>
 	        <div>
-	            <a href="https://localhost:8443/register" class="register">회원가입</a>
+	            <a href="https://localhost:8443/register" class="login">회원가입</a>
 	            <a href="https://localhost:8443/login" class="login">LOGIN</a>
 	        </div>
 	    </div>   
@@ -35,8 +35,17 @@
 
                 <div class="content-container">
                     <div id="intro" class="content-box hidden">
-                        <p>Cozy Pick은 고객의 휴식과 만족을 위해 최고의 숙소를 선별하여 제공합니다. 편안한 여행을 위해 다양한 테마 숙소를 만나보세요.</p>
-                    </div>
+						<div class="intro-section">
+										        <h2>Cozy Pick 창업자, 조현지</h2>
+										        <p>“Cozy Pick은 단순한 호텔 예약 사이트가 아닙니다. 고객의 여행 경험을 더욱 특별하게 만들기 위해 탄생한 플랫폼입니다. Cozy Pick이라는 이름에는 '따뜻하고 아늑한 장소를 선택하다'라는 의미가 담겨 있으며, 고객 여러분이 머무는 순간마다 편안함을 느낄 수 있도록 최선을 다하고자 합니다. 세상을 여행하면서 얻는 휴식의 의미는 사람마다 다르지만, 우리는 그 각기 다른 의미를 소중히 여깁니다. 그래서 Cozy Pick은 다양한 테마의 숙소를 엄선하여 제공함으로써 고객 개개인의 여행 경험이 더욱 뜻깊어지기를 희망합니다.</p>
+										        <p>우리가 세심하게 고른 숙소는 단지 숙박을 위한 장소가 아니라, 고객님이 일상의 피로를 풀고 재충전할 수 있는 진정한 안식처입니다. 바쁜 일상을 떠나 편안한 휴식을 취하고 싶은 순간에, Cozy Pick은 가장 안심하고 머물 수 있는 공간을 제공하는 것을 목표로 삼고 있습니다. 더불어, 고객의 다양한 요구를 충족시키기 위해 다채로운 결제 옵션을 마련해, 누구나 편리하게 예약할 수 있는 시스템을 갖추고 있습니다. 우리에게 가장 중요한 것은 고객이 Cozy Pick을 통해 여행지에서 진정한 휴식을 찾을 수 있도록 돕는 것입니다.”</p>
+										    </div>
+										    <div class="intro-section">
+										        <h2>Cozy Pick 대표이사 배현우</h2>
+										        <p>“항상 Cozy Pick을 신뢰해 주시고, 저희와 함께해 주시는 모든 고객님께 진심으로 감사드립니다. Cozy Pick은 설립 초기부터 ‘고객의 만족과 행복을 최우선으로’라는 가치를 기반으로 운영되고 있습니다. 우리는 고객 여러분께 신뢰성 높은 리뷰 시스템을 제공하여 다른 이용자의 솔직한 경험을 공유하고자 합니다. 공정하고 투명한 리뷰 시스템은 고객이 실제 후기를 바탕으로 선택할 수 있도록 돕고, Cozy Pick만의 신뢰도를 높이는 중요한 요소입니다. 또한, 고객님의 선호도와 예약 이력을 바탕으로 한 맞춤형 추천 시스템을 통해 더욱 효율적이고 즐거운 예약 경험을 제공합니다.</p>
+										        <p>2021년에 새롭게 설정한 비전인 'One World, Connecting Smiles.'은 Cozy Pick이 전 세계 고객들과 더 깊은 유대감을 형성하고, 여행지마다 미소가 가득할 수 있도록 노력하겠다는 약속입니다. Cozy Pick은 고객님의 소중한 여행 순간마다 함께하며, 온 마음을 다해 진심 어린 서비스를 제공하고자 합니다. 이 비전을 위해 우리는 숙소와 서비스의 품질을 지속적으로 개선하며, 새로운 트렌드와 고객의 목소리에 귀 기울이겠습니다. Cozy Pick과 함께라면 고객님의 여정이 더욱 특별해질 것입니다. 전 세계의 고객님이 Cozy Pick을 통해 진정한 행복과 휴식을 찾을 수 있도록, 앞으로도 최선을 다하겠습니다.”</p>
+										    </div>
+										</div>
                     <div id="history" class="content-box hidden">
                         <p>Cozy Pick은 2018년에 설립되어 지속적인 성장과 발전을 이루어왔습니다. 매년 고객 만족도를 높이기 위해 노력하고 있습니다.</p>
                     </div>
@@ -44,7 +53,7 @@
                         <p>Cozy Pick의 사업 영역은 국내외 숙소 예약 플랫폼입니다. 다양한 파트너들과 협력하여 폭넓은 선택지를 제공합니다.</p>
                     </div>
                     <div id="contact" class="content-box hidden">
-                        <div id="contact-map" class="hotel-map" style="width: 100%; height: 350px; border-radius: 8px;"></div>
+                        <div id="contact-map" class="hotel-map" style="width: 100%; height: 300px; border-radius: 8px;"></div>
                     </div>
                 </div>
 	        </div>
@@ -63,90 +72,6 @@
     <!-- Kakao Map API Script (API 키 확인 필요) -->
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b8314e6d575584c7e23cae7bdbb3bc39"></script>
     <script>
-		document.addEventListener('DOMContentLoaded', async function () {
-								    console.log('페이지가 로드되었습니다!');
-								    await fetchUserInfo();
-									
-								});
-
-								async function fetchUserInfo() {
-								    try {
-								        const rememberMeChecked = getCookie('rememberMe') === 'true';
-								        let response = await fetch('https://localhost:8443/userinfo', {
-								            method: 'GET',
-								            credentials: 'include'
-								        });
-
-								        if (response.status === 401 && rememberMeChecked) {
-								            console.log("엑세스 토큰 만료 - 리프레시 토큰으로 재발급 요청");
-								            await refreshAccessToken();
-								            response = await fetch('https://localhost:8443/userinfo', {
-								                method: 'GET',
-								                credentials: 'include'
-								            });
-								        }
-
-								        if (!response.ok) {
-								            throw new Error('사용자 정보를 가져오는 데 실패했습니다.');
-								        }
-
-								        const userInfo = await response.json();
-										
-								        changeLoginButtonToMyPage(userInfo);
-										return userInfo; // 반환 추가
-								    } catch (error) {
-								        console.error('사용자 정보를 가져오는 중 오류 발생:', error);
-								    }
-								}
-								function getCookie(name) {
-								    const cookieValue = document.cookie
-								        .split('; ')
-								        .find(row => row.startsWith(name + '='));
-								    
-								    return cookieValue ? cookieValue.split('=')[1] : null;
-								}
-
-
-								async function refreshAccessToken() {
-								    try {
-								        const response = await fetch('https://localhost:8443/refresh-token', {
-								            method: 'POST',
-								            credentials: 'include'
-								        });
-
-								        if (!response.ok) {
-								            throw new Error('리프레시 토큰이 유효하지 않거나 만료되었습니다.');
-								        }
-
-								        console.log("새로운 엑세스 토큰이 쿠키에 저장되었습니다.");
-								    } catch (error) {
-								        console.error('액세스 토큰 재발급 실패:', error);
-								        alert('세션이 만료되었습니다. 다시 로그인해 주세요.');
-								        window.location.href = 'https://localhost:8443/login';
-								    }
-								}
-
-								function changeLoginButtonToMyPage(userInfo) {
-								    const loginBtn = document.querySelector('.login');
-								    const registerBtn = document.querySelector('.register');
-								    if (loginBtn) {
-								        loginBtn.innerHTML = '마이 페이지';
-								        loginBtn.href = 'https://localhost:8443/mypage';
-								        registerBtn.style.display = 'none';
-
-								        if (userInfo.admin) {
-								            const adminLink = document.createElement('a');
-								            adminLink.href = 'https://localhost:8443/admin';
-								            adminLink.classList.add('admin-mode');
-								            adminLink.innerText = '관리자 모드 접속';
-
-								            const nav = document.querySelector('.nav');
-								            nav.appendChild(adminLink);
-								        }
-								    } else {
-								        console.error("로그인 버튼이 없습니다.");
-								    }
-								}
 		function showContent(id, button) {
 		    // 모든 콘텐츠 박스를 숨깁니다.
 		    const contentBoxes = document.querySelectorAll('.content-box');

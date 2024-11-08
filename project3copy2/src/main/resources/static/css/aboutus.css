@@ -270,3 +270,28 @@ footer {
 }
 
 
+.intro-section {
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 4px solid rgb(209, 209, 209);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.intro-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+

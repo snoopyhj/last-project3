@@ -489,7 +489,8 @@ hr {
 }
 
 .hotel-item {
-    width: 220px;
+    width: 200px;
+	height: 270px;
     /* padding: 15px; */
     background-color: #ffffff;
     /* border: 1px solid #e0e0e0; */
@@ -513,7 +514,8 @@ hr {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    margin: 8px 0 4px;
+	margin: 8px 0 15px;
+    
 }
 
 .hotel-name2 {
@@ -530,7 +532,8 @@ hr {
 .hotel-address {
     font-size: 0.9rem;
     color: #888;
-    margin: 0;
+    margin: 10px;
+	margin-bottom: 15px;
 }
 
 
@@ -728,6 +731,8 @@ button:hover {
 .faq-item.open .faq-answer {
     display: block;
 }
+
+
 .loading {
         display: none; /* 로딩 중일 때만 보이도록 */
         text-align: center;
@@ -762,5 +767,5 @@ button:hover {
 	    }
 
 	    #scrollToTopBtn:hover {
-	        background-color: #555; /* 마우스를 올릴 때 버튼 색 변경 */
+	        background-color: rgb(83, 83, 83); /* 마우스를 올릴 때 버튼 색 변경 */
 	    }

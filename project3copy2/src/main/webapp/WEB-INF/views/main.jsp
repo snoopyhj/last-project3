@@ -9,14 +9,7 @@
     <title>Cozy Pick</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
 </head>
-<body>
-	<script>
-		function chatbotpopup() {
-			let options = "toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=500, height=700, top=300,left=300";
-		
-			window.open("http://localhost:8085","_blank", options)
-		}
-	</script>
+<body
     <div class="wrap">
         
             
@@ -132,7 +125,7 @@
           <p>카카오톡 문의: 24시간 운영</p>
           <div class="contact-buttons">
               <button class="phone-btn">📞 1670-6250</button>
-              <button class="kakao-btn"><a href="#" onclick = "chatbotpopup()">💬 카카오 문의</a></button>
+              <button class="kakao-btn"><a href="http://localhost:8085/">💬 카카오 문의</a></button>
               <button class="email-btn"><a href="/email">📧 이메일 문의</a></button>
               <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
           </div>
@@ -283,7 +276,7 @@
 					    const registerBtn = document.querySelector('.register');
 					    if (loginBtn) {
 					        loginBtn.innerHTML = '마이 페이지';
-					        loginBtn.href = 'https://localhost:8443/mypage';
+					        loginBtn.href = 'https://localhost:8443/mypage'
 					        registerBtn.style.display = 'none';
 
 					        if (userInfo.admin) {

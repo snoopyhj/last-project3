@@ -222,7 +222,25 @@ hr {
     }
 }
 
-#ABOUTUS, #RESERVATION, #REVIEW, #CONTACT {
+#ABOUTUS{
+	padding-top: 100px; /* 헤더 높이만큼 여백 */
+	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
+	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
+}
+
+#RESERVATION {
+    padding-top: 20px; /* 여백 줄이기 */
+    margin-top: -20px; /* 보정 값 줄이기 */
+    scroll-margin-top: 120px; /* 원하는 스크롤 위치에 멈추도록 설정 */
+}
+
+#REVIEW {
+	padding-top: 100px; /* 헤더 높이만큼 여백 */
+	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
+	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
+}
+
+#CONTACT {
 	padding-top: 100px; /* 헤더 높이만큼 여백 */
 	margin-top: -100px; /* 스크롤 시 올바른 위치로 보정 */
 	scroll-margin-top: 100px; /* 클릭 시 올바른 위치에 멈추도록 설정 */
@@ -336,6 +354,7 @@ hr {
 .RESERVATION h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 
@@ -345,6 +364,7 @@ hr {
     overflow: hidden; /* 화면 밖 요소 숨기기 */
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 300px;
 }
 
 .reservation_count {
@@ -449,6 +469,7 @@ hr {
     padding: 20px;
     width: max-content; /* 전체 박스를 담을 수 있는 가로 길이 */
     animation: scroll 300s linear infinite; /* 천천히 왼쪽으로 이동하는 애니메이션 */
+	margin-bottom: 50px;
 }
 
 .hotel-scroll-wrapper {
@@ -468,7 +489,8 @@ hr {
 }
 
 .hotel-item {
-    width: 220px;
+    width: 200px;
+	height: 270px;
     /* padding: 15px; */
     background-color: #ffffff;
     /* border: 1px solid #e0e0e0; */
@@ -492,7 +514,8 @@ hr {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    margin: 8px 0 4px;
+	margin: 8px 0 15px;
+    
 }
 
 .hotel-name2 {
@@ -509,7 +532,8 @@ hr {
 .hotel-address {
     font-size: 0.9rem;
     color: #888;
-    margin: 0;
+    margin: 10px;
+	margin-bottom: 15px;
 }
 
 
@@ -636,12 +660,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* 추가 여백 및 스크롤 마진 설정 */
-#CONTACT, #RESERVATION {
-    padding-top: 120px; /* 헤더 높이만큼 여백 추가 */
-    margin-top: -120px; /* 스크롤 시 위치 보정 */
-    scroll-margin-top: 120px; /* 스크롤 고정 위치 설정 */
-}
 
 /*아코디언 */
 
@@ -719,6 +737,35 @@ button:hover {
         display: none; /* 로딩 중일 때만 보이도록 */
         text-align: center;
     }
+	#scrollToTopBtn {
+		display: none;
+		    position: fixed;
+		    bottom: 20px;
+		    right: 20px;
+		    z-index: 1000;
+		    background-color: #333;
+		    color: white;
+		    border: none;
+		    outline: none;
+		    width: 50px;
+		    height: 50px;
+		    text-align: center;
+		    font-size: 18px;
+		    border-radius: 50%;
+		    cursor: pointer;
+		    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		    transition: opacity 0.3s ease, background-color 0.3s ease;
+			display: flex;
+			    justify-content: center;
+			    align-items: center;
 
+			    /* 추가 설정 */
+			    line-height: 50px; /* 버튼 높이와 동일하게 설정 */
+			    font-size: 18px;
+			    text-align: center;
+			    padding: 0; /* 여백 제거 */
+	    }
 
-
+	    #scrollToTopBtn:hover {
+	        background-color: #555; /* 마우스를 올릴 때 버튼 색 변경 */
+	    }
