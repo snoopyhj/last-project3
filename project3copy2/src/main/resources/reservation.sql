@@ -10,3 +10,5 @@ CREATE TABLE reservation(
 	pay_date DATE,
 	person VARCHAR2(100)
 );
+
+commit;
