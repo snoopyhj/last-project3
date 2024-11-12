@@ -19,8 +19,7 @@
                     <div class="nav">
                         <a href="#">HOME</a> 
                         <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
-                        <a href="#REVIEW">REVIEW</a>
-                        <a href="#CONTACT">CONTACT</a>
+                        <a href="#CONTACT" onclick="scrollToReservation3(event)">CONTACT</a>
 						<a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
 						<a href="https://localhost:8444/aboutus">ABOUT US</a> 
                     </div>
@@ -110,16 +109,10 @@
           </div>
       </div>
 <!-- ================================================= main2 ======================================== -->
-      <div class="REVIEW" id="REVIEW">
-          <div class="customer-review">
-              <h2>회원 만족 리뷰</h2>
-              <p>회원들이 남긴 다양한 리뷰 사진을 확인해보세요!</p>
-          </div>
-         <br><br><br><br>
 
-      </div>
 <!-- ================================================= main3 ======================================== -->
-      <div class="CONTACT" id="CONTACT">
+<hr>     
+ <div class="CONTACT" id="CONTACT">
           <h2>고객센터</h2>
           <p>고객행복센터(전화): 오전 9시 ~ 새벽 3시 운영</p>
           <p>카카오톡 문의: 24시간 운영</p>
@@ -133,7 +126,7 @@
 
 
 
-      <hr><br><br>
+      <hr><br><br><br><br><br><br>
 <!-- ================================================= main5 ======================================== -->      
       <div class="FAQ" id="FAQ">
           <h1 class="faq-title">FAQ's</h1>
@@ -370,6 +363,18 @@
 			        behavior: "smooth"
 			    });
 			}
+			
+			function scrollToReservation3(event) {
+			    event.preventDefault(); // 기본 링크 이동 방지
+
+			    // 원하는 위치로 부드럽게 스크롤
+			    const targetPosition = document.querySelector("#CONTACT").offsetTop -280; // 조정된 위치
+			    window.scrollTo({
+			        top: targetPosition,
+			        behavior: "smooth"
+			    });
+			}
+			
 			const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 			    // 스크롤 이벤트 감지
