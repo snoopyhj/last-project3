@@ -1,12 +1,12 @@
 package com.example.demo.dao;
 
 import org.apache.ibatis.annotations.Mapper;
-
-import com.example.demo.vo.FavoritesVO;
+import org.springframework.stereotype.Repository;
 
 @Mapper
+@Repository
 public interface FavoritesDAO {
-    void insertFavorite(FavoritesVO review);
-    void deleteFavorite(FavoritesVO review);
-    boolean isFavorite(FavoritesVO favorite);
-    }
+    void insertFavorite(String default_num, String username);
+    void deleteFavorite(String default_num, String username);
+    boolean isFavorite(String default_num, String username);
+}

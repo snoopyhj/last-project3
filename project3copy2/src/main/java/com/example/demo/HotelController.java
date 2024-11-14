@@ -57,9 +57,9 @@ public class HotelController {
 	@PostMapping("/toggleFavorite")
 	@ResponseBody
 	public Map<String, Object> toggleFavorite(@RequestBody Map<String, String> payload) {
-	    String defaultNum = payload.get("default_num");
+	    String default_num = payload.get("default_num");
 	    String username = payload.get("username");
-	    System.out.println("Received defaultNum: " + defaultNum);
+	    System.out.println("Received defaultNum: " + default_num);
 	    System.out.println("User ID from session in toggleFavorite: " + username);
 
 	    if (username == null) {
@@ -67,28 +67,17 @@ public class HotelController {
 	        return Collections.singletonMap("favorited", false);
 	    }
 
-	    FavoritesVO favorite = new FavoritesVO();
-	    favorite.setId(username);
-	    favorite.setDefault_num(defaultNum);
-
 	    boolean favorited;
-	    System.out.println(fdao.isFavorite(favorite));
-	    if (fdao.isFavorite(favorite)) {
-	        fdao.deleteFavorite(favorite);
+	    System.out.println(fdao.isFavorite(default_num, username));
+	    if (fdao.isFavorite(default_num, username)) {
+	        fdao.deleteFavorite(default_num, username);
 	        favorited = false;
 	    } else {
-	        fdao.insertFavorite(favorite);
+	        fdao.insertFavorite(default_num, username);
 	        favorited = true;
 	    }
-	  
-	    
 	    return Collections.singletonMap("favorited", favorited);
 	}
-
-
-
-
-
 
 	@PostMapping("/login")
 	public String login(@RequestParam String username, HttpSession session) {
@@ -97,47 +86,38 @@ public class HotelController {
 	    return "redirect:/"; // 로그인 후 메인 페이지로 리디렉션
 	}
 
+//	@RequestMapping(value = "/insertFavorite", method = RequestMethod.GET)
+//	public String favoriesdetail(String id) {
+//	    FavoritesVO vo = new FavoritesVO();
+//	    vo.setId(id);
+//	    fdao.insertFavorite(default_num, username); 
+//	    return "hotellist"; 
+//	}
+//
+//	@RequestMapping(value = "/deleteFavorite", method = RequestMethod.GET)
+//	public String favorieslist(String id) {
+//	    FavoritesVO vo = new FavoritesVO();
+//	    vo.setId(id);
+//	    fdao.deleteFavorite(vo);
+//	    return "hotellist"; 
+//	}
+	
+//	@RequestMapping(value = "/insertFavorite2", method = RequestMethod.GET)
+//	public String favoriesdetail2(String id) {
+//	    FavoritesVO vo = new FavoritesVO();
+//	    vo.setId(id);
+//	    fdao.insertFavorite(vo); 
+//	    return "hotellist"; 
+//	}
+//
+//	@RequestMapping(value = "/deleteFavorite2", method = RequestMethod.GET)
+//	public String favorieslist2(String id) {
+//	    FavoritesVO vo = new FavoritesVO();
+//	    vo.setId(id);
+//	    fdao.deleteFavorite(vo);
+//	    return "hoteldetail"; 
+//	}
 
-
-	
-	
-	@RequestMapping(value = "/insertFavorite", method = RequestMethod.GET)
-	public String favoriesdetail(String id) {
-	    FavoritesVO vo = new FavoritesVO();
-	    vo.setId(id);
-	    fdao.insertFavorite(vo); 
-	    return "hotellist"; 
-	}
-
-	@RequestMapping(value = "/deleteFavorite", method = RequestMethod.GET)
-	public String favorieslist(String id) {
-	    FavoritesVO vo = new FavoritesVO();
-	    vo.setId(id);
-	    fdao.deleteFavorite(vo);
-	    return "hotellist"; 
-	}
-	
-	@RequestMapping(value = "/insertFavorite2", method = RequestMethod.GET)
-	public String favoriesdetail2(String id) {
-	    FavoritesVO vo = new FavoritesVO();
-	    vo.setId(id);
-	    fdao.insertFavorite(vo); 
-	    return "hotellist"; 
-	}
-
-	@RequestMapping(value = "/deleteFavorite2", method = RequestMethod.GET)
-	public String favorieslist2(String id) {
-	    FavoritesVO vo = new FavoritesVO();
-	    vo.setId(id);
-	    fdao.deleteFavorite(vo);
-	    return "hoteldetail"; 
-	}
-
-	
-	
-	
-	
-	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
 	public String region_search(String region, String subregion, Model model) {
 		  
@@ -152,10 +132,8 @@ public class HotelController {
 	
 	@RequestMapping(value = "/regionsearch2", method = RequestMethod.GET) 
 	public String region_search(String region,Model model) {
-		  
 		HotelVO vo = new HotelVO();
 		vo.setRegion(region);
-		
 		
 		model.addAttribute("hotel_list", dao.select_region2(vo));
 	  
@@ -187,10 +165,8 @@ public class HotelController {
 
 	    model.addAttribute("hotel_list", hotels);
 	    return "hotellist";  // 호텔 목록 페이지로 이동
-	    
-	    
-	    
 	}
+	
 	@RequestMapping(value = "/hoteldetail", method = RequestMethod.GET)
 	public String gotohoteldetail(@RequestParam("name") String name, Model model) {
 		HotelVO vo = new HotelVO();
