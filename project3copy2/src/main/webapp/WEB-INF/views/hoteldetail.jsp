@@ -52,18 +52,18 @@
 	    <!-- 가로 스크롤 컨테이너 -->
 	    <div class="review-list" id="reviewList">
 	        <c:forEach items="${reviews}" var="review">
-	            <div class="review-item">
-	                <div class="rating-stars">
-	                    <c:forEach begin="1" end="5" var="i">
-	                        <span class="${i <= review.rating ? 'filled-star' : 'empty-star'}">&#9733;</span>
-	                    </c:forEach>
-	                </div>
-	                <p><strong>작성자:</strong> ${review.userId}</p>
-	                <p><strong>작성일:</strong> 
-	                    <fmt:formatDate value="${review.createdAt}" pattern="yyyy-MM-dd"/>
-	                </p>
-	                <p class="review-content">${review.reviewText}</p>
-	            </div>
+				<div class="review-item" onclick="toggleReviewExpansion(this)">
+				    <div class="rating-stars">
+				        <c:forEach begin="1" end="5" var="i">
+				            <span class="${i <= review.rating ? 'filled-star' : 'empty-star'}">&#9733;</span>
+				        </c:forEach>
+				    </div>
+				    <p><strong>작성자:</strong> ${review.userId}</p>
+				    <p><strong>작성일:</strong> 
+				        <fmt:formatDate value="${review.createdAt}" pattern="yyyy-MM-dd"/>
+				    </p>
+				    <p class="review-content">${review.reviewText}</p>
+				</div>
 	        </c:forEach>
 	    </div>
 	</div>
@@ -373,7 +373,9 @@
 														});
 														marker.setMap(map);
 
-							
+														function toggleReviewExpansion(reviewItem) {
+														    reviewItem.classList.toggle('expanded');
+														}					
 
 							
 </script>
