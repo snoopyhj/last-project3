@@ -41,9 +41,7 @@
 		<p class="hotel-tel">${hotel.tel}</p>
 		<p class="hotel-comment">${hotel.coment}</p>
 		<p class="hotel-type">${hotel.type}</p>
-		<button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite('${eachhotel.default_num}')">
-		    ♥
-		</button>
+		<button class="favorite-btn" data-default-num="${hotel.default_num}">♥</button>
 	</div>
 
 	
@@ -202,6 +200,15 @@
 						    await fetchUserInfo();
 							
 						});
+						
+						// 모든 즐겨찾기 버튼에 클릭 이벤트 리스너 추가
+							    document.querySelectorAll('.favorite-btn').forEach(btn => {
+							        btn.addEventListener('click', function (event) {
+							            event.stopPropagation(); // 부모 요소 클릭 방지
+							            const defaultNum = this.getAttribute('data-default-num');
+							            toggleFavorite(defaultNum);
+							        });
+							    });
 
 						async function fetchUserInfo() {
 						    try {
@@ -232,6 +239,7 @@
 						        console.error('사용자 정보를 가져오는 중 오류 발생:', error);
 						    }
 						}
+						
 						function getCookie(name) {
 						    const cookieValue = document.cookie
 						        .split('; ')
@@ -375,8 +383,41 @@
 
 														function toggleReviewExpansion(reviewItem) {
 														    reviewItem.classList.toggle('expanded');
-														}					
+														}
+																			
+														async function toggleFavorite(defaultNum) {
+																	    try {
+																	        const userInfo = await fetchUserInfo();
 
+																	        if (!userInfo || !userInfo.username) {
+																	            alert('로그인이 필요합니다.');
+																	            return;
+																	        }
+
+																	        const response = await fetch('/toggleFavorite', {
+																	            method: 'POST',
+																	            headers: {
+																	                'Content-Type': 'application/json'
+																	            },
+																	            body: JSON.stringify({ default_num: defaultNum, username: userInfo.username }),
+																	            credentials: 'include'
+																	        });
+																			
+																			console.log(response)
+																			
+																	        if (!response.ok) {
+																	            throw new Error('즐겨찾기 처리 실패');
+																	        }
+																			
+																	        const result = await response.json();
+																	        // 해당 버튼의 상태를 토글
+																	        document.querySelector(`.favorite-btn[data-default-num="`+ defaultNum + `"]`).classList.toggle('favorited', result.favorited);
+																	        alert(result.favorited ? '즐겨찾기에 추가되었습니다.' : '즐겨찾기에서 제거되었습니다.');
+																	    } catch (error) {
+																	        console.error('즐겨찾기 처리 중 오류:', error);
+																	        alert('즐겨찾기 처리 중 오류가 발생했습니다.');
+																	    }
+																	}
 							
 </script>
 
