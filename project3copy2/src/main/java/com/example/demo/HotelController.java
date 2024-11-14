@@ -1,6 +1,8 @@
 package com.example.demo;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +17,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.demo.dao.FavoritesDAO;
 import com.example.demo.dao.HotelDAO;
 import com.example.demo.dao.HotelReviewDAO;
 import com.example.demo.dao.HotelSearchDAO;
 import com.example.demo.dao.RegionSearchDAO;
 import com.example.demo.dao.ReservationDAO;
+import com.example.demo.vo.FavoritesVO;
 import com.example.demo.vo.HotelReviewVO;
 import com.example.demo.vo.HotelVO;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HotelController {
@@ -33,9 +39,11 @@ public class HotelController {
 	@Autowired
 	ReservationDAO rdao;
 	@Autowired
-	private HotelDAO hotelDAO;   // HotelDAO 인스턴스 변수로 선언
+	private HotelDAO hotelDAO; 
 	@Autowired
 	private HotelReviewDAO hotelReviewDAO;
+	@Autowired
+	FavoritesDAO fdao;
 		
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -45,6 +53,89 @@ public class HotelController {
 	    model.addAttribute("hotel_list", dao.select_region4(vo));
 	    return "main";
 	}
+	
+	@PostMapping("/toggleFavorite")
+	@ResponseBody
+	public Map<String, Object> toggleFavorite(@RequestBody Map<String, String> payload) {
+	    String defaultNum = payload.get("default_num");
+	    String username = payload.get("username");
+	    System.out.println("Received defaultNum: " + defaultNum);
+	    System.out.println("User ID from session in toggleFavorite: " + username);
+
+	    if (username == null) {
+	        System.out.println("사용자가 로그인하지 않았습니다.");
+	        return Collections.singletonMap("favorited", false);
+	    }
+
+	    FavoritesVO favorite = new FavoritesVO();
+	    favorite.setId(username);
+	    favorite.setDefault_num(defaultNum);
+
+	    boolean favorited;
+	    System.out.println(fdao.isFavorite(favorite));
+	    if (fdao.isFavorite(favorite)) {
+	        fdao.deleteFavorite(favorite);
+	        favorited = false;
+	    } else {
+	        fdao.insertFavorite(favorite);
+	        favorited = true;
+	    }
+	  
+	    
+	    return Collections.singletonMap("favorited", favorited);
+	}
+
+
+
+
+
+
+	@PostMapping("/login")
+	public String login(@RequestParam String username, HttpSession session) {
+	    // 여기서 사용자 인증 로직을 처리한 뒤에 세션에 username을 저장합니다.
+	    session.setAttribute("username", username);
+	    return "redirect:/"; // 로그인 후 메인 페이지로 리디렉션
+	}
+
+
+
+	
+	
+	@RequestMapping(value = "/insertFavorite", method = RequestMethod.GET)
+	public String favoriesdetail(String id) {
+	    FavoritesVO vo = new FavoritesVO();
+	    vo.setId(id);
+	    fdao.insertFavorite(vo); 
+	    return "hotellist"; 
+	}
+
+	@RequestMapping(value = "/deleteFavorite", method = RequestMethod.GET)
+	public String favorieslist(String id) {
+	    FavoritesVO vo = new FavoritesVO();
+	    vo.setId(id);
+	    fdao.deleteFavorite(vo);
+	    return "hotellist"; 
+	}
+	
+	@RequestMapping(value = "/insertFavorite2", method = RequestMethod.GET)
+	public String favoriesdetail2(String id) {
+	    FavoritesVO vo = new FavoritesVO();
+	    vo.setId(id);
+	    fdao.insertFavorite(vo); 
+	    return "hotellist"; 
+	}
+
+	@RequestMapping(value = "/deleteFavorite2", method = RequestMethod.GET)
+	public String favorieslist2(String id) {
+	    FavoritesVO vo = new FavoritesVO();
+	    vo.setId(id);
+	    fdao.deleteFavorite(vo);
+	    return "hoteldetail"; 
+	}
+
+	
+	
+	
 	
 	
 	@RequestMapping(value = "/regionsearch", method = RequestMethod.GET) 
@@ -218,4 +309,6 @@ public class HotelController {
 	     System.out.println("review1234 : "+review.getRating());
 	     return "redirect:/regionsearch5?default_num=" + review.getDefaultNum();
 	 }
+	 
+
 }

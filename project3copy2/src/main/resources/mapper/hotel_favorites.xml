@@ -5,23 +5,24 @@
     <!-- 즐겨찾기 삽입 --> 
     <insert id="insertFavorite" parameterType="com.example.demo.vo.FavoritesVO">
         INSERT INTO favorites (id, default_Num)
-        VALUES (#{id}, #{default_Num})
+        VALUES (#{id}, #{default_num})
     </insert>
 
     <!-- 즐겨찾기 취소 (삭제) -->
     <delete id="deleteFavorite" parameterType="com.example.demo.vo.FavoritesVO">
 DELETE FROM favorites 
-WHERE id = #{id} 
+WHERE id = #{username} 
 AND default_num = #{default_num}
 
     </delete>
     
-    <select id="isFavorite" parameterType="com.example.demo.vo.FavoritesVO" resultType="boolean">
-    SELECT COUNT(*) > 0
+<select id="isFavorite" parameterType="com.example.demo.vo.FavoritesVO" resultType="boolean">
+    SELECT CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END AS isFavorite
     FROM favorites
-    WHERE id = #{id} 
+    WHERE id = #{username} 
     AND default_num = #{default_num}
 </select>
+
 
 
 </mapper>

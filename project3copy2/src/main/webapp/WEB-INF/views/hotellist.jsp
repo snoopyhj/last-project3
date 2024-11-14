@@ -100,23 +100,26 @@
 		              <option value="recommended">추천순</option>
 		          </select>
 		      </div>
+
 		      <div id="hotelCards">
+		          <!-- 반복문 추가 -->
 		          <c:forEach var="eachhotel" items="${hotel_list}">
 		              <div class="hotel-card" onclick="searchByDefaultNum('${eachhotel.default_num}')">
 		                  <img src="${eachhotel.img1}" alt="${eachhotel.name}" class="hotel-img">
+		                  <!-- 하트 버튼 위치 -->
+							<button class="favorite-btn" data-default-num="${eachhotel.default_num}">♥</button>
 		                  <div class="hotel-info">
-		                      <h3>${eachhotel.name}</h3>
+		                      <h3>${eachhotel.name}</h3>						  
 		                      <p>주소: ${eachhotel.address}</p>
-							  <p>전화번호: 
-							      <c:choose>
-							          <c:when test="${empty eachhotel.tel or eachhotel.tel eq 'nan'}">-</c:when>
-							          <c:otherwise>${eachhotel.tel}</c:otherwise>
-							      </c:choose>
-							  </p>
+		                      <p>전화번호:
+		                          <c:choose>
+		                              <c:when test="${empty eachhotel.tel or eachhotel.tel eq 'nan'}">-</c:when>
+		                              <c:otherwise>${eachhotel.tel}</c:otherwise>
+		                          </c:choose>
+		                      </p>
 		                      <p class="price">${eachhotel.standard} ~</p>
-							  <p class="resevations" style="display: none;">${eachhotel.reservation_count}</p>
-							  <p class="type" style="display: none;" >${eachhotel.type}</p>
-
+		                      <p class="resevations" style="display: none;">${eachhotel.reservation_count}</p>
+		                      <p class="type" style="display: none;">${eachhotel.type}</p>
 		                  </div>
 		              </div>
 		              <div class="divider"></div>
@@ -127,39 +130,41 @@
 
 <script>
 	document.addEventListener('DOMContentLoaded', async function () {
-						    console.log('페이지가 로드되었습니다!');
-						    await fetchUserInfo();
-							
-						});
+	    console.log('페이지가 로드되었습니다!');
+	    const userInfo = await fetchUserInfo();
+	    if (userInfo) {
+	        changeLoginButtonToMyPage(userInfo);
+	    }
+	    
+	    // 모든 즐겨찾기 버튼에 클릭 이벤트 리스너 추가
+	    document.querySelectorAll('.favorite-btn').forEach(btn => {
+	        btn.addEventListener('click', function (event) {
+	            event.stopPropagation(); // 부모 요소 클릭 방지
+	            const defaultNum = this.getAttribute('data-default-num');
+	            toggleFavorite(defaultNum);
+	        });
+	    });
+	});
 
-						async function fetchUserInfo() {
-						    try {
-						        const rememberMeChecked = getCookie('rememberMe') === 'true';
-						        let response = await fetch('https://localhost:8443/userinfo', {
-						            method: 'GET',
-						            credentials: 'include'
-						        });
+	async function fetchUserInfo() {
+	    try {
+	        const response = await fetch('https://localhost:8443/userinfo', {
+	            method: 'GET',
+	            credentials: 'include'
+	        });
 
-						        if (response.status === 401 && rememberMeChecked) {
-						            console.log("엑세스 토큰 만료 - 리프레시 토큰으로 재발급 요청");
-						            await refreshAccessToken();
-						            response = await fetch('https://localhost:8443/userinfo', {
-						                method: 'GET',
-						                credentials: 'include'
-						            });
-						        }
-
-						        if (!response.ok) {
-						            throw new Error('사용자 정보를 가져오는 데 실패했습니다.');
-						        }
-
-						        const userInfo = await response.json();
-						        changeLoginButtonToMyPage(userInfo);
-
-						    } catch (error) {
-						        console.error('사용자 정보를 가져오는 중 오류 발생:', error);
-						    }
-						}
+	        if (response.ok) {
+	            const userInfo = await response.json();
+	            return userInfo;
+	        } else {
+	            console.error('사용자 정보를 가져오는 데 실패했습니다.');
+	        }
+	    } catch (error) {
+	        console.error('사용자 정보를 가져오는 중 오류 발생:', error);
+	    }
+	    return null;
+	}
+						fetchUserInfo();
 						function getCookie(name) {
 						    const cookieValue = document.cookie
 						        .split('; ')
@@ -309,6 +314,81 @@
 			        }
 			    }
 			}
+			async function toggleFavorite(defaultNum) {
+			    try {
+			        const userInfo = await fetchUserInfo();
+
+			        if (!userInfo || !userInfo.username) {
+			            alert('로그인이 필요합니다.');
+			            return;
+			        }
+
+			        const response = await fetch('/toggleFavorite', {
+			            method: 'POST',
+			            headers: {
+			                'Content-Type': 'application/json'
+			            },
+			            body: JSON.stringify({ default_num: defaultNum, username: userInfo.username }),
+			            credentials: 'include'
+			        });
+
+			        if (!response.ok) {
+			            throw new Error('즐겨찾기 처리 실패');
+			        }
+					console.log(response)
+					
+			        const result = await response.json();
+			        // 해당 버튼의 상태를 토글
+			        document.querySelector(`.favorite-btn[data-default-num="${defaultNum}"]`).classList.toggle('favorited', result.favorited);
+			        alert(result.favorited ? '즐겨찾기에 추가되었습니다.' : '즐겨찾기에서 제거되었습니다.');
+			    } catch (error) {
+			        console.error('즐겨찾기 처리 중 오류:', error);
+			        alert('즐겨찾기 처리 중 오류가 발생했습니다.');
+			    }
+			}
+
+
+
+
+			document.addEventListener('DOMContentLoaded', async function () {
+									    console.log('페이지가 로드되었습니다!');
+									    await fetchUserInfo();
+										
+									});
+
+									async function fetchUserInfo() {
+									    try {
+									        const rememberMeChecked = getCookie('rememberMe') === 'true';
+									        let response = await fetch('https://localhost:8443/userinfo', {
+									            method: 'GET',
+									            credentials: 'include'
+									        });
+
+									        if (response.status === 401 && rememberMeChecked) {
+									            console.log("엑세스 토큰 만료 - 리프레시 토큰으로 재발급 요청");
+									            await refreshAccessToken();
+									            response = await fetch('https://localhost:8443/userinfo', {
+									                method: 'GET',
+									                credentials: 'include'
+									            });
+									        }
+
+									        if (!response.ok) {
+									            throw new Error('사용자 정보를 가져오는 데 실패했습니다.');
+									        }
+											
+											
+
+									        const userInfo = await response.json();
+											
+									        changeLoginButtonToMyPage(userInfo);
+											return userInfo; // 반환 추가
+									    } catch (error) {
+									        console.error('사용자 정보를 가져오는 중 오류 발생:', error);
+									    }
+									}			
+
+
 </script>
 
 </body>

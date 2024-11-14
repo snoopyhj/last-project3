@@ -41,6 +41,9 @@
 		<p class="hotel-tel">${hotel.tel}</p>
 		<p class="hotel-comment">${hotel.coment}</p>
 		<p class="hotel-type">${hotel.type}</p>
+		<button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite('${eachhotel.default_num}')">
+		    ♥
+		</button>
 	</div>
 
 	
@@ -325,6 +328,9 @@
 							    const walk = (x - startX) * 2; // 드래그 속도 조절
 							    reviewList.scrollLeft = scrollLeft - walk;
 							});
+							
+							
+							
 							document.getElementById('reviewForm').addEventListener('submit', async function(event) {
 							    event.preventDefault(); // 기본 form 제출 막기
 
