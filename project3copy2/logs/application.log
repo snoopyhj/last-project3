@@ -3290,3 +3290,432 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2024-11-15 17:48:38 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
 2024-11-15 17:48:59 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
 2024-11-15 17:49:06 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 17:52:47 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:52:52 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:52:59 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:06 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 17:54:17 WARN  [https-jsse-nio-8444-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:18 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:21 WARN  [https-jsse-nio-8444-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:23 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:25 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:26 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:30 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:38 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:40 WARN  [https-jsse-nio-8444-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:44 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:46 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:58 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:54:59 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:01 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:04 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:06 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:07 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:09 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:10 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:18 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:20 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:29 WARN  [https-jsse-nio-8444-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:55:56 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:56:04 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:56:09 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:56:17 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:56:26 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:57:01 WARN  [https-jsse-nio-8444-exec-10] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:57:03 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:58:18 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:59:06 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 17:59:33 WARN  [https-jsse-nio-8444-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:59:41 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:59:51 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 17:59:54 WARN  [https-jsse-nio-8444-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:00:00 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:00:05 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:00:17 WARN  [https-jsse-nio-8444-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:11 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:14 WARN  [https-jsse-nio-8444-exec-2] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:18 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:19 WARN  [https-jsse-nio-8444-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:23 WARN  [https-jsse-nio-8444-exec-10] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:24 WARN  [https-jsse-nio-8444-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:03:30 WARN  [https-jsse-nio-8444-exec-8] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-11-15 18:04:06 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:05:01 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-15 18:05:01 INFO  [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HOTEL_MAIN with eureka with status DOWN
+2024-11-15 18:05:01 INFO  [Thread-9] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731657901333, current=DOWN, previous=UP]
+2024-11-15 18:05:01 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:05:01 INFO  [Thread-9] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:05:01 INFO  [Thread-9] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:05:01 INFO  [Thread-9] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:05:01 INFO  [Thread-9] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-11-15 18:05:01 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:05:01 INFO  [Thread-9] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-11-15 18:05:01 INFO  [Thread-9] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-11-15 18:05:04 INFO  [Thread-9] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-11-15 18:05:04 INFO  [Thread-9] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - deregister  status: 200
+2024-11-15 18:05:04 INFO  [Thread-9] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-11-15 18:05:05 INFO  [restartedMain] c.e.demo.Project3copy2Application - Starting Project3copy2Application using Java 21.0.4 with PID 11692 (/Users/baehyeon-u/git/last-project3/project3copy2/target/classes started by baehyeon-u in /Users/baehyeon-u/git/last-project3/project3copy2)
+2024-11-15 18:05:05 INFO  [restartedMain] c.e.demo.Project3copy2Application - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 18:05:05 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15 18:05:05 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-11-15 18:05:05 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=5bdc6dcf-331d-3700-84c2-fad9f501095e
+2024-11-15 18:05:05 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:05:05 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:05:05 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:05:05 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:05:05 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:05:06 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with ports 8444 (https), 8089 (http)
+2024-11-15 18:05:06 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:05:06 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:05:06 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 18:05:06 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-15 18:05:06 INFO  [restartedMain] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-15 18:05:06 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 18:05:06 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1412 ms
+2024-11-15 18:05:06 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-11-15 18:05:06 WARN  [restartedMain] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-11-15 18:05:06 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection oracle.jdbc.driver.T4CConnection@6a06c0a0
+2024-11-15 18:05:06 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-11-15 18:05:06 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15 18:05:06 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-15 18:05:06 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15 18:05:06 WARN  [restartedMain] org.hibernate.dialect.Dialect - HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-11-15 18:05:06 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15 18:05:06 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:05:07 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15 18:05:07 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 18:05:07 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-11-15 18:05:07 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-15 18:05:07 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-11-15 18:05:07 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-11-15 18:05:07 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-11-15 18:05:08 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-11-15 18:05:08 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-15 18:05:08 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1731657908010 with initial instances count: 2
+2024-11-15 18:05:08 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application HOTEL_MAIN with eureka with status UP
+2024-11-15 18:05:08 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731657908041, current=UP, previous=STARTING]
+2024-11-15 18:05:08 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:05:08 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:05:08 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:05:08 INFO  [restartedMain] o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8444], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/baehyeon-u/.keystore] using alias [mylocalcert] with trust store [null]
+2024-11-15 18:05:08 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:05:08 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on ports 8444 (https), 8089 (http) with context path '/'
+2024-11-15 18:05:08 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8444
+2024-11-15 18:05:08 INFO  [restartedMain] c.e.demo.Project3copy2Application - Started Project3copy2Application in 3.428 seconds (process running for 1270.161)
+2024-11-15 18:05:08 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-15 18:05:11 INFO  [https-jsse-nio-8444-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15 18:05:11 INFO  [https-jsse-nio-8444-exec-9] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-15 18:05:11 INFO  [https-jsse-nio-8444-exec-9] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-11-15 18:10:07 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:15:06 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-15 18:15:06 INFO  [Thread-45] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HOTEL_MAIN with eureka with status DOWN
+2024-11-15 18:15:06 INFO  [Thread-45] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658506465, current=DOWN, previous=UP]
+2024-11-15 18:15:06 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:15:06 INFO  [Thread-45] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:15:06 INFO  [Thread-45] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:15:06 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:15:06 INFO  [Thread-45] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:15:06 INFO  [Thread-45] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-11-15 18:15:06 INFO  [Thread-45] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-11-15 18:15:06 INFO  [Thread-45] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-11-15 18:15:07 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:15:09 INFO  [Thread-45] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-11-15 18:15:09 WARN  [DiscoveryClient-%d] c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+2024-11-15 18:15:09 INFO  [Thread-45] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - deregister  status: 200
+2024-11-15 18:15:09 INFO  [Thread-45] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-11-15 18:15:10 INFO  [restartedMain] c.e.demo.Project3copy2Application - Starting Project3copy2Application using Java 21.0.4 with PID 11692 (/Users/baehyeon-u/git/last-project3/project3copy2/target/classes started by baehyeon-u in /Users/baehyeon-u/git/last-project3/project3copy2)
+2024-11-15 18:15:10 INFO  [restartedMain] c.e.demo.Project3copy2Application - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 18:15:10 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15 18:15:10 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-11-15 18:15:10 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=5bdc6dcf-331d-3700-84c2-fad9f501095e
+2024-11-15 18:15:10 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:15:10 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:15:10 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:15:10 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:15:10 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:15:11 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with ports 8444 (https), 8089 (http)
+2024-11-15 18:15:11 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:15:11 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:15:11 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 18:15:11 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-15 18:15:11 INFO  [restartedMain] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-15 18:15:11 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 18:15:11 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1318 ms
+2024-11-15 18:15:11 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-11-15 18:15:11 WARN  [restartedMain] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-11-15 18:15:11 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection oracle.jdbc.driver.T4CConnection@7c7e3db5
+2024-11-15 18:15:11 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-11-15 18:15:11 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15 18:15:11 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-15 18:15:11 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15 18:15:11 WARN  [restartedMain] org.hibernate.dialect.Dialect - HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-11-15 18:15:11 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15 18:15:11 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:15:12 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15 18:15:12 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 18:15:12 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-11-15 18:15:12 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-15 18:15:12 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-11-15 18:15:12 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-11-15 18:15:12 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1731658512611 with initial instances count: 2
+2024-11-15 18:15:12 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application HOTEL_MAIN with eureka with status UP
+2024-11-15 18:15:12 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658512616, current=UP, previous=STARTING]
+2024-11-15 18:15:12 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:15:12 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:15:12 INFO  [restartedMain] o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8444], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/baehyeon-u/.keystore] using alias [mylocalcert] with trust store [null]
+2024-11-15 18:15:12 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:15:12 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on ports 8444 (https), 8089 (http) with context path '/'
+2024-11-15 18:15:13 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8444
+2024-11-15 18:15:13 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:15:13 INFO  [restartedMain] c.e.demo.Project3copy2Application - Started Project3copy2Application in 3.198 seconds (process running for 1875.075)
+2024-11-15 18:15:13 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-15 18:15:14 INFO  [https-jsse-nio-8444-exec-7] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15 18:15:14 INFO  [https-jsse-nio-8444-exec-7] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-15 18:15:14 INFO  [https-jsse-nio-8444-exec-7] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-11-15 18:16:43 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-15 18:16:43 INFO  [Thread-58] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HOTEL_MAIN with eureka with status DOWN
+2024-11-15 18:16:43 INFO  [Thread-58] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658603083, current=DOWN, previous=UP]
+2024-11-15 18:16:43 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:16:43 INFO  [Thread-58] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:16:43 INFO  [Thread-58] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:16:43 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:16:43 INFO  [Thread-58] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:16:43 INFO  [Thread-58] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-11-15 18:16:43 INFO  [Thread-58] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-11-15 18:16:43 INFO  [Thread-58] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-11-15 18:16:46 INFO  [Thread-58] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-11-15 18:16:46 INFO  [Thread-58] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - deregister  status: 200
+2024-11-15 18:16:46 INFO  [Thread-58] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-11-15 18:16:46 INFO  [restartedMain] c.e.demo.Project3copy2Application - Starting Project3copy2Application using Java 21.0.4 with PID 11692 (/Users/baehyeon-u/git/last-project3/project3copy2/target/classes started by baehyeon-u in /Users/baehyeon-u/git/last-project3/project3copy2)
+2024-11-15 18:16:46 INFO  [restartedMain] c.e.demo.Project3copy2Application - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 18:16:46 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15 18:16:46 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-15 18:16:47 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=5bdc6dcf-331d-3700-84c2-fad9f501095e
+2024-11-15 18:16:47 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:16:47 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:16:47 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:16:47 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:16:47 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:16:47 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with ports 8444 (https), 8089 (http)
+2024-11-15 18:16:47 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:16:47 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:16:47 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 18:16:47 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-15 18:16:47 INFO  [restartedMain] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-15 18:16:47 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 18:16:47 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1148 ms
+2024-11-15 18:16:47 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2024-11-15 18:16:47 WARN  [restartedMain] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-11-15 18:16:48 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection oracle.jdbc.driver.T4CConnection@55b47134
+2024-11-15 18:16:48 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2024-11-15 18:16:48 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15 18:16:48 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-15 18:16:48 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15 18:16:48 WARN  [restartedMain] org.hibernate.dialect.Dialect - HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-11-15 18:16:48 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15 18:16:48 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:16:48 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15 18:16:48 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 18:16:48 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-11-15 18:16:48 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-15 18:16:49 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-11-15 18:16:49 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-11-15 18:16:49 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1731658609256 with initial instances count: 2
+2024-11-15 18:16:49 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application HOTEL_MAIN with eureka with status UP
+2024-11-15 18:16:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658609261, current=UP, previous=STARTING]
+2024-11-15 18:16:49 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:16:49 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:16:49 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:16:49 INFO  [restartedMain] o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8444], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/baehyeon-u/.keystore] using alias [mylocalcert] with trust store [null]
+2024-11-15 18:16:49 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:16:49 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on ports 8444 (https), 8089 (http) with context path '/'
+2024-11-15 18:16:49 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8444
+2024-11-15 18:16:49 INFO  [restartedMain] c.e.demo.Project3copy2Application - Started Project3copy2Application in 2.973 seconds (process running for 1971.315)
+2024-11-15 18:16:49 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-15 18:16:51 INFO  [https-jsse-nio-8444-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15 18:16:51 INFO  [https-jsse-nio-8444-exec-10] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-15 18:16:51 INFO  [https-jsse-nio-8444-exec-10] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-15 18:18:18 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-15 18:18:18 INFO  [Thread-67] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HOTEL_MAIN with eureka with status DOWN
+2024-11-15 18:18:18 INFO  [Thread-67] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658698375, current=DOWN, previous=UP]
+2024-11-15 18:18:18 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:18:18 INFO  [Thread-67] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:18 INFO  [Thread-67] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:18 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:18:18 INFO  [Thread-67] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:18:18 INFO  [Thread-67] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-11-15 18:18:18 INFO  [Thread-67] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-11-15 18:18:18 INFO  [Thread-67] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-11-15 18:18:21 INFO  [Thread-67] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-11-15 18:18:21 WARN  [DiscoveryClient-%d] c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+2024-11-15 18:18:21 INFO  [Thread-67] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - deregister  status: 200
+2024-11-15 18:18:21 INFO  [Thread-67] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-11-15 18:18:21 INFO  [restartedMain] c.e.demo.Project3copy2Application - Starting Project3copy2Application using Java 21.0.4 with PID 11692 (/Users/baehyeon-u/git/last-project3/project3copy2/target/classes started by baehyeon-u in /Users/baehyeon-u/git/last-project3/project3copy2)
+2024-11-15 18:18:21 INFO  [restartedMain] c.e.demo.Project3copy2Application - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 18:18:22 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15 18:18:22 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-15 18:18:22 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=5bdc6dcf-331d-3700-84c2-fad9f501095e
+2024-11-15 18:18:22 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:18:22 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:22 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:18:22 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:22 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:22 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with ports 8444 (https), 8089 (http)
+2024-11-15 18:18:22 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:22 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:22 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 18:18:22 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-15 18:18:23 INFO  [restartedMain] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-15 18:18:23 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 18:18:23 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1066 ms
+2024-11-15 18:18:23 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2024-11-15 18:18:23 WARN  [restartedMain] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-11-15 18:18:23 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection oracle.jdbc.driver.T4CConnection@398e02a2
+2024-11-15 18:18:23 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2024-11-15 18:18:23 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15 18:18:23 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-15 18:18:23 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15 18:18:23 WARN  [restartedMain] org.hibernate.dialect.Dialect - HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-11-15 18:18:23 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15 18:18:23 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:18:23 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-11-15 18:18:24 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-11-15 18:18:24 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-11-15 18:18:24 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1731658704564 with initial instances count: 2
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application HOTEL_MAIN with eureka with status UP
+2024-11-15 18:18:24 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658704569, current=UP, previous=STARTING]
+2024-11-15 18:18:24 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:18:24 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:24 INFO  [restartedMain] o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8444], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/baehyeon-u/.keystore] using alias [mylocalcert] with trust store [null]
+2024-11-15 18:18:24 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on ports 8444 (https), 8089 (http) with context path '/'
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8444
+2024-11-15 18:18:24 INFO  [restartedMain] c.e.demo.Project3copy2Application - Started Project3copy2Application in 2.996 seconds (process running for 2066.654)
+2024-11-15 18:18:24 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-15 18:18:24 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:18:43 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-15 18:18:43 INFO  [Thread-76] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HOTEL_MAIN with eureka with status DOWN
+2024-11-15 18:18:43 INFO  [Thread-76] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658723772, current=DOWN, previous=UP]
+2024-11-15 18:18:43 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:18:43 INFO  [Thread-76] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:43 INFO  [Thread-76] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:43 INFO  [Thread-76] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:18:43 INFO  [Thread-76] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-11-15 18:18:43 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:18:43 INFO  [Thread-76] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-11-15 18:18:43 INFO  [Thread-76] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2024-11-15 18:18:46 INFO  [Thread-76] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2024-11-15 18:18:46 INFO  [Thread-76] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - deregister  status: 200
+2024-11-15 18:18:46 INFO  [Thread-76] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2024-11-15 18:18:47 INFO  [restartedMain] c.e.demo.Project3copy2Application - Starting Project3copy2Application using Java 21.0.4 with PID 11692 (/Users/baehyeon-u/git/last-project3/project3copy2/target/classes started by baehyeon-u in /Users/baehyeon-u/git/last-project3/project3copy2)
+2024-11-15 18:18:47 INFO  [restartedMain] c.e.demo.Project3copy2Application - No active profile set, falling back to 1 default profile: "default"
+2024-11-15 18:18:47 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15 18:18:47 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2024-11-15 18:18:47 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=5bdc6dcf-331d-3700-84c2-fad9f501095e
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-11-15 18:18:48 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with ports 8444 (https), 8089 (http)
+2024-11-15 18:18:48 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:48 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:48 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-15 18:18:48 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-15 18:18:48 INFO  [restartedMain] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-15 18:18:48 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-15 18:18:48 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1028 ms
+2024-11-15 18:18:48 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2024-11-15 18:18:48 WARN  [restartedMain] c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-11-15 18:18:48 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection oracle.jdbc.driver.T4CConnection@5af42d98
+2024-11-15 18:18:48 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2024-11-15 18:18:48 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15 18:18:48 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-15 18:18:48 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15 18:18:48 WARN  [restartedMain] org.hibernate.dialect.Dialect - HHH000511: The 18.0.0 version for [org.hibernate.dialect.OracleDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 19.0.0. Check the community dialects project for available legacy versions.
+2024-11-15 18:18:48 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15 18:18:48 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15 18:18:48 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2024-11-15 18:18:49 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2024-11-15 18:18:49 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2024-11-15 18:18:49 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1731658729792 with initial instances count: 2
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application HOTEL_MAIN with eureka with status UP
+2024-11-15 18:18:49 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1731658729797, current=UP, previous=STARTING]
+2024-11-15 18:18:49 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444: registering service...
+2024-11-15 18:18:49 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8444"]
+2024-11-15 18:18:49 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/192.168.2.66:hotel_main:8444 - registration status: 204
+2024-11-15 18:18:49 INFO  [restartedMain] o.a.t.u.net.NioEndpoint.certificate - Connector [https-jsse-nio-8444], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [/Users/baehyeon-u/.keystore] using alias [mylocalcert] with trust store [null]
+2024-11-15 18:18:49 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on ports 8444 (https), 8089 (http) with context path '/'
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8444
+2024-11-15 18:18:49 INFO  [restartedMain] c.e.demo.Project3copy2Application - Started Project3copy2Application in 2.834 seconds (process running for 2091.894)
+2024-11-15 18:18:49 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-11-15 18:21:32 INFO  [https-jsse-nio-8444-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-15 18:21:32 INFO  [https-jsse-nio-8444-exec-10] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-15 18:21:32 INFO  [https-jsse-nio-8444-exec-10] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-11-15 18:23:49 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:28:44 WARN  [https-jsse-nio-8444-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Invalid input]
+2024-11-15 18:28:47 WARN  [https-jsse-nio-8444-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Invalid input]
+2024-11-15 18:28:49 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:28:51 WARN  [https-jsse-nio-8444-exec-6] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Invalid input]
+2024-11-15 18:33:49 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:38:49 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2024-11-15 18:43:49 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration

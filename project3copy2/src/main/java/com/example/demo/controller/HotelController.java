@@ -137,9 +137,9 @@ public class HotelController {
 
 	    // 데이터베이스에서 검색 결과 가져오기
 	    List<HotelVO> hotels = dao.select_region3(vo);
-
+	   System.out.print(hotels);
 	    model.addAttribute("hotel_list", hotels);
-	    return "hotellist";  // 호텔 목록 페이지로 이동
+	    return "hotel/hotellist";  // 호텔 목록 페이지로 이동
 	    
 	    
 	    

@@ -435,7 +435,7 @@
 			    event.preventDefault(); // 기본 링크 이동 방지
 
 			    // 원하는 위치로 부드럽게 스크롤
-			    const targetPosition = document.querySelector("#RESERVATION").offsetTop +350; // 조정된 위치
+			    const targetPosition = document.querySelector("#RESERVATION").offsetTop +180; // 조정된 위치
 			    window.scrollTo({
 			        top: targetPosition,
 			        behavior: "smooth"

@@ -12,9 +12,9 @@
 	        <a href="https://localhost:8444/" class="logo">cozypick</a>
 	        <div class="nav">
 	            <a href="https://localhost:8444/#">HOME</a> 
-	            <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
-	            <a href="#CONTACT">CONTACT</a>
+	            <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>       
 	            <a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
+				<a href="https://localhost:8444/contact">CONTACT</a>
 	            <a href="https://localhost:8444/aboutus">ABOUT US</a> 
 	        </div>
 	        <div>

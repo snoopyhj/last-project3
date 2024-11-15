@@ -66,6 +66,11 @@ public class MainController {
 
 	
 	
-
+	// Controller에서 /favicon.ico을 처리하는 메소드에 리턴값이 없게 함(로그인 이후 favicon 파일로 인해 발생하는 문제 처리)
+	   @GetMapping("/favicon.ico")
+	    @ResponseBody
+	    public void returnNoFavicon() {
+	      
+	    }
 	
 }

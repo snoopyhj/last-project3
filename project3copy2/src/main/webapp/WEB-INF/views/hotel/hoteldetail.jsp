@@ -51,7 +51,7 @@
 	    <!-- 가로 스크롤 컨테이너 -->
 	    <div class="review-list" id="reviewList">
 	        <c:forEach items="${reviews}" var="review">
-	            <div class="review-item">
+	            <div class="review-item" onclick="toggleReviewExpansion(this)">
 	                <div class="rating-stars">
 	                    <c:forEach begin="1" end="5" var="i">
 	                        <span class="${i <= review.rating ? 'filled-star' : 'empty-star'}">&#9733;</span>
@@ -505,7 +505,9 @@
 																	    }
 																	}
 
-							
+																	function toggleReviewExpansion(reviewItem) {
+																	    reviewItem.classList.toggle('expanded');
+																	}
 
 							
 </script>
