@@ -44,7 +44,10 @@ public class MainController {
 		return "hotel/hoteldetail";
 	}
 	
-	
+	@RequestMapping("/contact")
+    public String contactPage() {
+        return "mainpage/contact"; 
+    }
 
 	@RequestMapping("/aboutus")
 	public String aboutus() {

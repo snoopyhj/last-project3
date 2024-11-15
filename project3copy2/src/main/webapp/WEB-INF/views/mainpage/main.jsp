@@ -19,9 +19,8 @@
                     <div class="nav">
                         <a href="#">HOME</a> 
                         <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
-                        <a href="#REVIEW">REVIEW</a>
-                        <a href="#CONTACT">CONTACT</a>
 						<a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
+                        <a href="https://localhost:8444/contact">CONTACT</a>				
 						<a href="https://localhost:8444/aboutus">ABOUT US</a> 
                     </div>
 					
@@ -55,9 +54,21 @@
 
 <!-- ================================================= main1 ======================================== -->
  
-<div class="RESERVATION" id="RESERVATION"><br><br>
+
+	<div class="RESERVATION" id="RESERVATION">
+	    <br><br>	    
+	    <!-- 배너 이미지 영역 -->
+		<p class="subject1">이벤트</p>
+	    <div class="event-banner-container">
+	        <img src="/image/상단배너3.jpg" alt="이벤트 배너 1">
+	        <img src="/image/배너1.jpg" alt="이벤트 배너 2">
+			<img src="/image/상단배너2.jpg" alt="이벤트 배너 2">
+	    </div>
+	    	
+		
+	
       <h1>국내 대표 여행지</h1>
-	  <p class="subject1">국내를 대표하는 5곳의 여행지에서 최고의 경험을 만들어보세요.</p>
+	  <p class="subject1">국내를 대표하는 6곳의 여행지에서 최고의 경험을 만들어보세요.</p>
  <div class="reservation_wrapper"> 
 	<div class="reservation_count2">
 	    <button class="image-button" onclick="search2(1)">
@@ -84,6 +95,11 @@
 	        <img src="/image/mokpo.jpg" alt="목포">
 	        <p class="mainname">목포</p>
 	    </button>
+		
+		<button class="image-button" onclick="search(38,13)">	
+		    <img src="/image/yeosu1.jpg" alt="여수">
+		    <p class="mainname">여수</p>
+		</button>
 	</div>
 	<h1>국내 최고 인기 숙소에서 특별한 하루를 맞이해보세요.</h1>
 	<p class="subject1">여행의 다채로움을 더할 다양한 숙소들이 준비되어 있습니다. 각기 다른 테마와 특별한 경험을 선사하는 숙소에서 하루를 채워보세요.</p>
@@ -93,9 +109,8 @@
 	            <div class="hotel-item" onclick="searchByDefaultNum('${eachhotel.default_num}')">
 	                <img src="${eachhotel.img1 != null ? eachhotel.img1 : '/path/to/default_image.jpg'}" 
 	                     alt="${eachhotel.name}" width="200" height="150">
-						 <p class="hotel-name">&nbsp;&nbsp;${eachhotel.name}</p>
+						 <p class="hotel-name">${eachhotel.name}</p>
 						 <p class="hotel-address">${eachhotel.address}</p>
-						 <br>
 						 <p class="hotel-name2">${eachhotel.standard}원 ~</p>
 
 	            </div>
@@ -155,7 +170,7 @@
 		<img src="/image/배너2.jpg" alt="배너 이미지">
 	</div>
           </div>
-      </div>
+      </div><hr>
 <!-- ================================================= main2 ======================================== -->
      
 <!-- ================================================= main3 ======================================== -->

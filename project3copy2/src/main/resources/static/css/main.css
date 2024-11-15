@@ -369,7 +369,7 @@ hr {
 
 /* RESERVATION 섹션 */
 .RESERVATION {
-    height: 2200px;
+    height: 2500px;
     width: 90%;
     max-width: 1280px;
     margin: 60px auto;
@@ -458,8 +458,8 @@ hr {
 }
 
 .reservation_count2 img {
-    width: 200px;           /* 이미지의 너비 */
-    height: 179.5px;        /* 이미지의 높이 */
+    width: 180px;           /* 이미지의 너비 */
+    height: 160px;        /* 이미지의 높이 */
     object-fit: cover;      /* 비율을 유지하며 박스에 맞게 자르기 */
    	border-radius: 15px;    /* 라운드 처리 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* 약간의 그림자 효과 */
@@ -516,6 +516,7 @@ hr {
 }
 
 .hotel-item {
+    position: relative; /* 자식 요소 위치 설정 기준 */
     width: 250px;
     height: 340px;
     background-color: rgb(244, 244, 244);
@@ -524,6 +525,7 @@ hr {
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    padding-bottom: 20px; /* 텍스트와 하단 경계 간 여백 */
 }
 
 
@@ -537,10 +539,10 @@ hr {
 }
 
 .hotel-name {
-    font-size: 1.2rem; /* 글꼴 크기 확대 */
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #333;	
-    margin: 10px 0 8px;
+    color: #333;
+    margin: 10px 10px 8px;
 }
 
 .hotel-address {
@@ -551,10 +553,12 @@ hr {
 }
 
 .hotel-name2 {
+    position: absolute; /* 부모 요소의 위치 기준 */
+    bottom: 10px; /* 하단에서 10px 띄움 */
+    left: 10px; /* 왼쪽에서 10px 띄움 */
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-	margin-left: 10px;
 }
 
 
@@ -673,8 +677,10 @@ button:hover {
 /* FAQ 타이틀 */
 
 
-
-
+.faq {
+	margin-bottom: 20px;
+	
+}
 
 
 .faq-title {
@@ -683,6 +689,7 @@ button:hover {
     margin: 20px 0;
     color: #333;
     font-weight: bold;
+	margin-top: 120px;
 }
 
 /* FAQ 컨테이너 */
@@ -692,6 +699,8 @@ button:hover {
     gap: 10px;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 70px;
 }
 
 /* FAQ 항목 */
@@ -906,3 +915,23 @@ button:hover {
 			text-align: left;
 			
 		}
+		
+		.event-banner-container {
+		    display: flex;
+		    justify-content: center; /* 중앙 정렬 */
+		    gap: 10px; /* 이미지 사이 간격 */
+		    margin: 20px 0; /* 상하 여백 */
+			margin-bottom: 50px;
+		}
+
+		.event-banner-container img {
+		    width:380px;
+		    height:120px;
+		    object-fit: cover; /* 이미지가 지정된 크기에 맞게 채워짐 */
+		    border-radius: 8px; /* 모서리를 둥글게 */
+		    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 약간의 그림자 효과 */
+		}
+		
+		
+		
+		
