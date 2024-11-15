@@ -247,6 +247,7 @@ body {
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 	position: relative; 
+	cursor: pointer;
 }
 
 /* 구분선 스타일 */

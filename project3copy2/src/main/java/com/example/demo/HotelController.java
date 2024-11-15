@@ -79,6 +79,14 @@ public class HotelController {
 	    return Collections.singletonMap("favorited", favorited);
 	}
 
+
+    @GetMapping("/contact")
+    public String contactPage() {
+        return "contact"; 
+    }
+
+
+
 	@PostMapping("/login")
 	public String login(@RequestParam String username, HttpSession session) {
 	    // 여기서 사용자 인증 로직을 처리한 뒤에 세션에 username을 저장합니다.
@@ -136,6 +144,16 @@ public class HotelController {
 		vo.setRegion(region);
 		
 		model.addAttribute("hotel_list", dao.select_region2(vo));
+	  
+		return "hotellist";
+	}
+	
+	@RequestMapping(value = "/regionsearch6", method = RequestMethod.GET) 
+	public String region_search2(String type,Model model) {
+		HotelVO vo = new HotelVO();
+		vo.setType(type);
+		
+		model.addAttribute("hotel_list", dao.select_region6(vo));
 	  
 		return "hotellist";
 	}

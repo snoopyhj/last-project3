@@ -108,7 +108,18 @@ body {
 
 /* 검색창=============================================
 */
+.subject1 {
+    text-align: left;
+    color: #888888;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
 
+.mainname {
+    font-size: 15px !important;
+    text-align: left !important;
+    margin-left: 10px !important;
+}
 
 .search-reservation-box {
 	position: relative;
@@ -358,18 +369,19 @@ hr {
 
 /* RESERVATION 섹션 */
 .RESERVATION {
+    height: 2200px;
     width: 90%;
     max-width: 1280px;
     margin: 60px auto;
     padding: 40px;
-
     text-align: center;
 }
 
 .RESERVATION h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-	margin-top: 20px;
+    margin-top: 20px;
+    text-align: left; /* 왼쪽 정렬 */
 }
 
 
@@ -407,7 +419,7 @@ hr {
     align-items: center;
     flex-wrap: wrap;
     padding: 20px;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 }
 
 .image-button {
@@ -504,51 +516,45 @@ hr {
 }
 
 .hotel-item {
-    width: 200px;
-	height: 270px;
-    /* padding: 15px; */
-    background-color: #ffffff;
-    /* border: 1px solid #e0e0e0; */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    width: 250px;
+    height: 340px;
+    background-color: rgb(244, 244, 244);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 
+
 .hotel-item img {
     width: 100%;
-    height: 140px;
+    height: 210px; /* 이미지 높이 확대 */
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 10px;
+ 
 }
 
 .hotel-name {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 글꼴 크기 확대 */
     font-weight: bold;
-    color: #333;
-	margin: 8px 0 15px;
-    
+    color: #333;	
+    margin: 10px 0 8px;
+}
+
+.hotel-address {
+    font-size: 0.8rem; /* 글꼴 크기 확대 */
+    color: #888;
+    margin: 10px 0;
+	margin-left: 10px;
 }
 
 .hotel-name2 {
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    position: absolute;
-    bottom: 20px; /* 하단에서 10px 위에 배치 */
-	padding-left: 10px;
-
-
-}
-
-.hotel-address {
-    font-size: 0.9rem;
-    color: #888;
-    margin: 10px;
-	margin-bottom: 15px;
+	margin-left: 10px;
 }
 
 
@@ -631,20 +637,6 @@ hr {
     margin-top: 20px;
 }
 
-button {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 12px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: white;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
-}
 
 /* 반응형 처리 */
 @media (max-width: 768px) {
@@ -784,3 +776,133 @@ button:hover {
 	    #scrollToTopBtn:hover {
 	        background-color: rgb(83, 83, 83); /* 마우스를 올릴 때 버튼 색 변경 */
 	    }
+		
+		
+		
+		.hotel-container2 {
+		    text-align: center;
+		    padding: 30px 0px;
+			margin-top: 15px;
+		}
+
+		.hotel-container2 h2 {
+		    font-size: 24px;
+		    color: #333;
+		    margin-bottom: 20px;
+		}
+		.grid-container {
+		    display: grid;
+		    grid-template-columns: repeat(5, 1fr); /* 5개씩 한 줄에 배치 */
+		    gap: 15px;
+		    margin-top: 40px;
+			row-gap: 50px;
+		}
+
+		.grid-item {
+		    cursor: pointer;
+		    text-align: center;
+		    transition: transform 0.3s ease;
+		}
+
+		.grid-item img {
+		    width: 100%;
+		    height: 180px;
+		    border-radius: 8px;
+		    object-fit: cover;
+		    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.grid-item p {
+		    margin-top: 10px;
+		    font-size: 16px;
+		    color: #333;
+		}
+
+
+		.slider-wrapper {
+		    position: relative;
+		    width: 100%;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    overflow: hidden; /* 스크롤을 위한 overflow 설정 */
+		}
+
+		.slider {
+		    display: flex;
+		    gap: 15px;
+		    transition: transform 0.3s ease; /* 부드러운 스크롤 */
+		    /* overflow-x를 scroll로 설정하여 스크롤이 가능하도록 합니다 */
+		    overflow-x: scroll;
+		    scroll-snap-type: x mandatory; /* 스냅 스크롤 설정 */
+		}
+
+		.slide-item {
+		    flex: 0 0 auto; /* 자동으로 폭을 유지하도록 설정 */
+		    width: 230px;
+		    padding: 10px;
+		    text-align: center;
+		    scroll-snap-align: start; /* 아이템이 스냅되도록 설정 */
+			cursor: pointer;
+		}
+
+		.slide-item img {
+		    width: 100%;
+		    height: 180px; /* 세로 길이 줄이기 */
+		    border-radius: 8px;
+		    object-fit: cover;
+		    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		    transition: transform 0.3s ease;
+		}
+
+
+
+
+		.slide-item p {
+		    margin-top: 10px;
+		    font-size: 16px;
+		    color: #333;
+		}
+
+		.slider-btn {
+		    font-size: 24px;
+		    border: none;
+		    background: none;
+		    color: #333;
+		    cursor: pointer;
+
+		    padding: 0 10px;
+		}
+
+
+		.prev-btn {
+		    position: absolute;
+		    left: 11px;
+		    top: 86px;
+		}
+
+		.next-btn {
+		    position: absolute;
+			right: 11px;
+			top: 86px;
+		   
+		}
+		
+		.banner-container {
+		    margin: 40px auto; /* 위아래 여백 */
+		    text-align: center;
+		}
+
+		.banner-container img {
+		    width: auto;
+		    height: auto;
+		    max-width: 100%; /* 화면보다 이미지가 크면 화면 크기에 맞게 축소 */
+		    max-height: 100%; /* 화면보다 이미지가 크면 화면 높이에 맞게 축소 */
+		    object-fit: contain; /* 원본 비율 유지 */
+		    border-radius: 8px; /* 모서리 둥글게 처리 */
+		    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+			margin-bottom: 30px; /* 이미지 사이의 간격 설정 */
+		}
+		.search_main {
+			text-align: left;
+			
+		}

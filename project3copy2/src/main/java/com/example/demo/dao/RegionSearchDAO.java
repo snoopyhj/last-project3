@@ -19,4 +19,6 @@ public interface RegionSearchDAO {
 	public ArrayList<HotelVO> select_region4(HotelVO vo);
 	
 	public ArrayList<HotelVO> select_region5(HotelVO vo);
+	
+	public ArrayList<HotelVO> select_region6(HotelVO vo);
 }

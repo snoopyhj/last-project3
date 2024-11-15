@@ -25,9 +25,9 @@
                <a href="#" class="logo">cozypick</a>
                     <div class="nav">
                         <a href="#">HOME</a> 
-                        <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
-                        <a href="#CONTACT" onclick="scrollToReservation3(event)">CONTACT</a>
+                        <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>                     
 						<a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
+						<a href="https://localhost:8444/contact">CONTACT</a>
 						<a href="https://localhost:8444/aboutus">ABOUT US</a> 
                     </div>
 					<div id="loading-message" class="loading">Loading user information...</div>
@@ -42,7 +42,7 @@
             <div class="box-container">
             <div class="intro_bg">   
                 <div class="intro_text">
-                    <p class="search_main">국내여행엔<br> cozypick</p>
+                    <p class="search_main">국내여행! 최고의 선택은<br> cozypick</p>
 					    <input 
 					        type="text" 
 					        id="search-input" 
@@ -56,84 +56,113 @@
 
 <!-- ================================================= main1 ======================================== -->
  
-  <div class="RESERVATION" id="RESERVATION"><br><br><br>
-      <h1>국내 대표 여행지</h1><br>
+  <div class="RESERVATION" id="RESERVATION"><br><br>
+      <h1>국내 대표 여행지</h1>
+	  <p class="subject1">국내를 대표하는 5곳의 여행지에서 최고의 경험을 만들어보세요.</p>
  <div class="reservation_wrapper"> 
 	<div class="reservation_count2">
 	    <button class="image-button" onclick="search2(1)">
 	        <img src="/image/seoul2.jpg" alt="서울">
-	        <p>서울</p>
+	        <p class="mainname">서울</p>
 	    </button>
 
 	    <button class="image-button" onclick="search2(6)">	
 	        <img src="/image/busan.jpg" alt="부산">
-	        <p>부산</p>
+	        <p class="mainname">부산</p>
 	    </button>
 
 	    <button class="image-button" onclick="search2(39)">	
 	        <img src="/image/jeju.jpg" alt="제주">
-	        <p>제주</p>
+	        <p class="mainname">제주</p>
 	    </button>
 
 	    <button class="image-button" onclick="search(32,5)">	
 	        <img src="/image/sokcho.jpg" alt="속초">
-	        <p>속초</p>
+	        <p class="mainname">속초</p>
 	    </button>
 
 	    <button class="image-button" onclick="search(38,8)">	
 	        <img src="/image/mokpo.jpg" alt="목포">
-	        <p>목포</p>
+	        <p class="mainname">목포</p>
 	    </button>
 	</div>
-	<h1>국내 인기 숙박시설</h1>
-	<br><br><br>
+	<h1>국내 최고 인기 숙소에서 특별한 하루를 맞이해보세요.</h1>
+	<p class="subject1">여행의 다채로움을 더할 다양한 숙소들이 준비되어 있습니다. 각기 다른 테마와 특별한 경험을 선사하는 숙소에서 하루를 채워보세요.</p>
 	<div class="hotel-scroll-wrapper">
 	    <div class="hotel-container">
 	        <c:forEach var="eachhotel" items="${hotel_list}">
 	            <div class="hotel-item" onclick="searchByDefaultNum('${eachhotel.default_num}')">
 	                <img src="${eachhotel.img1 != null ? eachhotel.img1 : '/path/to/default_image.jpg'}" 
 	                     alt="${eachhotel.name}" width="200" height="150">
-						 <p class="hotel-name">${eachhotel.name}</p>
+						 <p class="hotel-name">&nbsp;&nbsp;${eachhotel.name}</p>
 						 <p class="hotel-address">${eachhotel.address}</p>
 						 <br>
-						 <p class="hotel-name2">${eachhotel.standard}원 ~</p>	
+						 <p class="hotel-name2">${eachhotel.standard}원 ~</p>
+
 	            </div>
 	        </c:forEach>
 	    </div>
 	</div>
+	<div class="hotel-container2">
+	    <h1>다양한 테마별 유형의 숙소를 확인해보세요.</h1>
+	    <p class="subject1">여행의 목적과 분위기에 맞춰 최고의 숙소를 선택해 보세요. 도시의 편리함을 누릴 수 있는 호텔, 자연과 가까이할 수 있는 캠핑장 등 다채로운 옵션이 준비되어 있습니다.</p>
+	    <div class="grid-container">
+	        <div class="grid-item" onclick="search3('호텔')">
+	            <img src="/image/호텔.jpg" alt="호텔">
+	            <p>호텔</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('리조트')">
+	            <img src="/image/리조트.jpg" alt="리조트">
+	            <p>리조트</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('한옥')">
+	            <img src="/image/한옥.jpg" alt="한옥">
+	            <p>한옥</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('펜션')">
+	            <img src="/image/펜션.jpg" alt="펜션">
+	            <p>펜션</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('게스트하우스')">
+	            <img src="/image/게스트하우스.jpg" alt="게스트하우스">
+	            <p>게스트하우스</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('민박')">
+	            <img src="/image/민박.jpg" alt="민박">
+	            <p>민박</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('모텔')">
+	            <img src="/image/모텔.jpg" alt="모텔">
+	            <p>모텔</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('유스호스텔')">
+	            <img src="/image/유스호스텔.jpg" alt="유스호스텔">
+	            <p>유스호스텔</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('레지던스')">
+	            <img src="/image/레지던스.jpg" alt="레지던스">
+	            <p>레지던스</p>
+	        </div>
+	        <div class="grid-item" onclick="search3('콘도')">
+	            <img src="/image/콘도.jpg" alt="콘도">
+	            <p>콘도</p>
+	        </div>
+	    </div>
+	</div
 
-			  
-         <br><br><br>
-
-          <div class="reservation-options">
-              <div class="reservation-item">
-                  <a href="/regionfilter">🏙️ 지역별 숙소예약</a>
-              </div>
-              <div class="reservation-item">
-                  <a href="/hotelbytype">🎨 테마별 숙소예약</a>
-              </div>
-
+	<!-- 배너 이미지 영역 -->
+	<div class="banner-container">
+	    <img src="/image/배너.jpg" alt="배너 이미지">
+		<img src="/image/배너2.jpg" alt="배너 이미지">
+	</div>
           </div>
       </div>
 <!-- ================================================= main2 ======================================== -->
 
+
 <!-- ================================================= main3 ======================================== -->
 <hr>     
- <div class="CONTACT" id="CONTACT">
-          <h2>고객센터</h2>
-          <p>고객행복센터(전화): 오전 9시 ~ 새벽 3시 운영</p>
-          <p>카카오톡 문의: 24시간 운영</p>
-          <div class="contact-buttons">
-              <button class="phone-btn">📞 1670-6250</button>
-              <button class="kakao-btn"><a href="#" onclick = "chatbotpopup()">💬 chatbot</a></button>
-              <button class="email-btn"><a href="/email">📧 이메일 문의</a></button>
-              <button class="question-btn"><a href="/question">자주 묻는 질문</a></button>
-          </div>
-         </div>
 
-
-
-      <hr><br><br><br><br><br><br>
 <!-- ================================================= main5 ======================================== -->      
       <div class="FAQ" id="FAQ">
           <h1 class="faq-title">FAQ's</h1>
@@ -209,6 +238,11 @@
 	<button id="scrollToTopBtn" title="맨 위로"><span style="font-size: 24px;">▲</span></button>
 <!-- ================================================= script ======================================== -->
     <script>
+		
+		
+		
+		
+		
 		document.addEventListener('DOMContentLoaded', async function () {
 					    console.log('페이지가 로드되었습니다!');
 					    await fetchUserInfo();
@@ -332,6 +366,16 @@
 			    }
 			}
 	
+			function search3(regionCode6) {
+			    if (regionCode6) {
+			        // 선택한 지역 코드를 포함한 URL로 이동
+			        location.href = "/regionsearch6?type=" + regionCode6;
+			    } else {
+			        alert("유효한 지역을 선택해주세요.");
+			    }
+			}
+			
+			
 			function handleEnter(event) {
 			    if (event.key === "Enter") {
 			        const searchcode = document.getElementById("search-input").value;
@@ -353,7 +397,7 @@
 			    event.preventDefault(); // 기본 링크 이동 방지
 
 			    // 원하는 위치로 부드럽게 스크롤
-			    const targetPosition = document.querySelector("#RESERVATION").offsetTop +350; // 조정된 위치
+			    const targetPosition = document.querySelector("#RESERVATION").offsetTop +390; // 조정된 위치
 			    window.scrollTo({
 			        top: targetPosition,
 			        behavior: "smooth"

@@ -9,9 +9,9 @@
 <body>
 	<div class="wrap">
 	    <div class="header">
-	        <a href="http://localhost:8084" class="logo">cozypick</a>
+	        <a href="https://localhost:8444/#" class="logo">cozypick</a>
 	        <div class="nav">
-	            <a href="http://localhost:8084/#">HOME</a> 
+	            <a href="https://localhost:8444/#">HOME</a> 
 	            <a href="#RESERVATION" onclick="scrollToReservation(event)">RESERVATION</a>
 	            <a href="#CONTACT">CONTACT</a>
 	            <a href="#FAQ" onclick="scrollToReservation2(event)">FAQ's</a>
