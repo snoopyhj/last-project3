@@ -375,7 +375,7 @@
 			        const result = await response.json();
 			        // 해당 버튼의 상태를 토글
 			        document.querySelector(`.favorite-btn[data-default-num="`+ defaultNum + `"]`).classList.toggle('favorited', result.favorited);
-			        alert(result.favorited ? '즐겨찾기에 추가되었습니다.' : '즐겨찾기에서 제거되었습니다.');
+			    
 			    } catch (error) {
 			        console.error('즐겨찾기 처리 중 오류:', error);
 			        alert('즐겨찾기 처리 중 오류가 발생했습니다.');

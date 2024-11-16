@@ -152,6 +152,7 @@ body {
 }
 
 .hotel-summary {
+	position: relative;
 	padding: 20px;
 	background-color: #f9f9f9;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -389,6 +390,9 @@ body {
 	    }
 
 		.favorite-btn {
+			position: absolute;
+			  top: 15px; /* hotel-summary 상단에서 15px */
+			  right: 15px;
 				    font-size: 30px;
 				    color: gray;
 					background-color: rgb(255, 255, 255);

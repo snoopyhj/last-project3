@@ -37,12 +37,12 @@
 
 	<!-- 호텔 기본 정보 및 요약 -->
 	<div class="hotel-summary">
-		<h1 class="hotel-name">${hotel.name}</h1>
+		<h1 class="hotel-name">${hotel.name}</h1><button class="favorite-btn" data-default-num="${hotel.default_num}">♥</button>
 		<p class="hotel-address">${hotel.address}</p>
 		<p class="hotel-tel">${hotel.tel}</p>
 		<p class="hotel-comment">${hotel.coment}</p>
 		<p class="hotel-type">${hotel.type}</p>
-		<button class="favorite-btn" data-default-num="${hotel.default_num}">♥</button>
+
 	</div>
 
 	
@@ -498,7 +498,7 @@
 																	        const result = await response.json();
 																	        // 해당 버튼의 상태를 토글
 																	        document.querySelector(`.favorite-btn[data-default-num="`+ defaultNum + `"]`).classList.toggle('favorited', result.favorited);
-																	        alert(result.favorited ? '즐겨찾기에 추가되었습니다.' : '즐겨찾기에서 제거되었습니다.');
+																	        
 																	    } catch (error) {
 																	        console.error('즐겨찾기 처리 중 오류:', error);
 																	        alert('즐겨찾기 처리 중 오류가 발생했습니다.');

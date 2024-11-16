@@ -36,7 +36,7 @@
             <div class="box-container">
             <div class="intro_bg">   
                 <div class="intro_text">
-                    <p class="search_main">국내여행엔<br> cozypick</p>
+                    <p class="search_main">국내여행 갈땐<br> cozypick!</p>
 					    <input 
 					        type="text" 
 					        id="search-input" 

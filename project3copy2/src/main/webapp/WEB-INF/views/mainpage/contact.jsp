@@ -133,7 +133,13 @@
 									        console.error("로그인 버튼이 없습니다.");
 									    }
 									}
-
+									
+										function chatbotpopup() {
+											let options = "toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=500, height=700, top=300,left=300";
+										
+											window.open("http://localhost:8085","_blank", options)
+										}
+								
 		</script>
 </body>
 </html>

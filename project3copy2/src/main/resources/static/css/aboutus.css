@@ -242,25 +242,23 @@ footer {
 /* CONTACT US 섹션 스타일 */
 #location {
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* 텍스트 왼쪽 정렬 */
     margin-top: 20px;
 }
 
 #location h2 {
     font-size: 1.8rem;
     color: #333;
-    text-align: center;
     margin-bottom: 15px;
 }
 
 #location p {
     font-size: 1rem;
     color: #555;
-    text-align: center;
+    line-height: 1.6; /* 가독성을 위한 줄 간격 추가 */
     margin-bottom: 15px;
 }
+
 
 #contact-map {
     width: 100%;
@@ -268,5 +266,91 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+
+.intro-section {
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 4px solid rgb(209, 209, 209);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.intro-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.intro-section p:last-child {
+    margin-bottom: 0;
+}
+.business-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.business-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.business-item {
+    width: 200px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 20px 0;
+    border-left: 3px solid #3a3a3a;
+}
+
+.timeline-item {
+    position: relative;
+    margin-left: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 17px;
+    width: 10px;
+    height: 10px;
+    background-color: #3a3a3a;
+    border-radius: 50%;
+}
+
+.timeline-year {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3a3a3a;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #555;
+}
+
 
 

@@ -912,9 +912,16 @@ button:hover {
 			margin-bottom: 30px; /* 이미지 사이의 간격 설정 */
 		}
 		.search_main {
-			text-align: left;
-			
+		    font-size: 30px; /* 원하는 글자 크기로 설정 */
+		    font-weight: bold; /* 필요하면 글자 두께 추가 */
+		    color: rgb(255, 255, 255); /* 텍스트 색상 */
 		}
+
+			
+
+		
+			
+		
 		
 		.event-banner-container {
 		    display: flex;
