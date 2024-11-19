@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.HotelInfoDAO">
+	<insert id="insert_hotelinfo"
+		parameterType="com.example.demo.vo.HotelVO">
+		INSERT INTO HOTEL_LIST
+		(address, region, type, img1, img2, img_auth, mapy, mapx, tel, name, subregion,
+		default_num, coment, person, standard, deluxe, suite)
+		VALUES
+		(#{address, jdbcType=VARCHAR}, #{region, jdbcType=VARCHAR}, #{type,
+		jdbcType=VARCHAR},
+		#{img1, jdbcType=VARCHAR}, #{img2, jdbcType=VARCHAR}, #{img_auth,
+		jdbcType=VARCHAR},
+		#{mapy, jdbcType=VARCHAR}, #{mapx, jdbcType=VARCHAR}, #{tel,
+		jdbcType=VARCHAR},
+		#{name, jdbcType=VARCHAR}, #{subregion, jdbcType=VARCHAR}, #{default_num,
+		jdbcType=VARCHAR},
+		#{coment, jdbcType=VARCHAR}, #{person, jdbcType=VARCHAR}, #{standard,
+		jdbcType=VARCHAR},
+		#{deluxe, jdbcType=VARCHAR}, #{suite, jdbcType=VARCHAR})
+		
+		
+	</insert>
+<insert id="insertHotelReservation" parameterType="com.example.demo.vo.HotelVO">
+    INSERT INTO hotel_reservations (default_num)
+    VALUES (#{default_num, jdbcType=VARCHAR})
+</insert>
+	<update id="hotel_update"
+		parameterType="com.example.demo.vo.HotelVO">
+		UPDATE hotel_list
+		SET
+		address = #{address, jdbcType=VARCHAR},
+		region = #{region, jdbcType=VARCHAR},
+		type = #{type, jdbcType=VARCHAR},
+		img1 = #{img1, jdbcType=VARCHAR},
+		img2 = #{img2, jdbcType=VARCHAR},
+		img_auth = #{img_auth, jdbcType=VARCHAR},
+		mapy = #{mapy, jdbcType=VARCHAR},
+		mapx = #{mapx, jdbcType=VARCHAR},
+		tel = #{tel, jdbcType=VARCHAR},
+		name = #{name, jdbcType=VARCHAR},
+		subregion = #{subregion, jdbcType=VARCHAR},
+		coment = #{coment, jdbcType=VARCHAR},
+		person = #{person, jdbcType=VARCHAR},
+		standard = #{standard, jdbcType=VARCHAR},
+		deluxe = #{deluxe, jdbcType=VARCHAR},
+		suite = #{suite, jdbcType=VARCHAR}
+		WHERE default_num = #{default_num, jdbcType=VARCHAR}
+	</update>
+
+	<select id="select_hotel_by_default_num" parameterType="string"
+		resultType="com.example.demo.vo.HotelVO">
+		SELECT *
+		FROM HOTEL_LIST
+		WHERE
+		DEFAULT_NUM = #{default_num}
+	</select>
+</mapper>
