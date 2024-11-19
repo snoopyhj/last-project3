@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakao Login Success</title>
+</head>
+<body>
+    
+    
+	
+    <div id="token-container" th:data-token="${token}"></div>
+
+	<script>
+	    
+		
+	    function handleKakaoLogin() {
+			const container = document.getElementById('token-container');
+	        const urlParams = new URLSearchParams(window.location.search);
+	        const code = urlParams.get('code');
+	        console.log('Extracted code:', code);
+	        const token = document.getElementById('token-container').dataset.token;
+	        
+			
+			debugger;
+
+	        if (!code) {
+	            document.getElementById('error-message').innerText = '코드가 유효하지 않습니다.';
+	            return; 
+	        }
+
+	        // 코드 검증 요청
+	        fetch(`/oauth2/success?code=${code}`, {
+	            method: 'GET',
+	            headers: {
+	                'Content-Type': 'application/json'
+	            }
+	        })
+	        .then(response => {
+	            // 사용자 존재 여부 판단
+	            if (!response.ok) {
+	                throw new Error('Failed to load /oauth2/success');
+	            }
+	            return response.text();
+	        })
+	        .then(data => {
+	            console.log('Received data:', data);
+				
+	            loadHomePage(token);
+	        })
+	        .catch(error => {
+	            console.error('Error:', error);
+	            document.getElementById('error-message').innerText = '코드 검증 실패: ' + error.message;
+	        });
+	    }
+		
+	    function loadHomePage(token) {
+	        fetch('https://localhost:8444/', {
+	            method: 'GET',
+	            headers: {
+	                'Authorization': 'Bearer ' + token,
+	                'Content-Type': 'application/json'
+	            },
+				credentials: 'include'
+	        })
+	        .then(response => {
+	            if (!response.ok) {
+	                throw new Error('Failed to load home page');
+	            }
+	            return response.text();
+	        })
+	        .then(data => {
+	            document.body.innerHTML = data; // 서버에서 받은 HTML로 업데이트
+	            window.location.href = 'https://localhost:8444/';
+	        })
+	        .catch(error => {
+	            console.error('Error:', error);
+	            document.getElementById('error-message').innerText = '홈 페이지 로드 실패: ' + error.message;
+	        });
+	    }
+
+	    window.onload = handleKakaoLogin;
+		
+		
+	</script>
+</body>
+</html>

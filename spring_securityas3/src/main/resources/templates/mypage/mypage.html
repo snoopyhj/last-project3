@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Cozy Pick</title>
+    <link rel="stylesheet" href="/css/mypage/mypage.css"> <!-- CSS 파일 경로 확인 -->
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+            <div class="header">
+                <a href="https://localhost:8444" class="logo">cozypick</a>
+                <div class="nav">
+                    <a href="#">HOME</a>
+                    <a href="#ABOUTUS">ABOUT US</a>
+                    <a href="#RESERVATION">RESERVATION</a>
+                    <a href="#REVIEW">REVIEW</a>
+                    <a href="#CONTACT">CONTACT</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="user-info">
+            <h2>사용자 이름</h2>
+            <span class="user-status" id="username">님은 <strong>일반 회원</strong>입니다</span>
+        </div>
+        
+        <!-- 버튼을 user-info 아래에 위치 -->
+        <div class="button-row">
+            <button class="button small-button"><span>일반회원 혜택</span><span class="arrow">></span></button>
+            <button class="button small-button" onclick="location.href='/MyInformation'">
+                <span>내 정보 관리</span><span class="arrow">></span>
+            </button>
+        </div>
+
+        <div class="button-container">
+            <div class="small-container">
+                <button class="button"><span>코지픽 포인트 0</span><span class="arrow">></span></button>
+                <div class="button-row">
+                    <button class="button" onclick="openModal()"><span>내 후기</span><span class="arrow">></span></button>
+                    <div id="reviewModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeReviewModal">&times;</span>
+                            <h2>내 후기</h2>
+                            <div class="review-list" id="review-list">
+                                <!-- 여기에 동적으로 후기 데이터를 추가 -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button"><span>쿠폰</span><span class="arrow">></span></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title">예약내역</div>
+        <div class="button-row">
+            <button class="button" onclick="location.href='/reservationlist'"><span>국내숙소</span><span class="arrow">></span></button>
+        </div>
+        
+        <div class="section-title">문의/안내</div>
+        <div class="faq-buttons">
+            <button class="button"><span>공지사항</span><span class="arrow">></span></button>
+            <button class="button"><span>자주 묻는 질문</span><span class="arrow">></span></button>
+            <button class="button" id="chatbotButton">
+                <span>챗봇 상담</span><span class="arrow">></span>
+            </button> <!-- 챗봇 상담 버튼 -->
+            <!-- 챗봇 모달 구조 추가 -->
+            <div id="chatbotModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" id="closeChatbotModal">&times;</span>
+                        <h2>챗봇 상담</h2>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://localhost:8085" width="100%" height="400px" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <button class="button"><span>고객상담센터</span><span class="arrow">></span></button>
+        </div>
+        
+        <div class="section-title">혜택</div>
+        <div class="button-container">
+            <button class="button"><span>이벤트</span><span class="arrow">></span></button>
+            <button class="button"><span>기획전</span><span class="arrow">></span></button>
+            <button class="button"><span>프로모션 코드 등록</span><span class="arrow">></span></button>
+            <button class="button"><span>MY혜택</span><span class="arrow">></span></button>
+        </div>
+
+        <div class="section-title">서비스 관리</div>
+        <div class="button-container">
+            <button class="button"><span>코지픽 정보</span><span class="arrow">></span></button>
+            <button class="button" onclick="location.href='/setting'">
+                <span>설정</span><span class="arrow">></span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+		document.addEventListener('DOMContentLoaded', function () {
+		    const chatbotButton = document.getElementById("chatbotButton");
+		    const chatbotModal = document.getElementById("chatbotModal");
+		    const closeChatbotModal = document.getElementById("closeChatbotModal");
+
+		    const reviewModal = document.getElementById("reviewModal");
+		    const closeReviewModal = document.getElementById("closeReviewModal");
+		    const reviewList = document.getElementById("review-list"); // 여기서 reviewList 정의
+
+		    // 챗봇 모달 열기
+		    chatbotButton.addEventListener("click", function (event) {
+		        event.preventDefault();
+		        chatbotModal.style.display = "block";
+		    });
+
+		    // 챗봇 모달 닫기
+		    closeChatbotModal.addEventListener("click", function () {
+		        chatbotModal.style.display = "none";
+		    });
+
+		    // 챗봇 모달 외부 클릭 시 닫기
+		    window.addEventListener("click", function (event) {
+		        if (event.target === chatbotModal) {
+		            chatbotModal.style.display = "none";
+		        }
+		    });
+
+		    // 리뷰 모달 열기
+		    window.openModal = function () {
+		        reviewModal.style.display = "flex";
+		        loadReviews();
+		    };
+
+		    // 리뷰 모달 닫기
+		    closeReviewModal.addEventListener("click", function () {
+		        reviewModal.style.display = "none";
+		    });
+
+		    // 리뷰 모달 외부 클릭 시 닫기
+		    window.addEventListener("click", function (event) {
+		        if (event.target === reviewModal) {
+		            reviewModal.style.display = "none";
+		        }
+		    });
+
+		    // 유저 정보 가져오기
+		    fetch('/api/user-info', {
+		        method: 'GET',
+		        credentials: 'include' // 쿠키 포함
+		    })
+		    .then(response => {
+		        if (!response.ok) {
+		            throw new Error('사용자 정보를 가져오는 데 실패했습니다.');
+		        }
+		        return response.json();
+		    })
+		    .then(userInfo => {
+		        document.getElementById('username').textContent = userInfo.name;
+		    })
+		    .catch(error => {
+		        console.error('사용자 정보 로드 중 오류:', error);
+		    });
+
+		    // 리뷰 데이터 로드
+		    async function loadReviews() {
+		        reviewList.innerHTML = ""; // 기존 리뷰 초기화
+
+		        try {
+		            const response = await fetch('/reviews', {
+		                method: 'GET',
+		                credentials: 'include'
+		            });
+
+		            if (!response.ok) {
+		                throw new Error('리뷰 데이터를 불러오는 데 실패했습니다.');
+		            }
+
+		            const reviews = await response.json();
+
+		            if (reviews.length === 0) {
+		                reviewList.innerHTML = "<p>작성된 후기가 없습니다.</p>";
+		                return;
+		            }
+
+		            reviews.forEach(review => {
+		                const reviewItem = document.createElement('div');
+		                reviewItem.classList.add('review-item');
+		                reviewItem.innerHTML = `
+		                    <h3>숙소 이름: ${review.hotelName}</h3>
+		                    <p>리뷰 내용: ${review.reviewText}</p>
+		                    <span class="review-date">작성일: ${review.reviewDate}</span>
+		                    <button class="delete-review-button" data-review-id="${review.reviewId}">삭제</button>
+		                `;
+		                reviewList.appendChild(reviewItem);
+		            });
+		        } catch (error) {
+		            console.error('리뷰 로드 중 오류:', error);
+		            reviewList.innerHTML = "<p>리뷰 데이터를 불러오는 중 오류가 발생했습니다.</p>";
+		        }
+		    }
+
+		    // 삭제 버튼 이벤트 리스너 추가
+		    reviewList.addEventListener('click', async (event) => {
+		        if (event.target.classList.contains('delete-review-button')) {
+		            const reviewId = event.target.getAttribute('data-review-id');
+
+		            try {
+		                const response = await fetch(`/delete_review/${reviewId}`, {
+		                    method: 'DELETE',
+		                    credentials: 'include'
+		                });
+
+		                if (response.ok) {
+		                    alert('리뷰가 삭제되었습니다.');
+		                    event.target.closest('.review-item').remove(); // 삭제된 리뷰를 화면에서 제거
+		                } else {
+		                    alert('리뷰 삭제에 실패했습니다.');
+		                }
+		            } catch (error) {
+		                console.error('리뷰 삭제 중 오류 발생:', error);
+		                alert('리뷰 삭제 중 오류가 발생했습니다.');
+		            }
+		        }
+		    });
+		});
+
+    </script>
+</body>
+</html>

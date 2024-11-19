@@ -1,0 +1,126 @@
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>비밀번호 찾기</title>
+	    <link rel="stylesheet" href="/css/login/changepwemail.css">
+	    <link rel="stylesheet" type="text/css" href="/css/find-password.css">
+	</head>
+	<body>
+	    <div class="header">
+	        <h2>비밀번호 찾기</h2>
+	    </div>
+	    <div class="wrapper">
+	        <div class="additional-container">
+	            <p>회원가입 시 등록한 이메일을 입력해 주세요.</p>
+	            <p>비밀번호 변경 가능한 링크를 보내드립니다.</p>
+	        </div>
+	        <div class="container">
+	            <form id="findPasswordForm">
+	                <div class="input-group">
+	                    <div class="form-group">
+	                        <input type="email" id="email" name="email" required placeholder="이메일" class="large-input">
+	                        <br><br>
+	                        <button type="button" id="sendEmailButton" class="large-button">인증 번호 보내기</button>
+	                        <div id="emailMessage" style="color: red; display: none;"></div>
+	                    </div>
+	                    <div class="form-group" id="verificationGroup" style="display: none;">
+	                        <input type="text" id="verificationCode" name="code" required placeholder="인증번호" class="verification-input">
+	                        <br><br><br>
+	                        <button type="button" id="verifyCodeButton" class="verification-button">인증하기</button>
+	                        <div id="verificationMessage" style="color: red; display: none;"></div>
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	
+	    <script>
+	        document.getElementById('sendEmailButton').addEventListener('click', function () {
+	            const email = document.getElementById('email').value;
+	            if (!email) {
+	                alert('이메일을 입력하세요.');
+	                return;
+	            }
+	            fetch('/send-email', {
+	                method: 'POST',
+	                headers: {
+	                    'Content-Type': 'application/json'
+	                },
+	                body: JSON.stringify({ email: email })
+	            })
+	            .then(response => response.json())
+	            .then(data => {
+	                const emailMessage = document.getElementById('emailMessage');
+	                if (data.success) {
+	                    emailMessage.style.color = 'green';
+	                    emailMessage.textContent = '인증 번호가 이메일로 전송되었습니다.';
+	                    emailMessage.style.display = 'block';
+	                    document.getElementById('verificationGroup').style.display = 'block';
+	                } else {
+	                    emailMessage.style.color = 'red';
+	                    emailMessage.textContent = '이메일 전송에 실패했습니다.';
+	                    emailMessage.style.display = 'block';
+	                }
+	            })
+	            .catch(error => {
+	                console.error('Error:', error);
+	            });
+	        });
+	
+	        document.getElementById('verifyCodeButton').addEventListener('click', function () {
+	            const code = document.getElementById('verificationCode').value;
+	            const email = document.getElementById('email').value;
+	
+	            if (!code) {
+	                alert('인증 번호를 입력하세요.');
+	                return;
+	            }
+	
+	            fetch('/verify-code', {
+	                method: 'POST',
+	                headers: {
+	                    'Content-Type': 'application/json'
+	                },
+	                body: JSON.stringify({ code: code, email: email })
+	            })
+	            .then(response => response.json())
+	            .then(data => {
+	                if (data.success) {
+	                    window.location.href = '/password/check?email=' + encodeURIComponent(email);
+	                } else {
+	                    const verificationMessage = document.getElementById('verificationMessage');
+	                    verificationMessage.style.color = 'red';
+	                    verificationMessage.textContent = '인증 실패';
+	                    verificationMessage.style.display = 'block';
+	                }
+	            })
+	            .catch(error => {
+	                console.error('Error:', error);
+	            });
+	        });
+	
+	        // 동적으로 높이 설정
+	        document.addEventListener('DOMContentLoaded', function () {
+				window.addEventListener('popstate', function(event) {
+																																			    console.log('popstate 이벤트 발생:', event);
+																																			    location.reload(); // 히스토리 변경 시 페이지 새로고침
+																																			});
+
+																																			window.addEventListener('pageshow', function(event) {
+																																			    console.log('pageshow 이벤트 발생:', event);
+																																			    if (event.persisted) {
+																																			        location.reload(); // 캐시된 페이지가 복원될 때 새로고침
+																																			    }
+																																			});						
+	            const additionalContainer = document.querySelector('.additional-container');
+	            const container = document.querySelector('.container');
+	
+	            const maxHeight = Math.max(additionalContainer.offsetHeight, container.offsetHeight);
+	            
+	            container.style.height = `${maxHeight}px`;
+	        });
+	    </script>
+	</body>
+	</html>

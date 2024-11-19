@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* CSS 파일이 UTF-8 문자 인코딩을 사용함 */
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0; /* 전체 배경 색상 (필요에 따라 조정) */
+}
+.header {
+    background-color: white; /* 흰색 바 배경 */
+    padding: 10px 20px;      /* 상하 여백과 좌우 여백 조정 */
+    width: 100%;             /* 상단 바의 너비를 100%로 설정 */
+    position: relative;      /* 상대 위치 설정 */
+    z-index: 2;              /* 다른 요소 위에 표시되도록 설정 */
+    border-bottom: 1px solid rgb(234, 234, 234); /* 아래쪽 테두리 추가 */
+    display: flex;           /* Flexbox를 사용하여 요소를 정렬 */
+    justify-content: center; /* 모든 요소를 가운데 정렬 */
+    align-items: center;     /* 수직 중앙 정렬 */
+    gap: 20px;               /* 로고와 제목 사이의 간격 */
+}
+
+
+.container {
+    display: flex;                     /* Flexbox 사용 */
+    flex-direction: column;            /* 세로 방향으로 정렬 */
+    background-color: white;   
+    padding: 30px;             
+    width: 80%;                
+    max-width: 1000px;        
+    margin: 0 auto;           
+    min-height: 700px;        
+    position: relative;        
+    z-index: 1;               
+}
+
+.title {
+    text-align: center; /* 가운데 정렬 */
+    margin-top: 20px;  /* 상단 여백 */
+    font-size: 23px;   /* 글자 크기 조정 (필요에 따라) */
+    font-weight: bold;  /* 글씨체 굵게 */
+	margin: 0;
+}
+
+
+
+.reservation {
+    width: 100%;                      /* 컨테이너의 너비를 100%로 설정 */
+    max-width: 1000px;                 /* 최대 너비 설정 (필요에 따라 조정) */
+	height: auto;                      /* 자동 높이로 설정 */
+	min-height: 400px;                 /* 최소 높이 설정 (원하는 높이로 조정) */
+    display: flex;
+    flex-direction: column;            /* 세로 방향으로 배치 */
+    justify-content: flex-start;       /* 세로 방향 시작점에서 정렬 */
+    align-items: stretch;              /* 자식 요소의 너비를 부모에 맞춤 */
+    padding: 30px;                     /* 내부 여백 */
+    background-color: white;           /* 배경색 */
+    margin: 10px 0;                   /* 컨테이너 간 간격 */
+    border-radius: 8px;                /* 모서리 둥글게 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 설정 */
+    border: 1px solid rgb(234, 234, 234); /* 테두리 설정 */
+    position: relative;                /* 위치 설정 */
+    transition: all 0.3s ease;        /* 부드러운 크기 변화 */
+}
+
+.reservation-header {
+    display: flex;               /* Flexbox 사용 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    align-items: center;         /* 수직 중앙 정렬 */
+}
+.reservation-content {
+    display: flex;                     /* Flexbox 사용 */
+    justify-content: space-between;    /* 양쪽 끝으로 정렬 */
+    align-items: center;               /* 세로 중앙 정렬 */
+    width: 100%;                       /* 전체 너비 사용 */
+}
+
+.divider {
+    width: 100%;                   /* 선의 너비를 100%로 설정 */
+    height: 1px;                   /* 선의 두께 설정 */
+    background-color: rgba(0, 0, 0, 0.1); /* 선의 색상 설정 (투명도 적용) */
+    margin: 10px 0;                /* 상하 여백 조정 */
+}
+
+.reservation h2 {
+	font-size: 15px;                  /* 날짜 제목 크기 */
+	margin: 0;                        /* 기본 여백 제거 */
+}
+.reservation-details {
+	margin-bottom: 10px;     /* 여백 */
+	margin-bottom: 30px;      /* 하단 여백을 늘려서 상세보기와의 간격 조정 */
+	margin-left: auto;                 /* 왼쪽 여백을 자동으로 설정하여 오른쪽으로 밀기 */
+}
+
+.details-content {
+    display: flex;                     /* Flexbox 사용 */
+    align-items: center;               /* 세로 중앙 정렬 */
+    flex-wrap: wrap;                   /* 줄 바꿈 허용 */
+    gap: 10px;                         /* 요소 간 간격 조정 */
+}
+
+.details-content .status,
+.details-content .ticket-info {
+    font-size: 5px !important; /* 해당 클래스에 대해 설정 */
+    margin: 0;
+}
+
+.view-details {
+	margin-left: auto;                 /* 오른쪽으로 밀기 */
+	text-align: right;                 /* 텍스트 오른쪽 정렬 */
+}
+
+.view-details {
+	 margin-left: auto;                 /* 오른쪽으로 밀기 */
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1000px) {
+.container {
+       width: 100%;              /* 너비를 100%로 설정하여 화면을 꽉 채우도록 함 */
+       height: calc(100vh - 60px); /* 높이를 전체 화면에서 상단 바 높이를 뺀 값으로 설정 */
+       padding: 10px;            /* 내부 여백 조정 (선택 사항) */
+  }
+}
+.reservation p {
+    margin: 10px 0;                   /* 각 문단 사이에 여백 추가 */
+}
+.modal {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .modal-overlay {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .modal-close {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            color: red;
+        }
+		.logo {
+		    font-size: 30px;         /* 로고 크기 */
+		    font-weight: bold;       /* 굵은 텍스트 */
+		    color: #333;             /* 텍스트 색상 */
+		    position: absolute;      /* 절대 위치로 설정 */
+		    left: 20px;              /* 왼쪽 기준으로 여백 추가 */
+		}
+		.nav a {
+		    margin: 0 10px; /* 링크 사이 간격 조정 */
+		    text-decoration: none;
+		    color: #333;
+		    font-size: 16px;
+		}
+
+		.header > div:last-child {
+		    margin-right: 20px; /* 로그인 및 회원가입 버튼 오른쪽 여백 */
+		    display: flex;
+		    gap: 10px; /* 버튼 간 간격 추가 */
+		}
+

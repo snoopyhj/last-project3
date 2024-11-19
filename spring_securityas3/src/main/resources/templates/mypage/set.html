@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Cozy Pick</title>
+    <link rel="stylesheet" href="/css/mypage/set.css"> <!-- CSS 파일 경로 확인 -->
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+            <div class="header">
+                <a href="https://localhost:8444" class="logo">cozypick</a>
+                
+                
+            </div>
+			
+			<!-- 설정 타이틀 -->
+            <div class="settings-title">설정</div>
+            <!-- 간편 로그인 버튼 -->
+			<div class="button-container">
+			    <button class="button" onclick="location.href='/easy-login'">
+			        간편 로그인 <span class="right-arrow">></span>
+			    </button>
+			    <!-- 로그아웃 버튼 -->
+			    <button class="button logout-button" onclick="location.href='/logout'">
+			        로그아웃 <span class="right-arrow">></span>
+			    </button>
+			</div>
+	    </div>
+		<script>
+			document.addEventListener('DOMContentLoaded', async function () {
+									window.addEventListener('popstate', function(event) {
+																																    console.log('popstate 이벤트 발생:', event);
+																																    location.reload(); // 히스토리 변경 시 페이지 새로고침
+																																});
+
+																																window.addEventListener('pageshow', function(event) {
+																																    console.log('pageshow 이벤트 발생:', event);
+																																    if (event.persisted) {
+																																        location.reload(); // 캐시된 페이지가 복원될 때 새로고침
+																																    }
+																																});						
+									});
+		</script>
+	</body>
+</html>

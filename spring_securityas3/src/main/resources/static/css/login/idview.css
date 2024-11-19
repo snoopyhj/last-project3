@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS 파일이 UTF-8 문자 인코딩을 사용함 */
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(242, 242, 242); /* 전체 배경 색상 (필요에 따라 조정) */
+}
+
+.container {
+    display: flex;                     /* Flexbox 사용 */
+    flex-direction: column;            /* 세로 방향으로 정렬 */
+    background-color: white;   
+    padding: 40px;             
+    width: 80%;                
+    max-width: 1000px;        
+    margin: 0 auto;           
+    min-height: 700px;        
+    position: relative;        
+    z-index: 1;             
+}
+.additional-container {
+    display: flex;                     /* Flexbox 사용: 자식 요소들을 효율적으로 배치하기 위해 Flexbox 컨테이너로 설정 */
+    flex-direction: column;            /* 세로 방향으로 정렬: 자식 요소들을 세로로 배치 */
+    background-color: rgb(247, 247, 247); /* 배경색을 연회색으로 설정 */
+    padding: 15px;                     /* 내부 여백 설정: 내용과 경계 사이에 15픽셀의 공간 추가 */
+    width: 95%;                        /* 너비를 95%로 설정: 부모 요소의 95% 너비를 차지 */
+    max-width: 1000px;                /* 최대 너비 설정: 화면이 넓어도 1000픽셀을 넘지 않도록 제한 */
+    margin: 0 auto;                   /* 수평 중앙 정렬: 상하 마진은 0, 좌우 마진은 자동으로 설정하여 중앙에 배치 */
+    min-height: auto;                 /* 최소 높이를 자동으로 설정: 자식 요소의 내용에 따라 높이가 결정되도록 설정 */
+    position: relative;                /* 상대 위치 설정: 자식 요소의 절대 위치 기준이 됨 */
+	border-radius: 3px;              /* 모서리를 둥글게 설정 (10픽셀) */
+}
+
+.header {
+    background-color: white; /* 흰색 바 배경 */
+	height: 50px;            /* 헤더의 높이를 고정 (원하는 높이로 설정) */
+    padding: 10px 0;        /* 상하 여백 */
+    text-align: center;      /* 가운데 정렬 */
+    width: 100%;             /* 상단 바의 너비를 100%로 설정 */
+    position: relative;      /* 상대 위치 설정 */
+    z-index: 2;              /* 다른 요소 위에 표시되도록 설정 */
+	line-height: 30px;      /* 텍스트를 헤더 중앙에 배치 (height와 동일하게 설정) */
+}
+h2 {
+    margin: 0;                       /* 기본 마진 제거 */
+    font-size: 18px;                 /* 원하는 글자 크기로 변경 */
+    text-align: center;              /* 텍스트 중앙 정렬 */
+}
+.large-button {
+	box-sizing: border-box;        /* 패딩과 테두리를 포함한 크기 계산 */	
+	   padding:15px;         /* 내부 여백 설정: 위아래 15픽셀, 좌우 30픽셀 추가 */
+	   width: 95%;                    /* 너비를 95%로 설정: 부모 요소의 95% 너비를 차지 */
+	   max-width: 1000px;            /* 최대 너비 설정: 화면이 넓어도 1000픽셀을 넘지 않도록 제한 */
+	   margin: 0 auto;               /* 수평 중앙 정렬: 상하 마진은 0, 좌우 마진은 자동으로 설정하여 중앙에 배치 */
+	   height: 45px;                 /* 버튼의 높이를 고정 (예: 50픽셀) */
+	   position: relative;            /* 상대 위치 설정: 자식 요소의 절대 위치 기준이 됨 */
+	   border: none;                 /* 모든 테두리 제거 */
+	   background-color: rgb(175, 175, 175); /* 배경 색상 지정 (회색) */
+	   color: white;                  /* 글자 색상 지정 (흰색) */
+	   font-weight: bold;             /* 글자 굵게 설정 */
+	   font-size: 16px;               /* 글자 크기 설정 (예: 18픽셀) */
+	   border-radius: 5px;           /* 모서리를 둥글게 설정 */
+	   cursor: pointer;               /* 마우스 커서를 포인터로 변경 */
+	   transition: background-color 0.3s; /* 배경 색상 변화에 애니메이션 추가 */
+}
+@media (max-width: 1000px) {
+.container {
+       width: 100%;              /* 너비를 100%로 설정하여 화면을 꽉 채우도록 함 */
+       height: calc(100vh - 60px); /* 높이를 전체 화면에서 상단 바 높이를 뺀 값으로 설정 */
+       padding: 10px;            /* 내부 여백 조정 (선택 사항) */
+  }
+}

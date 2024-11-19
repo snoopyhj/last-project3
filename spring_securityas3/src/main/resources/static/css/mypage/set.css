@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* CSS 파일이 UTF-8 문자 인코딩을 사용함을 명시함 */
+.wrap {
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: auto; /* 중앙 정렬 */
+    padding: 20px; /* 내부 여백 */
+}
+.section-title {
+    font-weight: bold; /* 제목 두껍게 */
+    margin-top: 30px; /* 위쪽 여백 설정 */
+    font-size: 1.5em; /* 제목 크기 설정 */
+    text-align: center; /* 제목 가운데 정렬 */
+}
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    /* 모든 요소에 "Noto Sans KR" 폰트를 적용하고, 없을 경우 기본 sans-serif 폰트를 사용 */
+    list-style: none;
+    /* 목록 스타일을 없앰 (불릿 포인트, 숫자 등) */
+    text-decoration: none;
+    /* 텍스트에 밑줄이나 장식 없음 */
+    margin: 0;
+    padding: 0;
+    /* 모든 요소의 기본 여백과 패딩을 제거 */
+    box-sizing: border-box;
+    /* 패딩과 테두리를 요소의 전체 크기에 포함시킴 */
+}
+body {
+    background-color: rgb(244, 244, 244);
+    /* 배경색을 연한 회색으로 설정 */
+    overflow-x: hidden;
+    /* 가로 스크롤이 생기지 않도록 숨김 */
+    padding-top: 80px; 
+    /* 상단바의 높이보다 더 큰 값을 주어 콘텐츠가 아래에서 시작되게 설정 */
+}
+.header {
+    position: fixed;
+    /* 화면에 고정된 위치에 헤더를 배치 */
+    top: 0;
+    left: 0;
+    /* 헤더를 화면 상단과 좌측에 위치 */
+    width: 100%;
+    /* 헤더의 너비를 화면 전체로 설정 */
+    height: 70px;
+    /* 헤더의 높이를 70px로 설정 */
+    display: flex;
+    /* 플렉스 박스로 헤더 내부 정렬 */
+    background-color: white;
+    /* 헤더 배경을 흰색으로 설정 */
+    justify-content: space-between;
+    /* 좌우에 요소들을 간격을 두고 배치 */
+    align-items: center;
+    /* 헤더 안의 요소들을 수직으로 가운데 정렬 */
+    padding: 0 30px;
+    /* 헤더 양옆에 30px 패딩을 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 헤더에 아래로 약간의 그림자 효과를 줌 */
+    z-index: 100;
+    /* 다른 요소들 위에 헤더가 표시되도록 z-index 설정 */
+}
+.logo {
+    font-size: 30px;
+    /* 로고 텍스트 크기를 30px로 설정 */
+    font-weight: bold;
+    /* 로고 텍스트를 굵게 설정 */
+    color: #333;
+    /* 로고 색상을 어두운 회색(#333)으로 설정 */
+}
+.nav a {
+    font-size: 17px;
+    /* 내비게이션 링크의 글자 크기를 17px로 설정 */
+    font-weight: 600;
+    /* 내비게이션 링크를 약간 굵게 설정 */
+    color: #333;
+    /* 링크 텍스트 색상을 어두운 회색으로 설정 */
+    margin-left: 20px;
+    /* 각 링크 사이에 20px의 간격을 설정 */
+    transition: color 0.2s;
+    /* 링크 색상이 변할 때 0.2초 동안 부드럽게 전환 */
+}
+.nav a:hover {
+    color: rgb(127, 127, 127);
+    /* 마우스를 올렸을 때 링크 색상이 파란색(#0984e3)으로 변경 */
+}
+.login {
+    background-color: rgb(81, 81, 81);
+    /* 로그인 버튼 배경색을 어두운 회색(#333)으로 설정 */
+    padding: 10px 20px;
+    /* 버튼의 상하 패딩은 10px, 좌우 패딩은 20px로 설정 */
+    border-radius: 25px;
+    /* 버튼의 모서리를 둥글게 만듦 */
+    font-size: 14px;
+    /* 로그인 버튼의 글자 크기를 14px로 설정 */
+    color: white;
+    /* 글자 색상을 흰색으로 설정 */
+    transition: background-color 0.3s, transform 0.3s;
+    /* 배경색과 크기가 변화할 때 0.3초 동안 부드럽게 전환 */
+    margin-left: 10px;
+    /* 로그인 버튼과 왼쪽 요소 사이에 10px 간격을 설정 */
+}
+.login:hover {
+    background-color: #555;
+    /* 마우스를 올렸을 때 버튼 배경색이 회색(#555)으로 변경 */
+    transform: scale(1.1);
+    /* 마우스를 올리면 버튼이 1.1배 커짐 */
+}
+/* "설정" 텍스트 스타일 */
+.settings-title {
+    font-weight: bold; /* 글씨를 굵게 설정 */
+    font-size: 24px;   /* 글씨 크기 설정 */
+    text-align: center; /* 가운데 정렬 */
+    margin: 20px 0;    /* 메뉴와 간격 조정 */
+}
+/* 버튼 스타일 */
+.button {
+    		width: 200px;
+			display: flex; /* 버튼을 블록으로 설정하여 수직 정렬 */
+	   		width: 100%; /* 필요에 따라 너비를 조정 */
+	   		margin-bottom: 10px; /* 버튼 간의 간격을 조정 */
+            padding: 10px;
+            font-size: 16px;
+            font-weight: normal;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            background-color: transparent;
+            border: none;
+			border-bottom: 1px solid rgb(202, 202, 202); /* 아래쪽 테두리 추가 (원하는 색상과 두께로 설정) */
+            margin: 10px 0;
+            cursor: pointer;
+        }
+/* 버튼을 묶은 래퍼 스타일 */
+.settings-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px; /* 버튼 간 간격 */
+	margin-top: 20px; /* 설정 타이틀과 간격 */
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-button {
+ 	background-color: transparent;
+}
+.button-container {
+    text-align: left; /* 좌측 정렬 */
+}
+.right-arrow {
+    margin-left: auto; /* 오른쪽 끝으로 이동 */
+}
