@@ -1,0 +1,40 @@
+Error Log Summary
+=================
+2024-11-12 09:22:09 ERROR [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter - 
+2024-11-12 11:06:30 ERROR [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Error thrown while acquiring connection from data source
+2024-11-12 11:06:30 ERROR [restartedMain] o.h.e.jdbc.spi.SqlExceptionHelper - IO 오류: Invalid Operation, NOT Connected
+2024-11-12 11:06:30 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-11-12 11:06:30 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-12 17:19:57 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-12 17:30:08 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-12 18:31:20 ERROR [DiscoveryClient-HeartbeatExecutor-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - was unable to send heartbeat!
+2024-11-12 18:31:50 ERROR [DiscoveryClient-HeartbeatExecutor-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - was unable to send heartbeat!
+2024-11-12 18:32:20 ERROR [DiscoveryClient-HeartbeatExecutor-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - was unable to send heartbeat!
+2024-11-12 18:32:29 ERROR [RMI TCP Connection(69)-127.0.0.1] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - de-registration failedCannot execute request on any known server
+2024-11-13 09:21:41 ERROR [restartedMain] o.h.e.jdbc.spi.SqlExceptionHelper - IO 오류: The Network Adapter could not establish the connection (CONNECTION_ID=99u0yUcyTTiF929UCVDKtA==)
+2024-11-13 09:21:41 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-11-13 09:21:41 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 13:48:58 ERROR [RMI TCP Connection(20)-127.0.0.1] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - de-registration failedCannot execute request on any known server
+2024-11-14 17:58:32 ERROR [restartedMain] o.h.e.jdbc.spi.SqlExceptionHelper - IO 오류: The Network Adapter could not establish the connection (CONNECTION_ID=FJEWDqKRS5+mvmoOMZOIJA==)
+2024-11-14 17:58:32 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-11-14 17:58:32 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 18:12:24 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 18:12:26 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 18:13:34 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 18:14:00 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-14 18:14:57 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'auto'
+2024-11-14 18:14:57 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2024-11-15 00:14:52 ERROR [DiscoveryClient-HeartbeatExecutor-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - was unable to send heartbeat!
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-4] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-7] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-9] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-1] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-5] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 14:53:53 ERROR [https-jsse-nio-8444-exec-10] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 15:05:49 ERROR [https-jsse-nio-8444-exec-1] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 15:05:49 ERROR [https-jsse-nio-8444-exec-5] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 15:05:49 ERROR [https-jsse-nio-8444-exec-2] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 15:05:49 ERROR [https-jsse-nio-8444-exec-7] o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [null] as the response has already been committed. As a result, the response may have the wrong status code.
+2024-11-15 18:33:20 ERROR [RMI TCP Connection(457)-127.0.0.1] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - de-registration failedCannot execute request on any known server
+2024-11-16 22:00:44 ERROR [RMI TCP Connection(473)-127.0.0.1] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - de-registration failedCannot execute request on any known server
+2024-11-17 01:04:26 ERROR [RMI TCP Connection(57)-127.0.0.1] c.netflix.discovery.DiscoveryClient - DiscoveryClient_HOTEL_MAIN/DESKTOP-1NHIHPT:hotel_main:8444 - de-registration failedCannot execute request on any known server
