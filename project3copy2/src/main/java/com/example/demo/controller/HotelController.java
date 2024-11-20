@@ -22,7 +22,7 @@ import com.example.demo.dao.HotelDAO;
 import com.example.demo.dao.HotelReviewDAO;
 import com.example.demo.dao.HotelSearchDAO;
 import com.example.demo.dao.RegionSearchDAO;
-import com.example.demo.dao.ReservationDAO;
+import com.example.demo.service.ReservationService;
 import com.example.demo.vo.HotelReviewVO;
 import com.example.demo.vo.HotelVO;
 import com.example.demo.vo.RoomTypePrice;
@@ -36,12 +36,12 @@ import org.springframework.web.util.HtmlUtils;
 @Controller
 public class HotelController {
 	@Autowired
+	ReservationService reservationService;
+	@Autowired
 	RegionSearchDAO dao;
 	// ㅇㄹㅇㄴ
 	@Autowired
 	HotelSearchDAO hdao;
-	@Autowired
-	ReservationDAO rdao;
 	@Autowired
 	private HotelDAO hotelDAO; // HotelDAO 인스턴스 변수로 선언
 	@Autowired
@@ -211,8 +211,8 @@ public class HotelController {
 		int expectedPrice = (int) session.getAttribute("Price");
 
 		String hotel_name = (String) session.getAttribute("HotelName");
-		rdao.insert_info(imp_uid, hotel_name, expectedPrice, email, name, tel, address, dateRange, dateStr, person,
-				default_num);
+		reservationService.createReservation(imp_uid, hotel_name, expectedPrice, email, name, tel, address, dateRange,
+											 dateStr, person, default_num);
 		session.setAttribute("defaultNum", default_num);
 		return "redirect:/#PAYMENTSUCCESS";
 	}
